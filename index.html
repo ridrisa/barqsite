@@ -191,7 +191,6 @@
         </div>
     </div>
 </section>
-
 <!-- Clients section -->
 <section id="clients">
     <div class="container">
@@ -361,6 +360,27 @@
         $(this).ekkoLightbox(); 
     }); 
     new WOW().init();
+    // Initialize the clients carousel
+    $("#owl-clients").owlCarousel({
+        loop: true, // Infinite loop
+        margin: 10, // Space between items
+        nav: false, // Navigation arrows
+        autoplay: true, // Automatic scrolling
+        autoplayTimeout: 3000, // Speed of autoplay
+        smartSpeed: 800, // Speed of transition
+        autoplayHoverPause: true, // Pause on hover
+        responsive: {
+            0: {
+                items: 1 // 1 item on small screens
+            },
+            600: {
+                items: 2 // 2 items on medium screens
+            },
+            1000: {
+                items: 3 // 3 items on large screens
+            }
+        }
+    });
 </script>
 </body>
 </html>
