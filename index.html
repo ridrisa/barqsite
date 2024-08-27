@@ -136,13 +136,12 @@
         </div>
     </div>
 </section>
-
-<section id="features">
+<!-- Advanced Technology Platform with Creative Map Section -->
+<section id="features" style="position: relative; overflow: hidden;">
     <div class="container">
         <div class="row">
-            <div class="col-md-6 col-sm-6 wow fadeInRight animated" data-wow-delay=".8s">
+            <div class="col-md-6 col-sm-6 wow fadeInRight" data-wow-delay=".8s">
                 <h2 class="title">Advanced Technology Platform</h2>
-
                 <div class="feature-item wow fadeInUp">
                     <div class="media">
                         <div class="pull-left icon">
@@ -154,7 +153,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="feature-item wow fadeInUp" data-wow-delay=".2s">
                     <div class="media">
                         <div class="pull-left icon">
@@ -166,7 +164,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="feature-item wow fadeInUp" data-wow-delay=".4s">
                     <div class="media">
                         <div class="pull-left icon">
@@ -178,19 +175,26 @@
                         </div>
                     </div>
                 </div>
-                <!-- Map iframe -->
-                <div class="map-container wow fadeInUp" data-wow-delay=".6s">
-                    <iframe src="map.html" style="width:100%; height:600px; border:none;"></iframe>
-                </div>
             </div>
-            <div class="col-md-6 col-sm-6 wow fadeInLeft animated" data-wow-delay=".8s">
+            <div class="col-md-6 col-sm-6 wow fadeInLeft" data-wow-delay=".8s">
                 <div class="block">
                     <img class="img-responsive" src="images/bulletdelivery.png" alt="">
                 </div>
             </div>
         </div>
     </div>
+    <!-- Full-Width Creative Map -->
+    <div class="creative-map-container" style="position: relative; height: 500px; width: 100%; overflow: hidden; background-color: #f5f5f5;">
+        <iframe src="map.html" style="width:100%; height: 100%; border:none; filter: grayscale(100%); transition: filter 0.5s;"></iframe>
+        <!-- Overlay Elements -->
+        <div class="map-overlay-content">
+            <h3 class="map-title wow fadeInUp">Explore Our Reach</h3>
+            <p class="map-description wow fadeInUp" data-wow-delay=".2s">See how our network spans across the city with precision targeting and unmatched coverage.</p>
+            <a href="#" class="btn btn-map wow fadeInUp" data-wow-delay=".4s">Learn More</a>
+        </div>
+    </div>
 </section>
+
 <!-- Clients section -->
 <section id="clients">
     <div class="container">
@@ -380,6 +384,15 @@
                 items: 3 // 3 items on large screens
             }
         }
+    });
+
+    // Map interaction
+    document.querySelector('.creative-map-container iframe').addEventListener('mouseenter', function() {
+        this.style.filter = 'grayscale(0%)';
+    });
+
+    document.querySelector('.creative-map-container iframe').addEventListener('mouseleave', function() {
+        this.style.filter = 'grayscale(100%)';
     });
 </script>
 </body>
