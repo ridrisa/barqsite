@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riyadh Impressions Map</title>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.css" rel="stylesheet" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Roboto', sans-serif;
+        }
+        #map {
+            width: 100%;
+            height: 100%;
+        }
+        .mapboxgl-popup {
+            max-width: 300px;
+            font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    <script>
+        // Your Mapbox access token
+        mapboxgl.accessToken = 'pk.eyJ1IjoicmlkcmlzYSIsImEiOiJjbTAwdmNhbGIxbTVuMmxzaXI1bnI5c3p1In0.U7SBrThz-zPdDaWz7Ah5XQ';
+
+        // Initialize the Mapbox map
+        const map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/light-v10',
+            center: [46.6753, 24.7136], // Centered on Riyadh
+            zoom: 10
+        });
+
+        // Add navigation controls to the map
+        map.addControl(new mapboxgl.NavigationControl());
+
+        let popup = new mapboxgl.Popup({
+            closeButton: false,
+            closeOnClick: false
+        });
+
+        // Load GeoJSON data and add it as a source
+        map.on('load', () => {
+            fetch('polygons_with_intensity.geojson')
+                .then(response => response.json())
+                .then(data => {
+                    map.addSource('polygons', {
+                        'type': 'geojson',
+                        'data': data
+                    });
+
+                    // Add a layer to visualize the polygons with intensity
+                    map.addLayer({
+                        'id': 'polygons-layer',
+                        'type': 'fill',
+                        'source': 'polygons',
+                        'layout': {},
+                        'paint': {
+                            'fill-color': ['get', 'color'], // Use the color property from GeoJSON
+                            'fill-opacity': 0.6
+                        }
+                    });
+
+                    // Add a border to the polygons
+                    map.addLayer({
+                        'id': 'polygons-outline',
+                        'type': 'line',
+                        'source': 'polygons',
+                        'layout': {},
+                        'paint': {
+                            'line-color': '#ffffff',
+                            'line-width': 2
+                        }
+                    });
+
+                    // Show popup on mouse enter and hide on mouse leave
+                    map.on('mousemove', 'polygons-layer', (e) => {
+                        const features = map.queryRenderedFeatures(e.point, {
+                            layers: ['polygons-layer']
+                        });
+
+                        if (features.length) {
+                            const feature = features[0];
+                            const coordinates = e.lngLat;
+                            const description = `
+                                <strong>${feature.properties.name}</strong><br>
+                                Description: ${feature.properties.description}<br>
+                                Estimated Impressions: ${feature.properties.points_count}
+                            `;
+
+                            popup
+                                .setLngLat(coordinates)
+                                .setHTML(description)
+                                .addTo(map);
+                        }
+                    });
+
+                    map.on('mouseleave', 'polygons-layer', () => {
+                        popup.remove();  // Remove the popup when the mouse leaves the polygon
+                        map.getCanvas().style.cursor = '';  // Reset the cursor to default
+                    });
+
+                    // Change the cursor to a pointer when the mouse is over the polygons layer
+                    map.on('mouseenter', 'polygons-layer', () => {
+                        map.getCanvas().style.cursor = 'pointer';
+                    });
+                })
+                .catch(error => console.error('Error loading GeoJSON:', error));
+        });
+    </script>
+</body>
+</html>
