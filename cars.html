@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hyundai Accent 2023 Template</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@1.14.0/dist/full.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(to right, #f3f4f6, #d1d5db);
+            overflow-x: hidden;
+        }
+        .card {
+            background-color: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        .upload-section {
+            border: 2px dashed rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            padding: 40px;
+            text-align: center;
+        }
+        .template {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+        }
+        .template img {
+            width: 100%;
+            height: auto;
+        }
+        .logo {
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -20%);
+            max-width: 200px;
+            max-height: 100px;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="bg-white shadow-lg">
+        <nav class="container mx-auto p-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold">Hyundai Accent 2023 Template</h1>
+        </nav>
+    </header>
+
+    <section class="container mx-auto p-10">
+        <div class="card p-8">
+            <h2 class="text-3xl font-bold text-center mb-5">Upload Your Logo</h2>
+            <div class="upload-section">
+                <input type="file" id="logoInput" accept="image/png" class="hidden" onchange="previewLogo()" />
+                <label for="logoInput" class="cursor-pointer text-gray-700 hover:text-blue-500 text-lg">Click to upload your logo (PNG)</label>
+                <div class="mt-5">
+                    <div id="templateContainer" class="template">
+                        <img src="images/hyundai-accent-2023-template.jpg" alt="Hyundai Accent 2023 Template">
+                        <img id="logoPreview" src="" alt="Logo Preview" class="logo hidden">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-white shadow-md p-4 text-center">
+        <p class="text-gray-700">Developed by Your Name - © 2023</p>
+    </footer>
+
+    <script>
+        function previewLogo() {
+            const logoInput = document.getElementById('logoInput');
+            const logoPreview = document.getElementById('logoPreview');
+
+            if (logoInput.files && logoInput.files[0]) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    logoPreview.src = e.target.result;
+                    logoPreview.classList.remove('hidden');
+                }
+                reader.readAsDataURL(logoInput.files[0]);
+            }
+        }
+    </script>
+</body>
+</html>
