@@ -256,9 +256,9 @@
             <h2 class="wow fadeInLeft" style="visibility: visible; animation-name: fadeInLeft;">Prices</h2>
             <div class="title-line wow fadeInRight"></div>
         </div>
-        <div class="row package-option">
+        <div class="row justify-content-center package-option">
             <!-- package 1 -->
-            <div class="col-sm-4">
+            <div class="col-sm-6 col-md-5">
                 <div class="price-box wow fadeInUp">
                     <div class="price-heading text-center">
                         <h3>Basic Package</h3>
@@ -269,7 +269,7 @@
                         <span class="time">/Vehicle</span>
                     </div>
                     <ul class="price-feature text-center">
-                        <li><strong>1000 SAR </strong> Setup fees</li>
+                        <li><strong>1000 SAR</strong> Setup fees</li>
                         <li><strong>30 - 99</strong> Vehicles</li>
                         <li><strong>3 Months</strong> Minimum duration</li>
                         <li><strong>Monthly</strong> Reporting</li>
@@ -282,7 +282,7 @@
             </div>
             
             <!-- package 2 -->
-            <div class="col-sm-4">
+            <div class="col-sm-6 col-md-5">
                 <div class="price-box wow fadeInUp" data-wow-delay="0.2s">
                     <div class="price-heading text-center">
                         <h3>Premium Package</h3>
@@ -304,32 +304,63 @@
                     </div>
                 </div>
             </div>  
-            
-            <!-- package 3 -->
-            <div class="col-sm-4">
-                <div class="price-box wow fadeInUp" data-wow-delay="0.4s">
-                    <div class="price-heading text-center">
-                        <h3>Enterprise Package</h3>
-                    </div>
-                    <div class="price-group text-center">
-                        <span class="dollar">Contact</span>
-                        <span class="price">Us</span>
-                    </div>
-                    <ul class="price-feature text-center">
-                        <li><strong>Custom Setup Fees</strong></li>
-                        <li><strong>Unlimited Vehicles</strong></li>
-                        <li><strong>6 Months</strong> Minimum duration</li>
-                        <li><strong>Dedicated Account Manager</strong></li>
-                        <li><strong>Full Vehicle Wrap</strong> Branding</li>
-                    </ul>
-                    <div class="price-footer text-center">
-                        <a class="btn btn-price" href="#">Contact Us</a>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 </section>
+
+<!-- Custom CSS -->
+<style>
+    .package-option {
+        display: flex;
+        justify-content: center;
+    }
+
+    .price-box {
+        margin: 20px;
+        padding: 30px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .price-box:hover {
+        transform: scale(1.05);
+    }
+
+    .price-heading {
+        margin-bottom: 20px;
+    }
+
+    .price-group {
+        margin-bottom: 20px;
+        font-size: 24px;
+    }
+
+    .price-feature {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 20px;
+    }
+
+    .price-feature li {
+        margin-bottom: 10px;
+    }
+
+    .price-footer .btn-price {
+        background-color: #f39c12;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 50px;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+    }
+
+    .price-footer .btn-price:hover {
+        background-color: #e67e22;
+    }
+</style>
 
 <!-- footer -->
 <footer id="footer">
