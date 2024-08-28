@@ -3,7 +3,6 @@
 * custom styles
 **/
 
-
 html, body {
 	width: 100%;
 	overflow-x: hidden;
@@ -24,6 +23,29 @@ body {
 h1,h2,h3,h4,h5,h6{
 font-family: 'Alegreya Sans', sans-serif;
 }
+
+/* Additional Logo Styling */
+.navbar-brand img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 60px; /* Adjust the height to ensure it fits within the navbar */
+    display: block;
+    margin: 0 auto; /* Center the logo horizontally */
+}
+
+@media (max-width: 768px) {
+    .navbar-brand img {
+        max-height: 50px; /* Adjust for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar-brand img {
+        max-height: 40px; /* Further adjust for very small screens */
+    }
+}
+
 h1 { font-size: 3em; line-height:1.2em; margin:0 0 .8em; }
 h2 { font-size: 1.8em; line-height:1.4em; margin:0 0 .8em;  }
 h3 { font-size: 1.4em; line-height:1.4em; }
