@@ -17,7 +17,7 @@
     <!-- Animate CSS -->
     <link href="css/animate.css" rel="stylesheet" type="text/css">
 </head>
-<body>
+<body data-spy="scroll" data-target="#navbar-scroll">
 
 <!-- Navigation Section -->
 <div id="menu">
@@ -36,11 +36,11 @@
             </div>
             <div id="navbar" class="collapse navbar-collapse navbar-right">
                 <ul class="nav navbar-nav">
-                    <li><a href="#intro">About</a></li>
-                    <li><a href="#feature">Features</a></li>
-                    <li><a href="#subscribe">Contact us</a></li>
+                    <li><a href="#aboutUs">About</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#contact">Contact us</a></li>
                     <li><a href="#clients">Clients</a></li>
-                    <li><a href="#package">Pricing</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
                 </ul>
             </div>
         </div>
@@ -55,6 +55,7 @@
                 <div class="top_left_cont zoomIn wow animated">
                     <h1 class="wow fadeInLeft">BARQ <br> <strong>ADS & BEYOND</strong></h1>
                     <p class="wow fadeInRight">Welcome to BARQ ADS, where we're transforming the landscape of outdoor advertising.</p>
+                    <a href="#aboutUs" class="btn btn-primary btn-lg wow fadeInUp">Learn More</a>
                 </div>
             </div>
         </div>
@@ -65,11 +66,11 @@
 <section id="aboutUs" class="about_section">
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-6 wow fadeInLeft">
                 <h2>About Us</h2>
                 <p>BARQ ADS offers unmatched reach and exposure for your campaigns through dynamic vehicle wraps, delivering your brand message directly to consumers on the go. With a fleet covering over 4 million kilometers monthly, we provide unmatched reach and visibility.</p>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 wow fadeInRight">
                 <img src="images/about.jpg" alt="About Us" class="img-responsive">
             </div>
         </div>
@@ -81,21 +82,125 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center">
-                <h2>Our Features</h2>
-                <p>Explore the powerful features of BARQ ADS...</p>
+                <h2 class="wow fadeInUp">Our Features</h2>
+                <p class="wow fadeInDown">Explore the powerful features of BARQ ADS...</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 wow fadeInUp">
+                <div class="feature-box">
+                    <i class="fa fa-bullhorn fa-3x"></i>
+                    <h3>High Visibility</h3>
+                    <p>Your ads are seen by thousands daily as our fleet travels across the city.</p>
+                </div>
+            </div>
+            <div class="col-md-4 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="feature-box">
+                    <i class="fa fa-line-chart fa-3x"></i>
+                    <h3>Real-Time Analytics</h3>
+                    <p>Track the performance of your ads with real-time data and insights.</p>
+                </div>
+            </div>
+            <div class="col-md-4 wow fadeInUp" data-wow-delay="0.4s">
+                <div class="feature-box">
+                    <i class="fa fa-mobile fa-3x"></i>
+                    <h3>Mobile Friendly</h3>
+                    <p>Control and monitor your ad campaigns from your mobile device.</p>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Client Section -->
+<!-- Clients Section -->
 <section id="clients" class="clients_section">
     <div class="container">
         <div class="row">
-            <div class="col-md-12 text-center">
+            <div class="col-md-12 text-center wow fadeInUp">
                 <h2>Our Clients</h2>
                 <p>Trusted by the best in the industry...</p>
-                <!-- Client logos or carousel here -->
+                <div id="owl-clients" class="owl-carousel owl-theme">
+                    <div class="item"><img src="images/client1.png" alt="Client 1"></div>
+                    <div class="item"><img src="images/client2.png" alt="Client 2"></div>
+                    <div class="item"><img src="images/client3.png" alt="Client 3"></div>
+                    <div class="item"><img src="images/client4.png" alt="Client 4"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Pricing Section -->
+<section id="pricing" class="pricing_section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center wow fadeInUp">
+                <h2>Pricing</h2>
+                <p>Choose the best plan that suits your needs</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 wow fadeInUp">
+                <div class="pricing-box">
+                    <h3>Basic Package</h3>
+                    <div class="price">$2000</div>
+                    <ul>
+                        <li>1 Vehicle</li>
+                        <li>1 Month Duration</li>
+                        <li>Basic Analytics</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary">Get Started</a>
+                </div>
+            </div>
+            <div class="col-md-4 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="pricing-box">
+                    <h3>Premium Package</h3>
+                    <div class="price">$4000</div>
+                    <ul>
+                        <li>3 Vehicles</li>
+                        <li>3 Months Duration</li>
+                        <li>Advanced Analytics</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary">Get Started</a>
+                </div>
+            </div>
+            <div class="col-md-4 wow fadeInUp" data-wow-delay="0.4s">
+                <div class="pricing-box">
+                    <h3>Enterprise Package</h3>
+                    <div class="price">$8000</div>
+                    <ul>
+                        <li>10 Vehicles</li>
+                        <li>6 Months Duration</li>
+                        <li>Full Analytics Suite</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact_section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center wow fadeInUp">
+                <h2>Contact Us</h2>
+                <p>Get in touch with us for more information</p>
+                <div class="contact-form">
+                    <form>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" placeholder="Your Name">
+                            </div>
+                            <div class="col-md-6">
+                                <input type="email" class="form-control" placeholder="Your Email">
+                            </div>
+                        </div>
+                        <textarea class="form-control" rows="5" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
@@ -104,7 +209,14 @@
 <!-- Footer -->
 <footer id="footer" class="footer_section">
     <div class="container text-center">
+        <ul class="social list-inline">
+            <li><a href="https://twitter.com/" class="wow fadeInUp"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="https://www.facebook.com/" class="wow fadeInUp" data-wow-delay="0.2s"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="https://plus.google.com/" class="wow fadeInUp" data-wow-delay="0.4s"><i class="fa fa-google-plus"></i></a></li>
+            <li><a href="https://www.instagram.com/" class="wow fadeInUp" data-wow-delay="0.6s"><i class="fa fa-instagram"></i></a></li>
+        </ul>
         <p>Copyright BARQ ADS 2024 | <a href="http://www.BARQADS.com">BARQ ADS</a></p>
+        <a href="#top" class="scrollToTop"><i class="fa fa-arrow-circle-o-up"></i></a>
     </div>
 </footer>
 
