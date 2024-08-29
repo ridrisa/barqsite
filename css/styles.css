@@ -1058,3 +1058,67 @@ and (orientation : landscape) {
 	}
 
 }
+/* Flexbox layout for the header container */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: #fff; /* Ensure a consistent background */
+}
+
+/* Adjust logo and text alignment */
+.header-logo {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.header-text {
+    flex: 2;
+    text-align: left;
+    font-size: 1.2em;
+    line-height: 1.4;
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .header-logo {
+        margin-bottom: 10px;
+    }
+
+    .header-text {
+        text-align: center;
+        font-size: 1em;
+    }
+}
+
+/* Ensure z-index for correct stacking order */
+.header-container {
+    position: relative;
+    z-index: 10;
+}
+
+/* Specific navbar-brand image adjustments */
+.navbar-brand img {
+    max-height: 60px;
+    display: block;
+    margin: 0 auto; /* Center the logo */
+}
+
+@media (max-width: 768px) {
+    .navbar-brand img {
+        max-height: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar-brand img {
+        max-height: 40px;
+    }
+}
