@@ -5,8 +5,8 @@ from shapely.wkt import loads as wkt_loads
 import pandas as pd
 
 # Load the CSV files
-polygon_df = pd.read_csv('/Users/ramizmohamed/Desktop/sites/essentials/polygon_boundary.csv')
-coordinates_df = pd.read_csv('/Users/ramizmohamed/Desktop/sites/essentials/coordinates.csv')
+polygon_df = pd.read_csv('/Users/ramizmohamed/Desktop/sites/polygon_boundary.csv')
+coordinates_df = pd.read_csv('/Users/ramizmohamed/Desktop/sites/coordinates.csv')
 
 # Initialize polygons list
 polygons = []

@@ -134,8 +134,10 @@
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="css/font-awesome.min.css" rel="stylesheet">
 
+    <link href="css/owl.carousel.min.css" rel="stylesheet">
 
-    <link href="fonts/icon-7-stroke/css/pe-icon-7-stroke.css" rel="stylesheet">
+
+    <link href="css/pe-icon-7-stroke.min.css" rel="stylesheet">
 
 
     <!-- Animations -->
@@ -146,6 +148,8 @@
 
     <!-- Custom Styles -->
     <link href="css/styles.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 
     <!-- Google Fonts --> 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700" rel="stylesheet" type="text/css">
@@ -185,7 +189,7 @@
     </nav>
 </div>
  
-<div class="fullscreen landing parallax banner" style="background-image:url('images/lowercover.jpg'); min-height: 50vh;min-width: 50vh background-repeat:no-repeat; background-size:cover;">
+<div class="fullscreen landing parallax banner" style="background-image:url('images/lowercover.jpg'); min-height: 50vh;min-width: 50vh ;background-repeat:no-repeat; background-size:cover;">
     <div class="overlay"></div>
         <div class="container" style="position: relative; z-index: 2;">
             <div class="row">
@@ -23952,7 +23956,13 @@ a:hover {
 	background: #000000;
 	color: white
 }
+<<<<<<< Updated upstream
+.site-name img{
+	height: 37px
+}
+=======
 
+>>>>>>> Stashed changes
 .logo {
 	margin: 15px 0 15px 20;
 	padding: 10;
@@ -24410,7 +24420,7 @@ a:hover {
 	padding: 5px;
 	font-size: 30px;
 	text-align: center; 
-	color: rgb(242, 47, 47);
+	color: #fbd22c;
 	position: fixed;
 	bottom: 20px;
 	right: 20px;
@@ -24899,6 +24909,544 @@ and (orientation : landscape) {
 }
 
 
+--- ./css/pe-icon-7-stroke.min.css ---
+@font-face {
+	font-family: 'Pe-icon-7-stroke';
+	src:url('../fonts/Pe-icon-7-stroke.eot?-2irksn');
+	src:url('../fonts/Pe-icon-7-stroke.eot?#iefix-2irksn') format('embedded-opentype'),
+		url('../fonts/Pe-icon-7-stroke.woff?-2irksn') format('woff'),
+		url('../fonts/Pe-icon-7-stroke.ttf?-2irksn') format('truetype'),
+		url('../fonts/Pe-icon-7-stroke.svg?-2irksn#Pe-icon-7-stroke') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="pe-7s-"], [class*=" pe-7s-"] {
+	display: inline-block;
+	font-family: 'Pe-icon-7-stroke';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.pe-7s-cloud-upload:before {
+	content: "\e68a";
+}
+.pe-7s-cash:before {
+	content: "\e68c";
+}
+.pe-7s-close:before {
+	content: "\e680";
+}
+.pe-7s-bluetooth:before {
+	content: "\e68d";
+}
+.pe-7s-cloud-download:before {
+	content: "\e68b";
+}
+.pe-7s-way:before {
+	content: "\e68e";
+}
+.pe-7s-close-circle:before {
+	content: "\e681";
+}
+.pe-7s-id:before {
+	content: "\e68f";
+}
+.pe-7s-angle-up:before {
+	content: "\e682";
+}
+.pe-7s-wristwatch:before {
+	content: "\e690";
+}
+.pe-7s-angle-up-circle:before {
+	content: "\e683";
+}
+.pe-7s-world:before {
+	content: "\e691";
+}
+.pe-7s-angle-right:before {
+	content: "\e684";
+}
+.pe-7s-volume:before {
+	content: "\e692";
+}
+.pe-7s-angle-right-circle:before {
+	content: "\e685";
+}
+.pe-7s-users:before {
+	content: "\e693";
+}
+.pe-7s-angle-left:before {
+	content: "\e686";
+}
+.pe-7s-user-female:before {
+	content: "\e694";
+}
+.pe-7s-angle-left-circle:before {
+	content: "\e687";
+}
+.pe-7s-up-arrow:before {
+	content: "\e695";
+}
+.pe-7s-angle-down:before {
+	content: "\e688";
+}
+.pe-7s-switch:before {
+	content: "\e696";
+}
+.pe-7s-angle-down-circle:before {
+	content: "\e689";
+}
+.pe-7s-scissors:before {
+	content: "\e697";
+}
+.pe-7s-wallet:before {
+	content: "\e600";
+}
+.pe-7s-safe:before {
+	content: "\e698";
+}
+.pe-7s-volume2:before {
+	content: "\e601";
+}
+.pe-7s-volume1:before {
+	content: "\e602";
+}
+.pe-7s-voicemail:before {
+	content: "\e603";
+}
+.pe-7s-video:before {
+	content: "\e604";
+}
+.pe-7s-user:before {
+	content: "\e605";
+}
+.pe-7s-upload:before {
+	content: "\e606";
+}
+.pe-7s-unlock:before {
+	content: "\e607";
+}
+.pe-7s-umbrella:before {
+	content: "\e608";
+}
+.pe-7s-trash:before {
+	content: "\e609";
+}
+.pe-7s-tools:before {
+	content: "\e60a";
+}
+.pe-7s-timer:before {
+	content: "\e60b";
+}
+.pe-7s-ticket:before {
+	content: "\e60c";
+}
+.pe-7s-target:before {
+	content: "\e60d";
+}
+.pe-7s-sun:before {
+	content: "\e60e";
+}
+.pe-7s-study:before {
+	content: "\e60f";
+}
+.pe-7s-stopwatch:before {
+	content: "\e610";
+}
+.pe-7s-star:before {
+	content: "\e611";
+}
+.pe-7s-speaker:before {
+	content: "\e612";
+}
+.pe-7s-signal:before {
+	content: "\e613";
+}
+.pe-7s-shuffle:before {
+	content: "\e614";
+}
+.pe-7s-shopbag:before {
+	content: "\e615";
+}
+.pe-7s-share:before {
+	content: "\e616";
+}
+.pe-7s-server:before {
+	content: "\e617";
+}
+.pe-7s-search:before {
+	content: "\e618";
+}
+.pe-7s-film:before {
+	content: "\e6a5";
+}
+.pe-7s-science:before {
+	content: "\e619";
+}
+.pe-7s-disk:before {
+	content: "\e6a6";
+}
+.pe-7s-ribbon:before {
+	content: "\e61a";
+}
+.pe-7s-repeat:before {
+	content: "\e61b";
+}
+.pe-7s-refresh:before {
+	content: "\e61c";
+}
+.pe-7s-add-user:before {
+	content: "\e6a9";
+}
+.pe-7s-refresh-cloud:before {
+	content: "\e61d";
+}
+.pe-7s-paperclip:before {
+	content: "\e69c";
+}
+.pe-7s-radio:before {
+	content: "\e61e";
+}
+.pe-7s-note2:before {
+	content: "\e69d";
+}
+.pe-7s-print:before {
+	content: "\e61f";
+}
+.pe-7s-network:before {
+	content: "\e69e";
+}
+.pe-7s-prev:before {
+	content: "\e620";
+}
+.pe-7s-mute:before {
+	content: "\e69f";
+}
+.pe-7s-power:before {
+	content: "\e621";
+}
+.pe-7s-medal:before {
+	content: "\e6a0";
+}
+.pe-7s-portfolio:before {
+	content: "\e622";
+}
+.pe-7s-like2:before {
+	content: "\e6a1";
+}
+.pe-7s-plus:before {
+	content: "\e623";
+}
+.pe-7s-left-arrow:before {
+	content: "\e6a2";
+}
+.pe-7s-play:before {
+	content: "\e624";
+}
+.pe-7s-key:before {
+	content: "\e6a3";
+}
+.pe-7s-plane:before {
+	content: "\e625";
+}
+.pe-7s-joy:before {
+	content: "\e6a4";
+}
+.pe-7s-photo-gallery:before {
+	content: "\e626";
+}
+.pe-7s-pin:before {
+	content: "\e69b";
+}
+.pe-7s-phone:before {
+	content: "\e627";
+}
+.pe-7s-plug:before {
+	content: "\e69a";
+}
+.pe-7s-pen:before {
+	content: "\e628";
+}
+.pe-7s-right-arrow:before {
+	content: "\e699";
+}
+.pe-7s-paper-plane:before {
+	content: "\e629";
+}
+.pe-7s-delete-user:before {
+	content: "\e6a7";
+}
+.pe-7s-paint:before {
+	content: "\e62a";
+}
+.pe-7s-bottom-arrow:before {
+	content: "\e6a8";
+}
+.pe-7s-notebook:before {
+	content: "\e62b";
+}
+.pe-7s-note:before {
+	content: "\e62c";
+}
+.pe-7s-next:before {
+	content: "\e62d";
+}
+.pe-7s-news-paper:before {
+	content: "\e62e";
+}
+.pe-7s-musiclist:before {
+	content: "\e62f";
+}
+.pe-7s-music:before {
+	content: "\e630";
+}
+.pe-7s-mouse:before {
+	content: "\e631";
+}
+.pe-7s-more:before {
+	content: "\e632";
+}
+.pe-7s-moon:before {
+	content: "\e633";
+}
+.pe-7s-monitor:before {
+	content: "\e634";
+}
+.pe-7s-micro:before {
+	content: "\e635";
+}
+.pe-7s-menu:before {
+	content: "\e636";
+}
+.pe-7s-map:before {
+	content: "\e637";
+}
+.pe-7s-map-marker:before {
+	content: "\e638";
+}
+.pe-7s-mail:before {
+	content: "\e639";
+}
+.pe-7s-mail-open:before {
+	content: "\e63a";
+}
+.pe-7s-mail-open-file:before {
+	content: "\e63b";
+}
+.pe-7s-magnet:before {
+	content: "\e63c";
+}
+.pe-7s-loop:before {
+	content: "\e63d";
+}
+.pe-7s-look:before {
+	content: "\e63e";
+}
+.pe-7s-lock:before {
+	content: "\e63f";
+}
+.pe-7s-lintern:before {
+	content: "\e640";
+}
+.pe-7s-link:before {
+	content: "\e641";
+}
+.pe-7s-like:before {
+	content: "\e642";
+}
+.pe-7s-light:before {
+	content: "\e643";
+}
+.pe-7s-less:before {
+	content: "\e644";
+}
+.pe-7s-keypad:before {
+	content: "\e645";
+}
+.pe-7s-junk:before {
+	content: "\e646";
+}
+.pe-7s-info:before {
+	content: "\e647";
+}
+.pe-7s-home:before {
+	content: "\e648";
+}
+.pe-7s-help2:before {
+	content: "\e649";
+}
+.pe-7s-help1:before {
+	content: "\e64a";
+}
+.pe-7s-graph3:before {
+	content: "\e64b";
+}
+.pe-7s-graph2:before {
+	content: "\e64c";
+}
+.pe-7s-graph1:before {
+	content: "\e64d";
+}
+.pe-7s-graph:before {
+	content: "\e64e";
+}
+.pe-7s-global:before {
+	content: "\e64f";
+}
+.pe-7s-gleam:before {
+	content: "\e650";
+}
+.pe-7s-glasses:before {
+	content: "\e651";
+}
+.pe-7s-gift:before {
+	content: "\e652";
+}
+.pe-7s-folder:before {
+	content: "\e653";
+}
+.pe-7s-flag:before {
+	content: "\e654";
+}
+.pe-7s-filter:before {
+	content: "\e655";
+}
+.pe-7s-file:before {
+	content: "\e656";
+}
+.pe-7s-expand1:before {
+	content: "\e657";
+}
+.pe-7s-exapnd2:before {
+	content: "\e658";
+}
+.pe-7s-edit:before {
+	content: "\e659";
+}
+.pe-7s-drop:before {
+	content: "\e65a";
+}
+.pe-7s-drawer:before {
+	content: "\e65b";
+}
+.pe-7s-download:before {
+	content: "\e65c";
+}
+.pe-7s-display2:before {
+	content: "\e65d";
+}
+.pe-7s-display1:before {
+	content: "\e65e";
+}
+.pe-7s-diskette:before {
+	content: "\e65f";
+}
+.pe-7s-date:before {
+	content: "\e660";
+}
+.pe-7s-cup:before {
+	content: "\e661";
+}
+.pe-7s-culture:before {
+	content: "\e662";
+}
+.pe-7s-crop:before {
+	content: "\e663";
+}
+.pe-7s-credit:before {
+	content: "\e664";
+}
+.pe-7s-copy-file:before {
+	content: "\e665";
+}
+.pe-7s-config:before {
+	content: "\e666";
+}
+.pe-7s-compass:before {
+	content: "\e667";
+}
+.pe-7s-comment:before {
+	content: "\e668";
+}
+.pe-7s-coffee:before {
+	content: "\e669";
+}
+.pe-7s-cloud:before {
+	content: "\e66a";
+}
+.pe-7s-clock:before {
+	content: "\e66b";
+}
+.pe-7s-check:before {
+	content: "\e66c";
+}
+.pe-7s-chat:before {
+	content: "\e66d";
+}
+.pe-7s-cart:before {
+	content: "\e66e";
+}
+.pe-7s-camera:before {
+	content: "\e66f";
+}
+.pe-7s-call:before {
+	content: "\e670";
+}
+.pe-7s-calculator:before {
+	content: "\e671";
+}
+.pe-7s-browser:before {
+	content: "\e672";
+}
+.pe-7s-box2:before {
+	content: "\e673";
+}
+.pe-7s-box1:before {
+	content: "\e674";
+}
+.pe-7s-bookmarks:before {
+	content: "\e675";
+}
+.pe-7s-bicycle:before {
+	content: "\e676";
+}
+.pe-7s-bell:before {
+	content: "\e677";
+}
+.pe-7s-battery:before {
+	content: "\e678";
+}
+.pe-7s-ball:before {
+	content: "\e679";
+}
+.pe-7s-back:before {
+	content: "\e67a";
+}
+.pe-7s-attention:before {
+	content: "\e67b";
+}
+.pe-7s-anchor:before {
+	content: "\e67c";
+}
+.pe-7s-albums:before {
+	content: "\e67d";
+}
+.pe-7s-alarm:before {
+	content: "\e67e";
+}
+.pe-7s-airplay:before {
+	content: "\e67f";
+}
+
 --- ./css/bootstrap.css.map ---
 {
     "version": 3,
@@ -24988,6 +25536,14 @@ and (orientation : landscape) {
 
 --- ./css/bootstrap-theme.css.map ---
 {"version":3,"sources":["less/theme.less","less/mixins.less"],"names":[],"mappings":"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","sourcesContent":["\n//\n// Load core variables and mixins\n// --------------------------------------------------\n\n@import \"variables.less\";\n@import \"mixins.less\";\n\n\n\n//\n// Buttons\n// --------------------------------------------------\n\n// Common styles\n.btn-default,\n.btn-primary,\n.btn-success,\n.btn-info,\n.btn-warning,\n.btn-danger {\n  text-shadow: 0 -1px 0 rgba(0,0,0,.2);\n  @shadow: inset 0 1px 0 rgba(255,255,255,.15), 0 1px 1px rgba(0,0,0,.075);\n  .box-shadow(@shadow);\n\n  // Reset the shadow\n  &:active,\n  &.active {\n    .box-shadow(inset 0 3px 5px rgba(0,0,0,.125));\n  }\n}\n\n// Mixin for generating new styles\n.btn-styles(@btn-color: #555) {\n  #gradient > .vertical(@start-color: @btn-color; @end-color: darken(@btn-color, 12%));\n  .reset-filter(); // Disable gradients for IE9 because filter bleeds through rounded corners\n  background-repeat: repeat-x;\n  border-color: darken(@btn-color, 14%);\n\n  &:hover,\n  &:focus  {\n    background-color: darken(@btn-color, 12%);\n    background-position: 0 -15px;\n  }\n\n  &:active,\n  &.active {\n    background-color: darken(@btn-color, 12%);\n    border-color: darken(@btn-color, 14%);\n  }\n}\n\n// Common styles\n.btn {\n  // Remove the gradient for the pressed/active state\n  &:active,\n  &.active {\n    background-image: none;\n  }\n}\n\n// Apply the mixin to the buttons\n.btn-default { .btn-styles(@btn-default-bg); text-shadow: 0 1px 0 #fff; border-color: #ccc; }\n.btn-primary { .btn-styles(@btn-primary-bg); }\n.btn-success { .btn-styles(@btn-success-bg); }\n.btn-info    { .btn-styles(@btn-info-bg); }\n.btn-warning { .btn-styles(@btn-warning-bg); }\n.btn-danger  { .btn-styles(@btn-danger-bg); }\n\n\n\n//\n// Images\n// --------------------------------------------------\n\n.thumbnail,\n.img-thumbnail {\n  .box-shadow(0 1px 2px rgba(0,0,0,.075));\n}\n\n\n\n//\n// Dropdowns\n// --------------------------------------------------\n\n.dropdown-menu > li > a:hover,\n.dropdown-menu > li > a:focus {\n  #gradient > .vertical(@start-color: @dropdown-link-hover-bg; @end-color: darken(@dropdown-link-hover-bg, 5%));\n  background-color: darken(@dropdown-link-hover-bg, 5%);\n}\n.dropdown-menu > .active > a,\n.dropdown-menu > .active > a:hover,\n.dropdown-menu > .active > a:focus {\n  #gradient > .vertical(@start-color: @dropdown-link-active-bg; @end-color: darken(@dropdown-link-active-bg, 5%));\n  background-color: darken(@dropdown-link-active-bg, 5%);\n}\n\n\n\n//\n// Navbar\n// --------------------------------------------------\n\n// Default navbar\n.navbar-default {\n  #gradient > .vertical(@start-color: lighten(@navbar-default-bg, 10%); @end-color: @navbar-default-bg);\n  .reset-filter(); // Remove gradient in IE<10 to fix bug where dropdowns don't get triggered\n  border-radius: @navbar-border-radius;\n  @shadow: inset 0 1px 0 rgba(255,255,255,.15), 0 1px 5px rgba(0,0,0,.075);\n  .box-shadow(@shadow);\n\n  .navbar-nav > .active > a {\n    #gradient > .vertical(@start-color: darken(@navbar-default-bg, 5%); @end-color: darken(@navbar-default-bg, 2%));\n    .box-shadow(inset 0 3px 9px rgba(0,0,0,.075));\n  }\n}\n.navbar-brand,\n.navbar-nav > li > a {\n  text-shadow: 0 1px 0 rgba(255,255,255,.25);\n}\n\n// Inverted navbar\n.navbar-inverse {\n  #gradient > .vertical(@start-color: lighten(@navbar-inverse-bg, 10%); @end-color: @navbar-inverse-bg);\n  .reset-filter(); // Remove gradient in IE<10 to fix bug where dropdowns don't get triggered\n\n  .navbar-nav > .active > a {\n    #gradient > .vertical(@start-color: @navbar-inverse-bg; @end-color: lighten(@navbar-inverse-bg, 2.5%));\n    .box-shadow(inset 0 3px 9px rgba(0,0,0,.25));\n  }\n\n  .navbar-brand,\n  .navbar-nav > li > a {\n    text-shadow: 0 -1px 0 rgba(0,0,0,.25);\n  }\n}\n\n// Undo rounded corners in static and fixed navbars\n.navbar-static-top,\n.navbar-fixed-top,\n.navbar-fixed-bottom {\n  border-radius: 0;\n}\n\n\n\n//\n// Alerts\n// --------------------------------------------------\n\n// Common styles\n.alert {\n  text-shadow: 0 1px 0 rgba(255,255,255,.2);\n  @shadow: inset 0 1px 0 rgba(255,255,255,.25), 0 1px 2px rgba(0,0,0,.05);\n  .box-shadow(@shadow);\n}\n\n// Mixin for generating new styles\n.alert-styles(@color) {\n  #gradient > .vertical(@start-color: @color; @end-color: darken(@color, 7.5%));\n  border-color: darken(@color, 15%);\n}\n\n// Apply the mixin to the alerts\n.alert-success    { .alert-styles(@alert-success-bg); }\n.alert-info       { .alert-styles(@alert-info-bg); }\n.alert-warning    { .alert-styles(@alert-warning-bg); }\n.alert-danger     { .alert-styles(@alert-danger-bg); }\n\n\n\n//\n// Progress bars\n// --------------------------------------------------\n\n// Give the progress background some depth\n.progress {\n  #gradient > .vertical(@start-color: darken(@progress-bg, 4%); @end-color: @progress-bg)\n}\n\n// Mixin for generating new styles\n.progress-bar-styles(@color) {\n  #gradient > .vertical(@start-color: @color; @end-color: darken(@color, 10%));\n}\n\n// Apply the mixin to the progress bars\n.progress-bar            { .progress-bar-styles(@progress-bar-bg); }\n.progress-bar-success    { .progress-bar-styles(@progress-bar-success-bg); }\n.progress-bar-info       { .progress-bar-styles(@progress-bar-info-bg); }\n.progress-bar-warning    { .progress-bar-styles(@progress-bar-warning-bg); }\n.progress-bar-danger     { .progress-bar-styles(@progress-bar-danger-bg); }\n\n\n\n//\n// List groups\n// --------------------------------------------------\n\n.list-group {\n  border-radius: @border-radius-base;\n  .box-shadow(0 1px 2px rgba(0,0,0,.075));\n}\n.list-group-item.active,\n.list-group-item.active:hover,\n.list-group-item.active:focus {\n  text-shadow: 0 -1px 0 darken(@list-group-active-bg, 10%);\n  #gradient > .vertical(@start-color: @list-group-active-bg; @end-color: darken(@list-group-active-bg, 7.5%));\n  border-color: darken(@list-group-active-border, 7.5%);\n}\n\n\n\n//\n// Panels\n// --------------------------------------------------\n\n// Common styles\n.panel {\n  .box-shadow(0 1px 2px rgba(0,0,0,.05));\n}\n\n// Mixin for generating new styles\n.panel-heading-styles(@color) {\n  #gradient > .vertical(@start-color: @color; @end-color: darken(@color, 5%));\n}\n\n// Apply the mixin to the panel headings only\n.panel-default > .panel-heading   { .panel-heading-styles(@panel-default-heading-bg); }\n.panel-primary > .panel-heading   { .panel-heading-styles(@panel-primary-heading-bg); }\n.panel-success > .panel-heading   { .panel-heading-styles(@panel-success-heading-bg); }\n.panel-info > .panel-heading      { .panel-heading-styles(@panel-info-heading-bg); }\n.panel-warning > .panel-heading   { .panel-heading-styles(@panel-warning-heading-bg); }\n.panel-danger > .panel-heading    { .panel-heading-styles(@panel-danger-heading-bg); }\n\n\n\n//\n// Wells\n// --------------------------------------------------\n\n.well {\n  #gradient > .vertical(@start-color: darken(@well-bg, 5%); @end-color: @well-bg);\n  border-color: darken(@well-bg, 10%);\n  @shadow: inset 0 1px 3px rgba(0,0,0,.05), 0 1px 0 rgba(255,255,255,.1);\n  .box-shadow(@shadow);\n}\n","//\n// Mixins\n// --------------------------------------------------\n\n\n// Utilities\n// -------------------------\n\n// Clearfix\n// Source: http://nicolasgallagher.com/micro-clearfix-hack/\n//\n// For modern browsers\n// 1. The space content is one way to avoid an Opera bug when the\n//    contenteditable attribute is included anywhere else in the document.\n//    Otherwise it causes space to appear at the top and bottom of elements\n//    that are clearfixed.\n// 2. The use of `table` rather than `block` is only necessary if using\n//    `:before` to contain the top-margins of child elements.\n.clearfix() {\n  &:before,\n  &:after {\n    content: \" \"; // 1\n    display: table; // 2\n  }\n  &:after {\n    clear: both;\n  }\n}\n\n// WebKit-style focus\n.tab-focus() {\n  // Default\n  outline: thin dotted;\n  // WebKit\n  outline: 5px auto -webkit-focus-ring-color;\n  outline-offset: -2px;\n}\n\n// Center-align a block level element\n.center-block() {\n  display: block;\n  margin-left: auto;\n  margin-right: auto;\n}\n\n// Sizing shortcuts\n.size(@width; @height) {\n  width: @width;\n  height: @height;\n}\n.square(@size) {\n  .size(@size; @size);\n}\n\n// Placeholder text\n.placeholder(@color: @input-color-placeholder) {\n  &:-moz-placeholder            { color: @color; } // Firefox 4-18\n  &::-moz-placeholder           { color: @color;   // Firefox 19+\n                                  opacity: 1; } // See https://github.com/twbs/bootstrap/pull/11526\n  &:-ms-input-placeholder       { color: @color; } // Internet Explorer 10+\n  &::-webkit-input-placeholder  { color: @color; } // Safari and Chrome\n}\n\n// Text overflow\n// Requires inline-block or block for proper styling\n.text-overflow() {\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n}\n\n// CSS image replacement\n//\n// Heads up! v3 launched with with only `.hide-text()`, but per our pattern for\n// mixins being reused as classes with the same name, this doesn't hold up. As\n// of v3.0.1 we have added `.text-hide()` and deprecated `.hide-text()`. Note\n// that we cannot chain the mixins together in Less, so they are repeated.\n//\n// Source: https://github.com/h5bp/html5-boilerplate/commit/aa0396eae757\n\n// Deprecated as of v3.0.1 (will be removed in v4)\n.hide-text() {\n  font: ~\"0/0\" a;\n  color: transparent;\n  text-shadow: none;\n  background-color: transparent;\n  border: 0;\n}\n// New mixin to use as of v3.0.1\n.text-hide() {\n  .hide-text();\n}\n\n\n\n// CSS3 PROPERTIES\n// --------------------------------------------------\n\n// Single side border-radius\n.border-top-radius(@radius) {\n  border-top-right-radius: @radius;\n   border-top-left-radius: @radius;\n}\n.border-right-radius(@radius) {\n  border-bottom-right-radius: @radius;\n     border-top-right-radius: @radius;\n}\n.border-bottom-radius(@radius) {\n  border-bottom-right-radius: @radius;\n   border-bottom-left-radius: @radius;\n}\n.border-left-radius(@radius) {\n  border-bottom-left-radius: @radius;\n     border-top-left-radius: @radius;\n}\n\n// Drop shadows\n//\n// Note: Deprecated `.box-shadow()` as of v3.1.0 since all of Bootstrap's\n//   supported browsers that have box shadow capabilities now support the\n//   standard `box-shadow` property.\n.box-shadow(@shadow) {\n  -webkit-box-shadow: @shadow; // iOS <4.3 & Android <4.1\n          box-shadow: @shadow;\n}\n\n// Transitions\n.transition(@transition) {\n  -webkit-transition: @transition;\n          transition: @transition;\n}\n.transition-property(@transition-property) {\n  -webkit-transition-property: @transition-property;\n          transition-property: @transition-property;\n}\n.transition-delay(@transition-delay) {\n  -webkit-transition-delay: @transition-delay;\n          transition-delay: @transition-delay;\n}\n.transition-duration(@transition-duration) {\n  -webkit-transition-duration: @transition-duration;\n          transition-duration: @transition-duration;\n}\n.transition-transform(@transition) {\n  -webkit-transition: -webkit-transform @transition;\n     -moz-transition: -moz-transform @transition;\n       -o-transition: -o-transform @transition;\n          transition: transform @transition;\n}\n\n// Transformations\n.rotate(@degrees) {\n  -webkit-transform: rotate(@degrees);\n      -ms-transform: rotate(@degrees); // IE9 only\n          transform: rotate(@degrees);\n}\n.scale(@ratio; @ratio-y...) {\n  -webkit-transform: scale(@ratio, @ratio-y);\n      -ms-transform: scale(@ratio, @ratio-y); // IE9 only\n          transform: scale(@ratio, @ratio-y);\n}\n.translate(@x; @y) {\n  -webkit-transform: translate(@x, @y);\n      -ms-transform: translate(@x, @y); // IE9 only\n          transform: translate(@x, @y);\n}\n.skew(@x; @y) {\n  -webkit-transform: skew(@x, @y);\n      -ms-transform: skewX(@x) skewY(@y); // See https://github.com/twbs/bootstrap/issues/4885; IE9+\n          transform: skew(@x, @y);\n}\n.translate3d(@x; @y; @z) {\n  -webkit-transform: translate3d(@x, @y, @z);\n          transform: translate3d(@x, @y, @z);\n}\n\n.rotateX(@degrees) {\n  -webkit-transform: rotateX(@degrees);\n      -ms-transform: rotateX(@degrees); // IE9 only\n          transform: rotateX(@degrees);\n}\n.rotateY(@degrees) {\n  -webkit-transform: rotateY(@degrees);\n      -ms-transform: rotateY(@degrees); // IE9 only\n          transform: rotateY(@degrees);\n}\n.perspective(@perspective) {\n  -webkit-perspective: @perspective;\n     -moz-perspective: @perspective;\n          perspective: @perspective;\n}\n.perspective-origin(@perspective) {\n  -webkit-perspective-origin: @perspective;\n     -moz-perspective-origin: @perspective;\n          perspective-origin: @perspective;\n}\n.transform-origin(@origin) {\n  -webkit-transform-origin: @origin;\n     -moz-transform-origin: @origin;\n      -ms-transform-origin: @origin; // IE9 only\n          transform-origin: @origin;\n}\n\n// Animations\n.animation(@animation) {\n  -webkit-animation: @animation;\n          animation: @animation;\n}\n.animation-name(@name) {\n  -webkit-animation-name: @name;\n          animation-name: @name;\n}\n.animation-duration(@duration) {\n  -webkit-animation-duration: @duration;\n          animation-duration: @duration;\n}\n.animation-timing-function(@timing-function) {\n  -webkit-animation-timing-function: @timing-function;\n          animation-timing-function: @timing-function;\n}\n.animation-delay(@delay) {\n  -webkit-animation-delay: @delay;\n          animation-delay: @delay;\n}\n.animation-iteration-count(@iteration-count) {\n  -webkit-animation-iteration-count: @iteration-count;\n          animation-iteration-count: @iteration-count;\n}\n.animation-direction(@direction) {\n  -webkit-animation-direction: @direction;\n          animation-direction: @direction;\n}\n\n// Backface visibility\n// Prevent browsers from flickering when using CSS 3D transforms.\n// Default value is `visible`, but can be changed to `hidden`\n.backface-visibility(@visibility){\n  -webkit-backface-visibility: @visibility;\n     -moz-backface-visibility: @visibility;\n          backface-visibility: @visibility;\n}\n\n// Box sizing\n.box-sizing(@boxmodel) {\n  -webkit-box-sizing: @boxmodel;\n     -moz-box-sizing: @boxmodel;\n          box-sizing: @boxmodel;\n}\n\n// User select\n// For selecting text on the page\n.user-select(@select) {\n  -webkit-user-select: @select;\n     -moz-user-select: @select;\n      -ms-user-select: @select; // IE10+\n       -o-user-select: @select;\n          user-select: @select;\n}\n\n// Resize anything\n.resizable(@direction) {\n  resize: @direction; // Options: horizontal, vertical, both\n  overflow: auto; // Safari fix\n}\n\n// CSS3 Content Columns\n.content-columns(@column-count; @column-gap: @grid-gutter-width) {\n  -webkit-column-count: @column-count;\n     -moz-column-count: @column-count;\n          column-count: @column-count;\n  -webkit-column-gap: @column-gap;\n     -moz-column-gap: @column-gap;\n          column-gap: @column-gap;\n}\n\n// Optional hyphenation\n.hyphens(@mode: auto) {\n  word-wrap: break-word;\n  -webkit-hyphens: @mode;\n     -moz-hyphens: @mode;\n      -ms-hyphens: @mode; // IE10+\n       -o-hyphens: @mode;\n          hyphens: @mode;\n}\n\n// Opacity\n.opacity(@opacity) {\n  opacity: @opacity;\n  // IE8 filter\n  @opacity-ie: (@opacity * 100);\n  filter: ~\"alpha(opacity=@{opacity-ie})\";\n}\n\n\n\n// GRADIENTS\n// --------------------------------------------------\n\n#gradient {\n\n  // Horizontal gradient, from left to right\n  //\n  // Creates two color stops, start and end, by specifying a color and position for each color stop.\n  // Color stops are not available in IE9 and below.\n  .horizontal(@start-color: #555; @end-color: #333; @start-percent: 0%; @end-percent: 100%) {\n    background-image: -webkit-linear-gradient(left, color-stop(@start-color @start-percent), color-stop(@end-color @end-percent)); // Safari 5.1-6, Chrome 10+\n    background-image:  linear-gradient(to right, @start-color @start-percent, @end-color @end-percent); // Standard, IE10, Firefox 16+, Opera 12.10+, Safari 7+, Chrome 26+\n    background-repeat: repeat-x;\n    filter: e(%(\"progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=1)\",argb(@start-color),argb(@end-color))); // IE9 and down\n  }\n\n  // Vertical gradient, from top to bottom\n  //\n  // Creates two color stops, start and end, by specifying a color and position for each color stop.\n  // Color stops are not available in IE9 and below.\n  .vertical(@start-color: #555; @end-color: #333; @start-percent: 0%; @end-percent: 100%) {\n    background-image: -webkit-linear-gradient(top, @start-color @start-percent, @end-color @end-percent);  // Safari 5.1-6, Chrome 10+\n    background-image: linear-gradient(to bottom, @start-color @start-percent, @end-color @end-percent); // Standard, IE10, Firefox 16+, Opera 12.10+, Safari 7+, Chrome 26+\n    background-repeat: repeat-x;\n    filter: e(%(\"progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)\",argb(@start-color),argb(@end-color))); // IE9 and down\n  }\n\n  .directional(@start-color: #555; @end-color: #333; @deg: 45deg) {\n    background-repeat: repeat-x;\n    background-image: -webkit-linear-gradient(@deg, @start-color, @end-color); // Safari 5.1-6, Chrome 10+\n    background-image: linear-gradient(@deg, @start-color, @end-color); // Standard, IE10, Firefox 16+, Opera 12.10+, Safari 7+, Chrome 26+\n  }\n  .horizontal-three-colors(@start-color: #00b3ee; @mid-color: #7a43b6; @color-stop: 50%; @end-color: #c3325f) {\n    background-image: -webkit-linear-gradient(left, @start-color, @mid-color @color-stop, @end-color);\n    background-image: linear-gradient(to right, @start-color, @mid-color @color-stop, @end-color);\n    background-repeat: no-repeat;\n    filter: e(%(\"progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=1)\",argb(@start-color),argb(@end-color))); // IE9 and down, gets no color-stop at all for proper fallback\n  }\n  .vertical-three-colors(@start-color: #00b3ee; @mid-color: #7a43b6; @color-stop: 50%; @end-color: #c3325f) {\n    background-image: -webkit-linear-gradient(@start-color, @mid-color @color-stop, @end-color);\n    background-image: linear-gradient(@start-color, @mid-color @color-stop, @end-color);\n    background-repeat: no-repeat;\n    filter: e(%(\"progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)\",argb(@start-color),argb(@end-color))); // IE9 and down, gets no color-stop at all for proper fallback\n  }\n  .radial(@inner-color: #555; @outer-color: #333) {\n    background-image: -webkit-radial-gradient(circle, @inner-color, @outer-color);\n    background-image: radial-gradient(circle, @inner-color, @outer-color);\n    background-repeat: no-repeat;\n  }\n  .striped(@color: rgba(255,255,255,.15); @angle: 45deg) {\n    background-image: -webkit-linear-gradient(@angle, @color 25%, transparent 25%, transparent 50%, @color 50%, @color 75%, transparent 75%, transparent);\n    background-image: linear-gradient(@angle, @color 25%, transparent 25%, transparent 50%, @color 50%, @color 75%, transparent 75%, transparent);\n  }\n}\n\n// Reset filters for IE\n//\n// When you need to remove a gradient background, do not forget to use this to reset\n// the IE filter for IE9 and below.\n.reset-filter() {\n  filter: e(%(\"progid:DXImageTransform.Microsoft.gradient(enabled = false)\"));\n}\n\n\n\n// Retina images\n//\n// Short retina mixin for setting background-image and -size\n\n.img-retina(@file-1x; @file-2x; @width-1x; @height-1x) {\n  background-image: url(\"@{file-1x}\");\n\n  @media\n  only screen and (-webkit-min-device-pixel-ratio: 2),\n  only screen and (   min--moz-device-pixel-ratio: 2),\n  only screen and (     -o-min-device-pixel-ratio: 2/1),\n  only screen and (        min-device-pixel-ratio: 2),\n  only screen and (                min-resolution: 192dpi),\n  only screen and (                min-resolution: 2dppx) {\n    background-image: url(\"@{file-2x}\");\n    background-size: @width-1x @height-1x;\n  }\n}\n\n\n// Responsive image\n//\n// Keep images from scaling beyond the width of their parents.\n\n.img-responsive(@display: block) {\n  display: @display;\n  max-width: 100%; // Part 1: Set a maximum relative to the parent\n  height: auto; // Part 2: Scale the height according to the width, otherwise you get stretching\n}\n\n\n// COMPONENT MIXINS\n// --------------------------------------------------\n\n// Horizontal dividers\n// -------------------------\n// Dividers (basically an hr) within dropdowns and nav lists\n.nav-divider(@color: #e5e5e5) {\n  height: 1px;\n  margin: ((@line-height-computed / 2) - 1) 0;\n  overflow: hidden;\n  background-color: @color;\n}\n\n// Panels\n// -------------------------\n.panel-variant(@border; @heading-text-color; @heading-bg-color; @heading-border) {\n  border-color: @border;\n\n  & > .panel-heading {\n    color: @heading-text-color;\n    background-color: @heading-bg-color;\n    border-color: @heading-border;\n\n    + .panel-collapse .panel-body {\n      border-top-color: @border;\n    }\n  }\n  & > .panel-footer {\n    + .panel-collapse .panel-body {\n      border-bottom-color: @border;\n    }\n  }\n}\n\n// Alerts\n// -------------------------\n.alert-variant(@background; @border; @text-color) {\n  background-color: @background;\n  border-color: @border;\n  color: @text-color;\n\n  hr {\n    border-top-color: darken(@border, 5%);\n  }\n  .alert-link {\n    color: darken(@text-color, 10%);\n  }\n}\n\n// Tables\n// -------------------------\n.table-row-variant(@state; @background) {\n  // Exact selectors below required to override `.table-striped` and prevent\n  // inheritance to nested tables.\n  .table > thead > tr,\n  .table > tbody > tr,\n  .table > tfoot > tr {\n    > td.@{state},\n    > th.@{state},\n    &.@{state} > td,\n    &.@{state} > th {\n      background-color: @background;\n    }\n  }\n\n  // Hover states for `.table-hover`\n  // Note: this is not available for cells or rows within `thead` or `tfoot`.\n  .table-hover > tbody > tr {\n    > td.@{state}:hover,\n    > th.@{state}:hover,\n    &.@{state}:hover > td,\n    &.@{state}:hover > th {\n      background-color: darken(@background, 5%);\n    }\n  }\n}\n\n// List Groups\n// -------------------------\n.list-group-item-variant(@state; @background; @color) {\n  .list-group-item-@{state} {\n    color: @color;\n    background-color: @background;\n\n    a& {\n      color: @color;\n\n      .list-group-item-heading { color: inherit; }\n\n      &:hover,\n      &:focus {\n        color: @color;\n        background-color: darken(@background, 5%);\n      }\n      &.active,\n      &.active:hover,\n      &.active:focus {\n        color: #fff;\n        background-color: @color;\n        border-color: @color;\n      }\n    }\n  }\n}\n\n// Button variants\n// -------------------------\n// Easily pump out default styles, as well as :hover, :focus, :active,\n// and disabled options for all buttons\n.button-variant(@color; @background; @border) {\n  color: @color;\n  background-color: @background;\n  border-color: @border;\n\n  &:hover,\n  &:focus,\n  &:active,\n  &.active,\n  .open .dropdown-toggle& {\n    color: @color;\n    background-color: darken(@background, 8%);\n        border-color: darken(@border, 12%);\n  }\n  &:active,\n  &.active,\n  .open .dropdown-toggle& {\n    background-image: none;\n  }\n  &.disabled,\n  &[disabled],\n  fieldset[disabled] & {\n    &,\n    &:hover,\n    &:focus,\n    &:active,\n    &.active {\n      background-color: @background;\n          border-color: @border;\n    }\n  }\n\n  .badge {\n    color: @background;\n    background-color: @color;\n  }\n}\n\n// Button sizes\n// -------------------------\n.button-size(@padding-vertical; @padding-horizontal; @font-size; @line-height; @border-radius) {\n  padding: @padding-vertical @padding-horizontal;\n  font-size: @font-size;\n  line-height: @line-height;\n  border-radius: @border-radius;\n}\n\n// Pagination\n// -------------------------\n.pagination-size(@padding-vertical; @padding-horizontal; @font-size; @border-radius) {\n  > li {\n    > a,\n    > span {\n      padding: @padding-vertical @padding-horizontal;\n      font-size: @font-size;\n    }\n    &:first-child {\n      > a,\n      > span {\n        .border-left-radius(@border-radius);\n      }\n    }\n    &:last-child {\n      > a,\n      > span {\n        .border-right-radius(@border-radius);\n      }\n    }\n  }\n}\n\n// Labels\n// -------------------------\n.label-variant(@color) {\n  background-color: @color;\n  &[href] {\n    &:hover,\n    &:focus {\n      background-color: darken(@color, 10%);\n    }\n  }\n}\n\n// Contextual backgrounds\n// -------------------------\n.bg-variant(@color) {\n  background-color: @color;\n  a&:hover {\n    background-color: darken(@color, 10%);\n  }\n}\n\n// Typography\n// -------------------------\n.text-emphasis-variant(@color) {\n  color: @color;\n  a&:hover {\n    color: darken(@color, 10%);\n  }\n}\n\n// Navbar vertical align\n// -------------------------\n// Vertically center elements in the navbar.\n// Example: an element has a height of 30px, so write out `.navbar-vertical-align(30px);` to calculate the appropriate top margin.\n.navbar-vertical-align(@element-height) {\n  margin-top: ((@navbar-height - @element-height) / 2);\n  margin-bottom: ((@navbar-height - @element-height) / 2);\n}\n\n// Progress bars\n// -------------------------\n.progress-bar-variant(@color) {\n  background-color: @color;\n  .progress-striped & {\n    #gradient > .striped();\n  }\n}\n\n// Responsive utilities\n// -------------------------\n// More easily include all the states for responsive-utilities.less.\n.responsive-visibility() {\n  display: block !important;\n  table&  { display: table; }\n  tr&     { display: table-row !important; }\n  th&,\n  td&     { display: table-cell !important; }\n}\n\n.responsive-invisibility() {\n    &,\n  tr&,\n  th&,\n  td& { display: none !important; }\n}\n\n\n// Grid System\n// -----------\n\n// Centered container element\n.container-fixed() {\n  margin-right: auto;\n  margin-left: auto;\n  padding-left:  (@grid-gutter-width / 2);\n  padding-right: (@grid-gutter-width / 2);\n  &:extend(.clearfix all);\n}\n\n// Creates a wrapper for a series of columns\n.make-row(@gutter: @grid-gutter-width) {\n  margin-left:  (@gutter / -2);\n  margin-right: (@gutter / -2);\n  &:extend(.clearfix all);\n}\n\n// Generate the extra small columns\n.make-xs-column(@columns; @gutter: @grid-gutter-width) {\n  position: relative;\n  float: left;\n  width: percentage((@columns / @grid-columns));\n  min-height: 1px;\n  padding-left:  (@gutter / 2);\n  padding-right: (@gutter / 2);\n}\n.make-xs-column-offset(@columns) {\n  @media (min-width: @screen-xs-min) {\n    margin-left: percentage((@columns / @grid-columns));\n  }\n}\n.make-xs-column-push(@columns) {\n  @media (min-width: @screen-xs-min) {\n    left: percentage((@columns / @grid-columns));\n  }\n}\n.make-xs-column-pull(@columns) {\n  @media (min-width: @screen-xs-min) {\n    right: percentage((@columns / @grid-columns));\n  }\n}\n\n\n// Generate the small columns\n.make-sm-column(@columns; @gutter: @grid-gutter-width) {\n  position: relative;\n  min-height: 1px;\n  padding-left:  (@gutter / 2);\n  padding-right: (@gutter / 2);\n\n  @media (min-width: @screen-sm-min) {\n    float: left;\n    width: percentage((@columns / @grid-columns));\n  }\n}\n.make-sm-column-offset(@columns) {\n  @media (min-width: @screen-sm-min) {\n    margin-left: percentage((@columns / @grid-columns));\n  }\n}\n.make-sm-column-push(@columns) {\n  @media (min-width: @screen-sm-min) {\n    left: percentage((@columns / @grid-columns));\n  }\n}\n.make-sm-column-pull(@columns) {\n  @media (min-width: @screen-sm-min) {\n    right: percentage((@columns / @grid-columns));\n  }\n}\n\n\n// Generate the medium columns\n.make-md-column(@columns; @gutter: @grid-gutter-width) {\n  position: relative;\n  min-height: 1px;\n  padding-left:  (@gutter / 2);\n  padding-right: (@gutter / 2);\n\n  @media (min-width: @screen-md-min) {\n    float: left;\n    width: percentage((@columns / @grid-columns));\n  }\n}\n.make-md-column-offset(@columns) {\n  @media (min-width: @screen-md-min) {\n    margin-left: percentage((@columns / @grid-columns));\n  }\n}\n.make-md-column-push(@columns) {\n  @media (min-width: @screen-md-min) {\n    left: percentage((@columns / @grid-columns));\n  }\n}\n.make-md-column-pull(@columns) {\n  @media (min-width: @screen-md-min) {\n    right: percentage((@columns / @grid-columns));\n  }\n}\n\n\n// Generate the large columns\n.make-lg-column(@columns; @gutter: @grid-gutter-width) {\n  position: relative;\n  min-height: 1px;\n  padding-left:  (@gutter / 2);\n  padding-right: (@gutter / 2);\n\n  @media (min-width: @screen-lg-min) {\n    float: left;\n    width: percentage((@columns / @grid-columns));\n  }\n}\n.make-lg-column-offset(@columns) {\n  @media (min-width: @screen-lg-min) {\n    margin-left: percentage((@columns / @grid-columns));\n  }\n}\n.make-lg-column-push(@columns) {\n  @media (min-width: @screen-lg-min) {\n    left: percentage((@columns / @grid-columns));\n  }\n}\n.make-lg-column-pull(@columns) {\n  @media (min-width: @screen-lg-min) {\n    right: percentage((@columns / @grid-columns));\n  }\n}\n\n\n// Framework grid generation\n//\n// Used only by Bootstrap to generate the correct number of grid classes given\n// any value of `@grid-columns`.\n\n.make-grid-columns() {\n  // Common styles for all sizes of grid columns, widths 1-12\n  .col(@index) when (@index = 1) { // initial\n    @item: ~\".col-xs-@{index}, .col-sm-@{index}, .col-md-@{index}, .col-lg-@{index}\";\n    .col((@index + 1), @item);\n  }\n  .col(@index, @list) when (@index =< @grid-columns) { // general; \"=<\" isn't a typo\n    @item: ~\".col-xs-@{index}, .col-sm-@{index}, .col-md-@{index}, .col-lg-@{index}\";\n    .col((@index + 1), ~\"@{list}, @{item}\");\n  }\n  .col(@index, @list) when (@index > @grid-columns) { // terminal\n    @{list} {\n      position: relative;\n      // Prevent columns from collapsing when empty\n      min-height: 1px;\n      // Inner gutter via padding\n      padding-left:  (@grid-gutter-width / 2);\n      padding-right: (@grid-gutter-width / 2);\n    }\n  }\n  .col(1); // kickstart it\n}\n\n.make-grid-columns-float(@class) {\n  .col(@index) when (@index = 1) { // initial\n    @item: ~\".col-@{class}-@{index}\";\n    .col((@index + 1), @item);\n  }\n  .col(@index, @list) when (@index =< @grid-columns) { // general\n    @item: ~\".col-@{class}-@{index}\";\n    .col((@index + 1), ~\"@{list}, @{item}\");\n  }\n  .col(@index, @list) when (@index > @grid-columns) { // terminal\n    @{list} {\n      float: left;\n    }\n  }\n  .col(1); // kickstart it\n}\n\n.calc-grid(@index, @class, @type) when (@type = width) and (@index > 0) {\n  .col-@{class}-@{index} {\n    width: percentage((@index / @grid-columns));\n  }\n}\n.calc-grid(@index, @class, @type) when (@type = push) {\n  .col-@{class}-push-@{index} {\n    left: percentage((@index / @grid-columns));\n  }\n}\n.calc-grid(@index, @class, @type) when (@type = pull) {\n  .col-@{class}-pull-@{index} {\n    right: percentage((@index / @grid-columns));\n  }\n}\n.calc-grid(@index, @class, @type) when (@type = offset) {\n  .col-@{class}-offset-@{index} {\n    margin-left: percentage((@index / @grid-columns));\n  }\n}\n\n// Basic looping in LESS\n.make-grid(@index, @class, @type) when (@index >= 0) {\n  .calc-grid(@index, @class, @type);\n  // next iteration\n  .make-grid((@index - 1), @class, @type);\n}\n\n\n// Form validation states\n//\n// Used in forms.less to generate the form validation CSS for warnings, errors,\n// and successes.\n\n.form-control-validation(@text-color: #555; @border-color: #ccc; @background-color: #f5f5f5) {\n  // Color the label and help text\n  .help-block,\n  .control-label,\n  .radio,\n  .checkbox,\n  .radio-inline,\n  .checkbox-inline  {\n    color: @text-color;\n  }\n  // Set the border and box shadow on specific inputs to match\n  .form-control {\n    border-color: @border-color;\n    .box-shadow(inset 0 1px 1px rgba(0,0,0,.075)); // Redeclare so transitions work\n    &:focus {\n      border-color: darken(@border-color, 10%);\n      @shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 6px lighten(@border-color, 20%);\n      .box-shadow(@shadow);\n    }\n  }\n  // Set validation states also for addons\n  .input-group-addon {\n    color: @text-color;\n    border-color: @border-color;\n    background-color: @background-color;\n  }\n  // Optional feedback icon\n  .form-control-feedback {\n    color: @text-color;\n  }\n}\n\n// Form control focus state\n//\n// Generate a customized focus state and for any input with the specified color,\n// which defaults to the `@input-focus-border` variable.\n//\n// We highly encourage you to not customize the default value, but instead use\n// this to tweak colors on an as-needed basis. This aesthetic change is based on\n// WebKit's default styles, but applicable to a wider range of browsers. Its\n// usability and accessibility should be taken into account with any change.\n//\n// Example usage: change the default blue border and shadow to white for better\n// contrast against a dark gray background.\n\n.form-control-focus(@color: @input-border-focus) {\n  @color-rgba: rgba(red(@color), green(@color), blue(@color), .6);\n  &:focus {\n    border-color: @color;\n    outline: 0;\n    .box-shadow(~\"inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px @{color-rgba}\");\n  }\n}\n\n// Form control sizing\n//\n// Relative text size, padding, and border-radii changes for form controls. For\n// horizontal sizing, wrap controls in the predefined grid classes. `<select>`\n// element gets special love because it's special, and that's a fact!\n\n.input-size(@input-height; @padding-vertical; @padding-horizontal; @font-size; @line-height; @border-radius) {\n  height: @input-height;\n  padding: @padding-vertical @padding-horizontal;\n  font-size: @font-size;\n  line-height: @line-height;\n  border-radius: @border-radius;\n\n  select& {\n    height: @input-height;\n    line-height: @input-height;\n  }\n\n  textarea&,\n  select[multiple]& {\n    height: auto;\n  }\n}\n"]}
+
+--- ./css/owl.carousel.min.css ---
+/**
+ * Owl Carousel v2.3.4
+ * Copyright 2013-2018 David Deutsch
+ * Licensed under: SEE LICENSE IN https://github.com/OwlCarousel2/OwlCarousel2/blob/master/LICENSE
+ */
+ .owl-carousel,.owl-carousel .owl-item{-webkit-tap-highlight-color:transparent;position:relative}.owl-carousel{display:none;width:100%;z-index:1}.owl-carousel .owl-stage{position:relative;-ms-touch-action:pan-Y;touch-action:manipulation;-moz-backface-visibility:hidden}.owl-carousel .owl-stage:after{content:".";display:block;clear:both;visibility:hidden;line-height:0;height:0}.owl-carousel .owl-stage-outer{position:relative;overflow:hidden;-webkit-transform:translate3d(0,0,0)}.owl-carousel .owl-item,.owl-carousel .owl-wrapper{-webkit-backface-visibility:hidden;-moz-backface-visibility:hidden;-ms-backface-visibility:hidden;-webkit-transform:translate3d(0,0,0);-moz-transform:translate3d(0,0,0);-ms-transform:translate3d(0,0,0)}.owl-carousel .owl-item{min-height:1px;float:left;-webkit-backface-visibility:hidden;-webkit-touch-callout:none}.owl-carousel .owl-item img{display:block;width:100%}.owl-carousel .owl-dots.disabled,.owl-carousel .owl-nav.disabled{display:none}.no-js .owl-carousel,.owl-carousel.owl-loaded{display:block}.owl-carousel .owl-dot,.owl-carousel .owl-nav .owl-next,.owl-carousel .owl-nav .owl-prev{cursor:pointer;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.owl-carousel .owl-nav button.owl-next,.owl-carousel .owl-nav button.owl-prev,.owl-carousel button.owl-dot{background:0 0;color:inherit;border:none;padding:0!important;font:inherit}.owl-carousel.owl-loading{opacity:0;display:block}.owl-carousel.owl-hidden{opacity:0}.owl-carousel.owl-refresh .owl-item{visibility:hidden}.owl-carousel.owl-drag .owl-item{-ms-touch-action:pan-y;touch-action:pan-y;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.owl-carousel.owl-grab{cursor:move;cursor:grab}.owl-carousel.owl-rtl{direction:rtl}.owl-carousel.owl-rtl .owl-item{float:right}.owl-carousel .animated{animation-duration:1s;animation-fill-mode:both}.owl-carousel .owl-animated-in{z-index:0}.owl-carousel .owl-animated-out{z-index:1}.owl-carousel .fadeOut{animation-name:fadeOut}@keyframes fadeOut{0%{opacity:1}100%{opacity:0}}.owl-height{transition:height .5s ease-in-out}.owl-carousel .owl-item .owl-lazy{opacity:0;transition:opacity .4s ease}.owl-carousel .owl-item .owl-lazy:not([src]),.owl-carousel .owl-item .owl-lazy[src^=""]{max-height:0}.owl-carousel .owl-item img.owl-lazy{transform-style:preserve-3d}.owl-carousel .owl-video-wrapper{position:relative;height:100%;background:#000}.owl-carousel .owl-video-play-icon{position:absolute;height:80px;width:80px;left:50%;top:50%;margin-left:-40px;margin-top:-40px;background:url(owl.video.play.png) no-repeat;cursor:pointer;z-index:1;-webkit-backface-visibility:hidden;transition:transform .1s ease}.owl-carousel .owl-video-play-icon:hover{-ms-transform:scale(1.3,1.3);transform:scale(1.3,1.3)}.owl-carousel .owl-video-playing .owl-video-play-icon,.owl-carousel .owl-video-playing .owl-video-tn{display:none}.owl-carousel .owl-video-tn{opacity:0;height:100%;background-position:center center;background-repeat:no-repeat;background-size:contain;transition:opacity .4s ease}.owl-carousel .owl-video-frame{position:relative;z-index:1;height:100%;width:100%}
 
 --- ./css/font-awesome.min.css ---
 /*!
@@ -29456,6 +30012,7 @@ function backgroundResize(){
 $(window).resize(backgroundResize);
 $(window).focus(backgroundResize);
 backgroundResize();
+
 
 /* set parallax background-position 
 ----------------------------------------------*/
