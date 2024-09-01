@@ -92,9 +92,8 @@
                             const feature = features[0];
                             const coordinates = e.lngLat;
                             const description = `
-                                <strong>${feature.properties.name}</strong><br>
-                                Description: ${feature.properties.description}<br>
-                                Estimated Impressions: ${feature.properties.points_count}
+                                Exposure Zone: <strong>${feature.properties.name}<br></strong>
+                                Estimated Impressions: <strong>${feature.properties.points_count}</strong>
                             `;
 
                             popup
@@ -111,7 +110,7 @@
 
                     // Change the cursor to a pointer when the mouse is over the polygons layer
                     map.on('mouseenter', 'polygons-layer', () => {
-                        map.getCanvas().style.cursor = 'pointer';
+                        map.getCanvas().style.cursor = 'pointer' ;
                     });
                 })
                 .catch(error => console.error('Error loading GeoJSON:', error));

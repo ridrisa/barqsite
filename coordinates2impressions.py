@@ -103,6 +103,7 @@ def get_dynamic_color(points_count, min_count, max_count):
         return '#ec739b'
 
 # Convert polygons with intensity to GeoJSON features
+# Convert polygons with intensity to GeoJSON features
 features = []
 for polygon in polygons:
     color = get_dynamic_color(polygon['points_count'], min_count, max_count)
@@ -113,7 +114,7 @@ for polygon in polygons:
             "name": polygon['name'],
             "description": polygon['description'],
             "points_count": polygon['points_count'],
-            "color": color
+            "color": color  # Assign dynamic color
         }
     })
 
