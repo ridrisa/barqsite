@@ -138,6 +138,7 @@ $(window).resize(backgroundResize);
 $(window).focus(backgroundResize);
 backgroundResize();
 
+
 /* set parallax background-position 
 ----------------------------------------------*/
 function parallaxPosition(e){
