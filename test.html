@@ -400,6 +400,18 @@
             <div class="feature-item"><h3 class="font-semibold text-lg">Digital Displays</h3><p>Leverage dynamic digital screens for real-time, location-based messaging.</p></div>
         </div>
     </section>
+    <section id="visualizer" class="container mx-auto p-6">
+        <h2 class="text-center text-3xl font-bold">Vehicle Wrap Visualizer</h2>
+        <form>
+            <div class="form-group"><label for="vehicle-select">Select Vehicle</label><select id="vehicle-select" class="form-control"><option>Sedan</option><option>SUV</option><option>Truck</option></select></div>
+            <div class="form-group"><label for="wrap-type">Wrap Type</label><select id="wrap-type" class="form-control"><option>Full Wrap</option><option>Partial Wrap</option></select></div>
+            <div class="form-group"><label for="primary-color">Primary Color</label><input type="color" id="primary-color" class="form-control"></div>
+            <div class="form-group"><label for="secondary-color">Secondary Color</label><input type="color" id="secondary-color" class="form-control"></div>
+            <div class="form-group"><label for="logo-upload">Upload Logo</label><input type="file" id="logo-upload" class="form-control"></div>
+            <button type="submit" class="btn btn-primary">Apply Changes</button>
+            <button type="button" class="btn btn-secondary">Download Design</button>
+        </form>
+    </section>
     <div class="creative-map-container container mx-auto p-6" style="position: relative; height: 500px; overflow: hidden; background-color: #f5f5f5;">
         <iframe src="map.html" style="width:100%; height: 100%; border:none; filter: grayscale(100%); transition: filter 0.5s;"></iframe>
         <!-- Overlay Elements -->
@@ -413,6 +425,11 @@
         <h2 class="text-center text-3xl font-bold">Our Reach</h2>
         <div id="map" class="map-container mb-4"></div>
         <p>See how our network spans across the city with precision targeting and unmatched coverage.</p>
+    </section>
+    <section id="webgl" class="container mx-auto p-6">
+        <h2 class="text-center text-3xl font-bold">WebGL Experience</h2>
+        <canvas id="glCanvas"></canvas>
+        <p class="text-center mt-4">Enjoy a simple WebGL rendering demo below!</p>
     </section>
     <footer id="contact">
         <div class="container mx-auto p-6">
