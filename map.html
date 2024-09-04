@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Riyadh Impressions Map</title>
     <script src="https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.js"></script>
-    <link href="https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.css" rel="stylesheet" />
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.css" rel="stylesheet"/>
     <style>
         body {
             margin: 0;
@@ -96,21 +96,26 @@
                                 Estimated Impressions: <strong>${feature.properties.points_count}</strong>
                             `;
 
-                            popup
-                                .setLngLat(coordinates)
-                                .setHTML(description)
-                                .addTo(map);
+                            // Check if the popup is already open before creating a new one
+                            if (!popup.isOpen()) {
+                                popup.setLngLat(coordinates)
+                                     .setHTML(description)
+                                     .addTo(map);
+                            } else {
+                                popup.setLngLat(coordinates)
+                                     .setHTML(description);
+                            }
                         }
                     });
 
                     map.on('mouseleave', 'polygons-layer', () => {
                         popup.remove();  // Remove the popup when the mouse leaves the polygon
-                        map.getCanvas().style.cursor = '';  // Reset the cursor to default
+                        map.getCanvas().style.cursor = 'default';  // Reset the cursor to default
                     });
 
                     // Change the cursor to a pointer when the mouse is over the polygons layer
                     map.on('mouseenter', 'polygons-layer', () => {
-                        map.getCanvas().style.cursor = 'pointer' ;
+                        map.getCanvas().style.cursor = 'pointer';
                     });
                 })
                 .catch(error => console.error('Error loading GeoJSON:', error));

@@ -1,0 +1,325 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+    <title>BARQ ADS - Transform Your Advertising</title>
+    <!-- Core CSS Files -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/owl.carousel.min.css" rel="stylesheet">
+    <link href="css/pe-icon-7-stroke.min.css" rel="stylesheet">
+    <!-- Animations -->
+    <link href="css/animate.min.css" rel="stylesheet" media="screen">
+    <!-- Carousel Styles -->
+    <link href="css/owl.carousel.min.css" rel="stylesheet">
+    <!-- Custom Styles -->
+    <link href="css/styles.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts --> 
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:100,300,400,700" rel="stylesheet" type="text/css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #ffffff;
+            color: #334155;
+            scroll-behavior: smooth;
+        }
+        .gradient-bg {
+            background: linear-gradient(to right, #6ee7b7, #3b82f6);
+        }
+        .animated-section {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .animated-section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .hero {
+            background-image: url('./images/hero-bg.jpg');
+            padding: 120px 0;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+        .parallax {
+            background: url('./images/parallax-bg.jpg') no-repeat center center fixed;
+            height: 500px;
+            background-size: cover;
+        }
+        #glCanvas {
+            width: 100%;
+            height: 500px;
+            background: #000;
+        }
+    </style>
+</head>
+<body>
+    <header class="gradient-bg text-white p-5">
+        <h1 class="text-3xl font-bold">BARQ ADS - Transform Your Advertising</h1>
+        <nav class="mt-3">
+            <a href="#intro" class="mx-3 hover:underline">Home</a>
+            <a href="#features" class="mx-3 hover:underline">Features</a>
+            <a href="#how-it-works" class="mx-3 hover:underline">How It Works</a>
+            <a href="#business-benefits" class="mx-3 hover:underline">Business Benefits</a>
+            <a href="#campaign" class="mx-3 hover:underline">Start Campaign</a>
+            <a href="#types" class="mx-3 hover:underline">Ad Types</a>
+            <a href="#testimonials" class="mx-3 hover:underline">Testimonials</a>
+            <a href="#faq" class="mx-3 hover:underline">FAQ</a>
+            <a href="#blog" class="mx-3 hover:underline">Blog</a>
+            <a href="#map" class="mx-3 hover:underline">Our Reach</a>
+            <a href="#webgl" class="mx-3 hover:underline">WebGL</a>
+            <a href="#contact" class="mx-3 hover:underline">Contact</a>
+        </nav>
+    </header>
+    <div id="intro" class="hero flex items-center justify-center text-center">
+        <div class="bg-black bg-opacity-50 p-10 rounded-lg">
+            <h1 class="text-5xl font-bold text-white">Drive Your Brand Across the City with Barq Ads</h1>
+            <p class="text-lg text-white mt-4">Your logo travels through every street, grabbing attention at every turn.</p>
+            <a href="#campaign" class="bg-blue-600 text-white px-4 py-2 rounded-lg inline-block mt-6 transition-transform transform hover:scale-105">Start Your Campaign</a>
+        </div>
+    </div>
+    <section id="features" class="container mx-auto p-6">
+        <h2 class="text-center text-3xl font-bold">Why Choose Barq Ads</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-6">
+            <div class="feature-item p-5 rounded-lg bg-white shadow-lg hover:shadow-xl transition-shadow">
+                <img src="./images/Picture2.png" alt="Massive Exposure" class="w-full mb-4 rounded-lg">
+                <h3 class="font-semibold text-lg">Massive Exposure</h3>
+                <p>Reach thousands of potential customers daily with eye-catching mobile advertisements.</p>
+            </div>
+            <div class="feature-item p-5 rounded-lg bg-white shadow-lg hover:shadow-xl transition-shadow">
+                <img src="./images/Picture4.png" alt="Targeted Advertising" class="w-full mb-4 rounded-lg">
+                <h3 class="font-semibold text-lg">Targeted Advertising</h3>
+                <p>Choose specific routes and areas to maximize your ad's impact on your target audience.</p>
+            </div>
+            <div class="feature-item p-5 rounded-lg bg-white shadow-lg hover:shadow-xl transition-shadow">
+                <img src="./images/Picture3.png" alt="Cost-Effective" class="w-full mb-4 rounded-lg">
+                <h3 class="font-semibold text-lg">Cost-Effective</h3>
+                <p>Get more bang for your buck with lower cost-per-impression compared to traditional advertising.</p>
+            </div>
+            <div class="feature-item p-5 rounded-lg bg-white shadow-lg hover:shadow-xl transition-shadow">
+                <img src="./images/Picture1.png" alt="Real-Time Tracking" class="w-full mb-4 rounded-lg">
+                <h3 class="font-semibold text-lg">Real-Time Tracking</h3>
+                <p>Monitor your campaign's performance with our advanced GPS tracking and analytics system.</p>
+            </div>
+        </div>
+    </section>
+    <section id="how-it-works" class="container mx-auto p-6">
+        <h2 class="text-center text-3xl font-bold">How It Works</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-6">
+            <div class="feature-item p-5 rounded-lg bg-white shadow-lg hover:shadow-xl transition-shadow">
+                <h3 class="font-semibold text-lg">1. Design Your Ad</h3>
+                <p>Work with our design team to create an attention-grabbing vehicle wrap.</p>
+            </div>
+            <div class="feature-item p-5 rounded-lg bg-white shadow-lg hover:shadow-xl transition-shadow">
+                <h3 class="font-semibold text-lg">2. Choose Your Fleet</h3>
+                <p>Select the number and type of vehicles for your campaign.</p>
+            </div>
+            <div class="feature-item p-5 rounded-lg bg-white shadow-lg hover:shadow-xl transition-shadow">
+                <h3 class="font-semibold text-lg">3. Set Your Route</h3>
+                <p>Define the areas and routes where you want your mobile ads to appear.</p>
+            </div>
+            <div class="feature-item p-5 rounded-lg bg-white shadow-lg hover:shadow-xl transition-shadow">
+                <h3 class="font-semibold text-lg">4. Launch & Monitor</h3>
+                <p>Watch your campaign go live and track its performance in real-time.</p>
+            </div>
+        </div>
+    </section>
+    <section id="testimonials" class="container mx-auto p-6">
+        <h2 class="text-center text-3xl font-bold">What Our Clients Say</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+            <div class="testimonial-item p-5 rounded-lg bg-white shadow-lg hover:shadow-xl transition-shadow">
+                <p>"Barq Ads has revolutionized our advertising strategy! We've seen a significant increase in brand awareness."</p>
+                <p class="font-semibold">— Client A</p>
+            </div>
+            <div class="testimonial-item p-5 rounded-lg bg-white shadow-lg hover:shadow-xl transition-shadow">
+                <p>"The real-time tracking feature allowed us to measure our campaign's success instantly. Highly recommended!"</p>
+                <p class="font-semibold">— Client B</p>
+            </div>
+            <div class="testimonial-item p-5 rounded-lg bg-white shadow-lg hover:shadow-xl transition-shadow">
+                <p>"Thanks to Barq Ads, our message reached thousands of potential customers! Their service is top-notch."</p>
+                <p class="font-semibold">— Client C</p>
+            </div>
+        </div>
+    </section>
+    <section id="faq" class="container mx-auto p-6">
+        <h2 class="text-center text-3xl font-bold">Frequently Asked Questions</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+            <div class="feature-item p-5 rounded-lg bg-white shadow-lg hover:shadow-xl transition-shadow">
+                <h3 class="font-semibold text-lg">1. How do I start a campaign?</h3>
+                <p>Simply contact us via our contact form, and we will guide you through the process.</p>
+            </div>
+            <div class="feature-item p-5 rounded-lg bg-white shadow-lg hover:shadow-xl transition-shadow">
+                <h3 class="font-semibold text-lg">2. What areas do you cover?</h3>
+                <p>We cover a wide radius around the city. You can specify your target areas during your campaign setup.</p>
+            </div>
+            <div class="feature-item p-5 rounded-lg bg-white shadow-lg hover:shadow-xl transition-shadow">
+                <h3 class="font-semibold text-lg">3. Can I track the performance of my campaign?</h3>
+                <p>Yes, our real-time tracking system lets you monitor and analyze your campaign's performance at any time.</p>
+            </div>
+        </div>
+    </section>
+    <section id="blog" class="container mx-auto p-6">
+        <h2 class="text-center text-3xl font-bold">Latest Articles</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+            <div class="feature-item p-5 rounded-lg bg-white shadow-lg hover:shadow-xl transition-shadow">
+                <h3 class="font-semibold text-lg">The Benefits of Mobile Advertising</h3>
+                <p>Discover how mobile advertising can transform your marketing strategy.</p>
+            </div>
+            <div class="feature-item p-5 rounded-lg bg-white shadow-lg hover:shadow-xl transition-shadow">
+                <h3 class="font-semibold text-lg">How to Maximize Your Campaign Reach</h3>
+                <p>Learn strategies to enhance your campaign's visibility.</p>
+            </div>
+            <div class="feature-item p-5 rounded-lg bg-white shadow-lg hover:shadow-xl transition-shadow">
+                <h3 class="font-semibold text-lg">Success Stories from Our Clients</h3>
+                <p>Read about how Barq Ads has helped businesses grow.</p>
+            </div>
+        </div>
+    </section>
+    <section id="campaign" class="container mx-auto p-6">
+        <h2 class="text-center text-3xl font-bold">Build & Submit Your Campaign</h2>
+        <form class="space-y-4 mt-6">
+            <input type="text" placeholder="Campaign Name" class="input w-full border border-gray-300 p-3 rounded" required>
+            <input type="text" placeholder="Company Name" class="input w-full border border-gray-300 p-3 rounded" required>
+            <select class="input w-full border border-gray-300 p-3 rounded">
+                <option>Vehicle Type</option>
+                <option>Car</option>
+                <option>Truck</option>
+                <option>Bus</option>
+            </select>
+            <input type="number" placeholder="Number of Vehicles" class="input w-full border border-gray-300 p-3 rounded" required>
+            <input type="number" placeholder="Campaign Duration (weeks)" class="input w-full border border-gray-300 p-3 rounded" required>
+            <input type="text" placeholder="Target Area" class="input w-full border border-gray-300 p-3 rounded" required>
+            <select class="input w-full border border-gray-300 p-3 rounded">
+                <option>Campaign Type</option>
+                <option>Brand Awareness</option>
+                <option>Product Launch</option>
+                <option>Event Promotion</option>
+            </select>
+            <input type="number" placeholder="Estimated Budget ($)" class="input w-full border border-gray-300 p-3 rounded" required>
+            <textarea placeholder="Additional Details" class="input w-full border border-gray-300 p-3 rounded" rows="3"></textarea>
+            <button type="submit" class="bg-blue-600 text-white rounded p-3 w-full hover:bg-blue-700 transition">Submit Campaign</button>
+        </form>
+    </section>
+    <section id="pricing" class="container mx-auto p-6">
+        <h2 class="text-center text-3xl font-bold">Pricing Plans</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+            <div class="feature-item p-5 rounded-lg bg-white shadow-lg hover:shadow-xl transition-shadow">
+                <h3 class="font-semibold text-lg">Basic Plan</h3>
+                <p class="font-bold text-2xl">$500/month</p>
+                <ul class="list-disc pl-5">
+                    <li>1 Vehicle</li>
+                    <li>Basic Analytics</li>
+                    <li>Regional Coverage</li>
+                </ul>
+                <button class="bg-blue-600 text-white rounded p-2 hover:bg-blue-700 transition">Choose Plan</button>
+            </div>
+            <div class="feature-item p-5 rounded-lg bg-white shadow-lg hover:shadow-xl transition-shadow">
+                <h3 class="font-semibold text-lg">Standard Plan</h3>
+                <p class="font-bold text-2xl">$1,000/month</p>
+                <ul class="list-disc pl-5">
+                    <li>3 Vehicles</li>
+                    <li>Enhanced Analytics</li>
+                    <li>Citywide Coverage</li>
+                </ul>
+                <button class="bg-blue-600 text-white rounded p-2 hover:bg-blue-700 transition">Choose Plan</button>
+            </div>
+            <div class="feature-item p-5 rounded-lg bg-white shadow-lg hover:shadow-xl transition-shadow">
+                <h3 class="font-semibold text-lg">Premium Plan</h3>
+                <p class="font-bold text-2xl">$2,000/month</p>
+                <ul class="list-disc pl-5">
+                    <li>5 Vehicles</li>
+                    <li>Full Analytics Suite</li>
+                    <li>National Coverage</li>
+                </ul>
+                <button class="bg-blue-600 text-white rounded p-2 hover:bg-blue-700 transition">Choose Plan</button>
+            </div>
+        </div>
+    </section>
+    <section id="business-benefits" class="container mx-auto p-6">
+        <h2 class="text-center text-3xl font-bold">Business Benefits</h2>
+        <ul class="list-disc pl-6 space-y-2 mt-6">
+            <li><strong>Guaranteed Reach:</strong> Your ads will consistently appear across high-traffic areas, ensuring maximum visibility.</li>
+            <li><strong>Widespread Coverage:</strong> We guarantee broad exposure throughout the city.</li>
+            <li><strong>Data-Driven:</strong> Optimize campaigns with actionable insights and analytics.</li>
+        </ul>
+    </section>
+    <section id="types" class="container mx-auto p-6">
+        <h2 class="text-center text-3xl font-bold">Types of Advertising</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+            <div class="feature-item p-5 rounded-lg bg-white shadow-lg hover:shadow-xl transition-shadow">
+                <h3 class="font-semibold text-lg">Full Car Wraps</h3>
+                <p>Transform vehicles into mobile billboards with eye-catching full wraps.</p>
+            </div>
+            <div class="feature-item p-5 rounded-lg bg-white shadow-lg hover:shadow-xl transition-shadow">
+                <h3 class="font-semibold text-lg">Partial Wraps</h3>
+                <p>Customize partial vehicle coverage for a more subtle yet effective approach.</p>
+            </div>
+            <div class="feature-item p-5 rounded-lg bg-white shadow-lg hover:shadow-xl transition-shadow">
+                <h3 class="font-semibold text-lg">Digital Displays</h3>
+                <p>Leverage dynamic digital screens for real-time, location-based messaging.</p>
+            </div>
+        </div>
+    </section>
+    <section id="map" class="container mx-auto p-6">
+        <h2 class="text-center text-3xl font-bold">Our Reach</h2>
+        <div id="map" class="map-container h-72 mb-4 rounded-lg shadow-lg"></div>
+        <p class="text-center">See how our network spans across the city with precision targeting and unmatched coverage.</p>
+    </section>
+    <section id="webgl" class="container mx-auto p-6">
+        <h2 class="text-center text-3xl font-bold">WebGL Experience</h2>
+        <canvas id="glCanvas"></canvas>
+        <p class="text-center mt-4">Enjoy a simple WebGL rendering demo below!</p>
+    </section>
+    <footer id="contact" class="gradient-bg text-white p-6">
+        <div class="container mx-auto">
+            <p class="text-center">© 2024 BARQ ADS. All rights reserved.</p>
+            <div class="text-center mt-4">
+                <a href="#terms" class="mx-3">Terms of Service</a>
+                <a href="#privacy" class="mx-3">Privacy Policy</a>
+            </div>
+            <div class="social mt-4">
+                <ul class="flex justify-center space-x-4">
+                    <li><a href="https://twitter.com/" class="hover:text-blue-400"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="https://www.facebook.com/" class="hover:text-blue-400"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="https://plus.google.com/" class="hover:text-blue-400"><i class="fa fa-google-plus"></i></a></li>
+                    <li><a href="https://instagram.com/" class="hover:text-blue-400"><i class="fa fa-instagram"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mapbox-gl@2.8.2/dist/mapbox-gl.js"></script>
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoicmlkcmlzYSIsImEiOiJjbTBseXJ3Z2wwMmN5MmlzZmF6d3Q2bzhvIn0.rzkBAbieJBaeJN0msFSD3g';
+        var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/streets-v11',
+            center: [46.6753, 24.7136],
+            zoom: 12
+        });
+        $(document).ready(function() {
+            $('.animated-section').each(function() {
+                $(this).waypoint(function() {
+                    $(this.element).addClass('visible');
+                }, { offset: '85%' });
+            });
+        });
+        var canvas = document.getElementById("glCanvas");
+        var gl = canvas.getContext("webgl");
+        if (!gl) {
+            console.log("WebGL not supported, falling back on experimental-webgl");
+            gl = canvas.getContext("experimental-webgl");
+        }
+        if (!gl) {
+            alert("Your browser does not support WebGL");
+        }
+        gl.clearColor(0.0, 0.0, 0.0, 1.0);
+        gl.clear(gl.COLOR_BUFFER_BIT);
+    </script>
+</body>
+</html>

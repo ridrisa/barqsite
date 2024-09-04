@@ -7,8 +7,8 @@ output_file = "combined_file_1.txt"
 folders_to_skip = ['venv','flask_session']  # Add more folder names as needed
 # List of file extensions to skip
 file_extensions_to_skip = [
-    '.png', '.jpg', '.jpeg', '.gif', 'map.html','.bmp','.avif', '.tiff', '.ico', '.pdf','.log','.pyc',
-    'combined_file.txt', 'combined_file_1.txt','combine.py'
+    '.png', '.jpg', '.jpeg', '.gif', 'test.html','test1.html','test2.html','test3.html','test4.html','test5.html','map.html','.bmp','.avif', '.tiff', '.ico', '.pdf','.log','.pyc',
+    'combined_file.txt', 'combined_file_1.txt','combine.py','.csv','coordinates.csv','polygon_boundary.csv','coordinates2impressions.py'
 ]
 
 # Function to combine files
