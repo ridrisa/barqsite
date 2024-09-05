@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VehicleAd Pro - Ad Placement Editor</title>
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.7/dist/html2canvas.min.js"></script>
     <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -35,8 +36,14 @@
             background-color: white;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            overflow: hidden;
             position: relative;
+            background-image: linear-gradient(0deg, transparent 24%, #ddd 25%, #ddd 26%, transparent 27%, transparent 74%, #ddd 75%, #ddd 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, #ddd 25%, #ddd 26%, transparent 27%, transparent 74%, #ddd 75%, #ddd 76%, transparent 77%, transparent);
+            background-size: 50px 50px;
+        }
+        #vehicle-img {
+            width: 100%;
+            height: auto;
+            max-height: 500px;
         }
         #controls {
             flex: 1;
@@ -61,23 +68,42 @@
             border: 1px solid #ddd;
             border-radius: 4px;
         }
-        #vehicle-img {
-            width: 100%;
-            height: auto;
-        }
         #logo-container {
             position: absolute;
-            top: 280px; /* Adjust based on vehicle image */
-            left: 350px;
-            width: 100px;
-            height: 100px;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 150px;
+            height: 150px;
             text-align: center;
+            transition: all 0.2s ease;
+            overflow: hidden; /* To ensure the image fits within the container */
+            cursor: grab;
         }
         #logo-text {
             font-size: 24px;
         }
         #logo-image {
             display: none;
+            width: 100%;
+            height: 100%;
+            object-fit: contain; /* Ensures image fits while maintaining aspect ratio */
+        }
+        @media (max-width: 768px) {
+            #design-area {
+                flex-direction: column;
+            }
+            #controls {
+                margin-left: 0;
+                margin-top: 2em;
+            }
+        }
+        body.high-contrast {
+            background-color: black;
+            color: white;
+        }
+        body.high-contrast #vehicle-preview {
+            border: 2px solid yellow;
         }
     </style>
 </head>
@@ -88,14 +114,19 @@
     <div class="container">
         <div id="design-area">
             <div id="vehicle-preview">
-                <img id="vehicle-img" src="images/accent carear.png" alt="Vehicle Preview">
+                <img id="vehicle-img" src="images/partner.jpg" alt="Vehicle Preview">
                 <div id="logo-container">
                     <text id="logo-text">Your Logo Here</text>
-                    <img id="logo-image" src="" alt="Logo" style="display:none;">
+                    <img id="logo-image" src="" alt="Logo">
                 </div>
             </div>
             <div id="controls">
                 <div class="control-group">
+                    <label for="vehicle-type">Vehicle Type:</label>
+                    <select id="vehicle-type">
+                        <option value="partner">Partner</option>
+                    </select>
+
                     <label for="logo-type">Logo Type:</label>
                     <select id="logo-type">
                         <option value="text">Text</option>
@@ -124,10 +155,14 @@
                     </div>
                 </div>
                 <div class="control-group">
-                    <label for="logo-placement-x">X:</label>
-                    <input type="range" id="logo-placement-x" min="0" max="800" value="400">
-                    <label for="logo-placement-y">Y:</label>
-                    <input type="range" id="logo-placement-y" min="0" max="400" value="320">
+                    <label for="logo-size">Logo Size:</label>
+                    <input type="range" id="logo-size" min="50" max="300" value="150">
+                </div>
+                <div class="control-group">
+                    <button id="save-btn">Save</button>
+                    <button id="reset-btn">Reset</button>
+                    <label for="high-contrast">High Contrast Mode:</label>
+                    <input type="checkbox" id="high-contrast">
                 </div>
             </div>
         </div>
@@ -141,10 +176,50 @@ document.addEventListener('DOMContentLoaded', () => {
     const logoTextInput = document.getElementById('logo-text-input');
     const logoImageInput = document.getElementById('logo-image-input');
     const logoContainer = document.getElementById('logo-container');
-    const logoPlacementX = document.getElementById('logo-placement-x');
-    const logoPlacementY = document.getElementById('logo-placement-y');
+    const logoSize = document.getElementById('logo-size');
+    const vehicleImg = document.getElementById('vehicle-img');
+    let isDragging = false;
+    let offsetX, offsetY;
 
-    // Handle logo type change
+    // Update the logo size dynamically
+    function updateLogoSize(value) {
+        logoContainer.style.width = `${value}px`;
+        logoContainer.style.height = `${value}px`;
+    }
+
+    // Drag-and-drop functionality
+    logoContainer.addEventListener('mousedown', (e) => {
+        isDragging = true;
+        offsetX = e.clientX - logoContainer.getBoundingClientRect().left;
+        offsetY = e.clientY - logoContainer.getBoundingClientRect().top;
+        logoContainer.style.cursor = 'grabbing';
+    });
+
+    document.addEventListener('mousemove', (e) => {
+        if (isDragging) {
+            const vehiclePreview = document.getElementById('vehicle-preview');
+            const previewRect = vehiclePreview.getBoundingClientRect();
+            const newX = e.clientX - offsetX - previewRect.left;
+            const newY = e.clientY - offsetY - previewRect.top;
+
+            // Ensure the logo stays within the vehicle preview area
+            const maxX = previewRect.width - logoContainer.offsetWidth;
+            const maxY = previewRect.height - logoContainer.offsetHeight;
+            logoContainer.style.left = `${Math.min(Math.max(0, newX), maxX)}px`;
+            logoContainer.style.top = `${Math.min(Math.max(0, newY), maxY)}px`;
+        }
+    });
+
+    document.addEventListener('mouseup', () => {
+        isDragging = false;
+        logoContainer.style.cursor = 'grab';
+    });
+
+    // Update logo size based on user input
+    logoSize.addEventListener('input', (e) => {
+        updateLogoSize(e.target.value);
+    });
+
     logoTypeSelect.addEventListener('change', () => {
         if (logoTypeSelect.value === 'text') {
             logoTextInput.style.display = 'block';
@@ -159,31 +234,18 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Handle logo text update dynamically
     document.getElementById('logo-text-content').addEventListener('input', (e) => {
         logoText.textContent = e.target.value || 'Your Logo Here';
     });
 
-    // Handle logo font update dynamically
     document.getElementById('logo-font').addEventListener('change', (e) => {
         logoText.style.fontFamily = e.target.value;
     });
 
-    // Handle logo color update dynamically
     document.getElementById('logo-color').addEventListener('input', (e) => {
         logoText.style.color = e.target.value;
     });
 
-    // Handle logo placement update dynamically
-    logoPlacementX.addEventListener('input', (e) => {
-        logoContainer.style.left = `${e.target.value}px`;
-    });
-
-    logoPlacementY.addEventListener('input', (e) => {
-        logoContainer.style.top = `${e.target.value}px`;
-    });
-
-    // Handle logo image upload dynamically
     document.getElementById('logo-image-upload').addEventListener('change', function(e) {
         const file = e.target.files[0];
         const reader = new FileReader();
@@ -191,9 +253,45 @@ document.addEventListener('DOMContentLoaded', () => {
         reader.onload = function(event) {
             logoImage.src = event.target.result;
             logoImage.style.display = 'block';
+            logoImage.style.objectFit = 'contain'; // Ensure the image fits within the container without distortion
         };
 
         reader.readAsDataURL(file);
+    });
+
+    document.getElementById('vehicle-type').addEventListener('change', (e) => {
+        if (e.target.value === 'partner') {
+            vehicleImg.src = 'images/partner.jpg';
+        }
+    });
+
+    document.getElementById('reset-btn').addEventListener('click', () => {
+        logoText.textContent = 'Your Logo Here';
+        logoText.style.color = '#000000';
+        logoText.style.fontFamily = 'Arial';
+        logoSize.value = 150;
+        updateLogoSize(150);
+        logoImage.style.display = 'none';
+        logoText.style.display = 'block';
+        logoContainer.style.left = '50%';
+        logoContainer.style.top = '60%';
+        logoContainer.style.transform = 'translate(-50%, -50%)';
+    });
+
+    // Save and export the image of the vehicle preview
+    document.getElementById('save-btn').addEventListener('click', () => {
+        const vehiclePreview = document.getElementById('vehicle-preview');
+
+        html2canvas(vehiclePreview).then(canvas => {
+            const link = document.createElement('a');
+            link.download = 'vehicle_ad_preview.png';
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+        });
+    });
+
+    document.getElementById('high-contrast').addEventListener('change', (e) => {
+        document.body.classList.toggle('high-contrast', e.target.checked);
     });
 });
 </script>
