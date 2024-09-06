@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Barq Ads</title>
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.7/dist/html2canvas.min.js"></script>
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css?family=Muli:400,600&display=swap" rel="stylesheet">
@@ -95,50 +97,32 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light py-2">
-            <div class="container">
-                <a class="navbar-brand" href="#">
-                    <img src="images/logotransparent.png" alt="Barq Ads Logo" class="navbar-logo" style="height: 40px;" />
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#about">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#features">Features</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#how-it-works">How It Works</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#business-benefits">Business Benefits</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#pricing">Pricing</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#testimonials">Testimonials</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#types-of-advertising">Types of Advertising</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#latest-articles">Latest Articles</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#impressions-map">Impressions Map</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#contact">Contact Us</a>
-                        </li>
+        <div id="menu">
+        <nav class="navbar-wrapper navbar-default" role="navigation">
+            <div class="container header-container">
+                <div class="navbar-header header-logo">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-themers">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand site-name" href="#top">
+                        <img src="images/logotransparentxs.png" alt="logo">
+                    </a>
+                    <div id="navbar-scroll" class="collapse navbar-collapse navbar-themers navbar-right header-text">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#intro">About</a></li>
+                        <li><a href="#feature">Features</a></li>
+                        <li><a href="#subscribe">Contact us</a></li>
+                        <li><a href="#clients">Clients</a></li>
+                        <li><a href="#package">Pricing</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
+    </div>
+     
     </header>
     
     
@@ -312,83 +296,120 @@
             </div>
         </div>
     </section>
-    <section id="ad-editor" class="ad-editor">
-        <h2>VehicleAd Pro - Ad Placement Editor</h2>
+    <body>
+        <header>
+            <h1>Visualize your Campaign</h1>
+        </header>
         <div class="container">
-            <div class="row" id="design-area">
-                <div class="col-md-8" id="vehicle-preview">
-                    <img src="images/partner.jpg" alt="Real Car" class="w-full h-auto" id="real-car">
-                    <svg id="vehicle-svg" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg" style="display: none;">
-                        <path id="vehicle-body" d="M50,300 Q100,280 150,280 L650,280 Q700,280 750,300 L750,350 Q700,370 650,370 L150,370 Q100,370 50,350 Z" fill="#ccc" stroke="#999" stroke-width="2"></path>
-                        <path id="vehicle-windows" d="M200,290 L250,240 L550,240 L600,290" fill="#87CEEB" stroke="#4682B4" stroke-width="2"></path>
-                        <circle id="wheel-left" cx="200" cy="370" r="40" fill="#333"></circle>
-                        <circle id="wheel-right" cx="600" cy="370" r="40" fill="#333"></circle>
-                        <g id="logo-container">
-                            <text id="logo-text" x="400" y="320" text-anchor="middle" font-size="24" fill="#000">Your Logo Here</text>
-                            <image id="logo-image" x="350" y="280" width="100" height="100" style="display: none;"></image>
-                        </g>
-                    </svg>
+            <div id="design-area">
+                <div id="vehicle-preview">
+                    <img id="vehicle-img" src="images/partner.jpg" alt="Vehicle Preview">
+                    <div id="logo-container">
+                        <text id="logo-text">Your Logo Here</text>
+                        <img id="logo-image" src="" alt="Logo">
+                    </div>
                 </div>
-                <div class="col-md-4" id="controls">
+                <div id="controls">
                     <div class="control-group">
+                        <label for="vehicle-type">Vehicle Type:</label>
+                        <select id="vehicle-type">
+                            <option value="partner">Partner</option>
+                        </select>
+    
                         <label for="logo-type">Logo Type:</label>
-                        <select id="logo-type" class="form-control">
+                        <select id="logo-type">
                             <option value="text">Text</option>
                             <option value="image">Image</option>
-                            <option value="multiple">Multiple Images</option>
                         </select>
+                        
                         <div id="logo-text-input">
                             <label for="logo-text-content">Logo Text:</label>
-                            <input type="text" id="logo-text-content" class="form-control" placeholder="Enter logo text">
+                            <input type="text" id="logo-text-content" placeholder="Enter logo text">
+                            
                             <label for="logo-font">Logo Font:</label>
-                            <select id="logo-font" class="form-control">
+                            <select id="logo-font">
                                 <option value="Arial">Arial</option>
                                 <option value="Verdana">Verdana</option>
                                 <option value="Times New Roman">Times New Roman</option>
                                 <option value="Courier">Courier</option>
                             </select>
+                            
                             <label for="logo-color">Logo Color:</label>
-                            <input type="color" id="logo-color" value="#000000" class="form-control">
+                            <input type="color" id="logo-color" value="#000000">
                         </div>
+                        
                         <div id="logo-image-input" style="display: none;">
                             <label for="logo-image-upload">Logo Image (PNG):</label>
-                            <input type="file" id="logo-image-upload" accept="image/png" class="form-control">
+                            <input type="file" id="logo-image-upload" accept="image/png">
                         </div>
                     </div>
                     <div class="control-group">
-                        <label for="vehicle-color">Vehicle Color:</label>
-                        <input type="color" id="vehicle-color" value="#cccccc" class="form-control">
+                        <label for="logo-size">Logo Size:</label>
+                        <input type="range" id="logo-size" min="50" max="300" value="150">
                     </div>
                     <div class="control-group">
-                        <label for="vehicle-shape">Vehicle Shape:</label>
-                        <input type="range" id="vehicle-shape" min="0" max="100" value="50" class="form-control">
+                        <button id="save-btn">Save</button>
+                        <button id="reset-btn">Reset</button>
+                        <label for="high-contrast">High Contrast Mode:</label>
+                        <input type="checkbox" id="high-contrast">
                     </div>
-                    <div class="control-group">
-                        <label for="logo-placement-x">X:</label>
-                        <input type="range" id="logo-placement-x" min="0" max="800" value="400" class="form-control">
-                        <label for="logo-placement-y">Y:</label>
-                        <input type="range" id="logo-placement-y" min="0" max="400" value="320" class="form-control">
-                    </div>
-                    <button id="apply-design" class="btn btn-primary">Apply Design</button>
                 </div>
             </div>
         </div>
+    
+    
         <script>
             document.addEventListener('DOMContentLoaded', () => {
                 const logoText = document.getElementById('logo-text');
                 const logoImage = document.getElementById('logo-image');
-                const vehicleBody = document.getElementById('vehicle-body');
-                const vehicleWindows = document.getElementById('vehicle-windows');
-                const wheelLeft = document.getElementById('wheel-left');
-                const wheelRight = document.getElementById('wheel-right');
-                const applyButton = document.getElementById('apply-design');
-                const vehicleShapeSlider = document.getElementById('vehicle-shape');
-                const logoPlacementX = document.getElementById('logo-placement-x');
-                const logoPlacementY = document.getElementById('logo-placement-y');
                 const logoTypeSelect = document.getElementById('logo-type');
                 const logoTextInput = document.getElementById('logo-text-input');
                 const logoImageInput = document.getElementById('logo-image-input');
-
+                const logoContainer = document.getElementById('logo-container');
+                const logoSize = document.getElementById('logo-size');
+                const vehicleImg = document.getElementById('vehicle-img');
+                let isDragging = false;
+                let offsetX, offsetY;
+            
+                // Update the logo size dynamically
+                function updateLogoSize(value) {
+                    logoContainer.style.width = `${value}px`;
+                    logoContainer.style.height = `${value}px`;
+                }
+            
+                // Drag-and-drop functionality
+                logoContainer.addEventListener('mousedown', (e) => {
+                    isDragging = true;
+                    offsetX = e.clientX - logoContainer.getBoundingClientRect().left;
+                    offsetY = e.clientY - logoContainer.getBoundingClientRect().top;
+                    logoContainer.style.cursor = 'grabbing';
+                });
+            
+                document.addEventListener('mousemove', (e) => {
+                    if (isDragging) {
+                        const vehiclePreview = document.getElementById('vehicle-preview');
+                        const previewRect = vehiclePreview.getBoundingClientRect();
+                        const newX = e.clientX - offsetX - previewRect.left;
+                        const newY = e.clientY - offsetY - previewRect.top;
+            
+                        // Ensure the logo stays within the vehicle preview area
+                        const maxX = previewRect.width - logoContainer.offsetWidth;
+                        const maxY = previewRect.height - logoContainer.offsetHeight;
+                        logoContainer.style.left = `${Math.min(Math.max(0, newX), maxX)}px`;
+                        logoContainer.style.top = `${Math.min(Math.max(0, newY), maxY)}px`;
+                    }
+                });
+            
+                document.addEventListener('mouseup', () => {
+                    isDragging = false;
+                    logoContainer.style.cursor = 'grab';
+                });
+            
+                // Update logo size based on user input
+                logoSize.addEventListener('input', (e) => {
+                    updateLogoSize(e.target.value);
+                });
+            
                 logoTypeSelect.addEventListener('change', () => {
                     if (logoTypeSelect.value === 'text') {
                         logoTextInput.style.display = 'block';
@@ -402,52 +423,69 @@
                         logoImage.style.display = 'block';
                     }
                 });
-
-                applyButton.addEventListener('click', () => {
-                    if (logoTypeSelect.value === 'text') {
-                        const logoContent = document.getElementById('logo-text-content').value;
-                        logoText.textContent = logoContent || 'Your Logo Here';
-
-                        const logoColor = document.getElementById('logo-color').value;
-                        logoText.setAttribute('fill', logoColor);
-
-                        const logoFont = document.getElementById('logo-font').value;
-                        logoText.style.fontFamily = logoFont;
-                    }
-
-                    const vehicleColor = document.getElementById('vehicle-color').value;
-                    vehicleBody.setAttribute('fill', vehicleColor);
-
-                    updateVehicleShape();
-                    updateLogoPlacement();
+            
+                document.getElementById('logo-text-content').addEventListener('input', (e) => {
+                    logoText.textContent = e.target.value || 'Your Logo Here';
                 });
-
-                function updateVehicleShape() {
-                    const shapeValue = vehicleShapeSlider.value;
-                    const newPath = `M50,${300 - shapeValue} Q100,${280 - shapeValue} 150,${280 - shapeValue} L650,${280 - shapeValue} Q700,${280 - shapeValue} 750,${300 - shapeValue} L750,350 Q700,370 650,370 L150,370 Q100,370 50,350 Z`;
-                    vehicleBody.setAttribute('d', newPath);
-
-                    const windowPath = `M200,${290 - shapeValue} L250,${240 - shapeValue} L550,${240 - shapeValue} L600,${290 - shapeValue}`;
-                    vehicleWindows.setAttribute('d', windowPath);
-
-                    wheelLeft.setAttribute('cy', 370 - shapeValue / 2);
-                    wheelRight.setAttribute('cy', 370 - shapeValue / 2);
-                }
-
-                function updateLogoPlacement() {
-                    const x = logoPlacementX.value;
-                    const y = logoPlacementY.value;
-                    logoText.setAttribute('x', x);
-                    logoText.setAttribute('y', y);
-                    logoImage.setAttribute('x', x - 50);
-                    logoImage.setAttribute('y', y - 50);
-                }
-
-                vehicleShapeSlider.addEventListener('input', updateVehicleShape);
-                logoPlacementX.addEventListener('input', updateLogoPlacement);
-                logoPlacementY.addEventListener('input', updateLogoPlacement);
+            
+                document.getElementById('logo-font').addEventListener('change', (e) => {
+                    logoText.style.fontFamily = e.target.value;
+                });
+            
+                document.getElementById('logo-color').addEventListener('input', (e) => {
+                    logoText.style.color = e.target.value;
+                });
+            
+                document.getElementById('logo-image-upload').addEventListener('change', function(e) {
+                    const file = e.target.files[0];
+                    const reader = new FileReader();
+            
+                    reader.onload = function(event) {
+                        logoImage.src = event.target.result;
+                        logoImage.style.display = 'block';
+                        logoImage.style.objectFit = 'contain'; // Ensure the image fits within the container without distortion
+                    };
+            
+                    reader.readAsDataURL(file);
+                });
+            
+                document.getElementById('vehicle-type').addEventListener('change', (e) => {
+                    if (e.target.value === 'partner') {
+                        vehicleImg.src = 'images/partner.jpg';
+                    }
+                });
+            
+                document.getElementById('reset-btn').addEventListener('click', () => {
+                    logoText.textContent = 'Your Logo Here';
+                    logoText.style.color = '#000000';
+                    logoText.style.fontFamily = 'Arial';
+                    logoSize.value = 150;
+                    updateLogoSize(150);
+                    logoImage.style.display = 'none';
+                    logoText.style.display = 'block';
+                    logoContainer.style.left = '50%';
+                    logoContainer.style.top = '60%';
+                    logoContainer.style.transform = 'translate(-50%, -50%)';
+                });
+            
+                // Save and export the image of the vehicle preview
+                document.getElementById('save-btn').addEventListener('click', () => {
+                    const vehiclePreview = document.getElementById('vehicle-preview');
+            
+                    html2canvas(vehiclePreview).then(canvas => {
+                        const link = document.createElement('a');
+                        link.download = 'vehicle_ad_preview.png';
+                        link.href = canvas.toDataURL('image/png');
+                        link.click();
+                    });
+                });
+            
+                document.getElementById('high-contrast').addEventListener('change', (e) => {
+                    document.body.classList.toggle('high-contrast', e.target.checked);
+                });
             });
-        </script>
+            </script>
+            
     </section>
     <footer>
         <p>© 2024 BARQ ADS. All rights reserved.</p>

@@ -2,298 +2,275 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VehicleAd Pro - Ad Placement Editor</title>
-    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.7/dist/html2canvas.min.js"></script>
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        header {
-            background-color: #2c3e50;
-            color: white;
-            text-align: center;
-            padding: 1em 0;
-        }
-        h1 {
-            margin: 0;
-        }
-        #design-area {
-            display: flex;
-            margin-top: 2em;
-        }
-        #vehicle-preview {
-            flex: 2;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            position: relative;
-            background-image: linear-gradient(0deg, transparent 24%, #ddd 25%, #ddd 26%, transparent 27%, transparent 74%, #ddd 75%, #ddd 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, #ddd 25%, #ddd 26%, transparent 27%, transparent 74%, #ddd 75%, #ddd 76%, transparent 77%, transparent);
-            background-size: 50px 50px;
-        }
-        #vehicle-img {
-            width: 100%;
-            height: auto;
-            max-height: 500px;
-        }
-        #controls {
-            flex: 1;
-            margin-left: 2em;
-        }
-        .control-group {
-            background-color: white;
-            border-radius: 8px;
-            padding: 1em;
-            margin-bottom: 1em;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        label {
-            display: block;
-            margin-bottom: 0.5em;
-            font-weight: bold;
-        }
-        input[type="text"], input[type="color"], input[type="range"], select, input[type="file"] {
-            width: 100%;
-            padding: 0.5em;
-            margin-bottom: 1em;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-        }
-        #logo-container {
-            position: absolute;
-            top: 60%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 150px;
-            height: 150px;
-            text-align: center;
-            transition: all 0.2s ease;
-            overflow: hidden; /* To ensure the image fits within the container */
-            cursor: grab;
-        }
-        #logo-text {
-            font-size: 24px;
-        }
-        #logo-image {
-            display: none;
-            width: 100%;
-            height: 100%;
-            object-fit: contain; /* Ensures image fits while maintaining aspect ratio */
-        }
-        @media (max-width: 768px) {
-            #design-area {
-                flex-direction: column;
-            }
-            #controls {
-                margin-left: 0;
-                margin-top: 2em;
-            }
-        }
-        body.high-contrast {
-            background-color: black;
-            color: white;
-        }
-        body.high-contrast #vehicle-preview {
-            border: 2px solid yellow;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>BARQ ADS - Drive Your Brand Across the City</title>
+    
+    <!-- Core CSS Files -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/owl.carousel.min.css" rel="stylesheet">
+    <link href="css/pe-icon-7-stroke.min.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Google Fonts --> 
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Alegreya+Sans:100,300,400,700" rel="stylesheet">
 </head>
-<body>
-    <header>
-        <h1>VehicleAd Pro - Ad Placement Editor</h1>
-    </header>
-    <div class="container">
-        <div id="design-area">
-            <div id="vehicle-preview">
-                <img id="vehicle-img" src="images/partner.jpg" alt="Vehicle Preview">
-                <div id="logo-container">
-                    <text id="logo-text">Your Logo Here</text>
-                    <img id="logo-image" src="" alt="Logo">
+<body data-spy="scroll" data-target="#navbar-scroll">
+    <div id="top"></div>
+
+    <!-- Navigation -->
+    <nav id="menu" class="navbar-wrapper navbar-default" role="navigation">
+        <div class="container header-container">
+            <div class="navbar-header header-logo">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-themers">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand site-name" href="#top">
+                    <img src="images/logotransparentxs.png" alt="BARQ ADS logo">
+                </a>
+            </div>
+     
+            <div id="navbar-scroll" class="collapse navbar-collapse navbar-themers navbar-right header-text">
+                <ul class="nav navbar-nav">
+                    <li><a href="#intro">About</a></li>
+                    <li><a href="#feature">Features</a></li>
+                    <li><a href="#features">Technology</a></li>
+                    <li><a href="#clients">Clients</a></li>
+                    <li><a href="#package">Pricing</a></li>
+                    <li><a href="#footer">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+ 
+    <!-- Hero Section -->
+    <div class="fullscreen landing parallax banner" style="background-image:url('images/lowercover.jpg');">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1 class="wow fadeInLeft">
+                        ADS & BEYOND
+                        <small>Drive Your Brand Across the City with Barq Ads</small>
+                    </h1>
+                    <div class="landing-text wow fadeInLeft">
+                        <p>Picture your logo traveling through every street, grabbing attention at every turn. Say hello to Barq Ads where we set your brand in motion!</p>
+                        <p>Join us in transforming the landscape of outdoor advertising with our innovative platform that turns vehicles into dynamic billboards, delivering your brand message directly to consumers on the go. With a fleet covering over 4 million kilometers monthly, we offer unmatched reach and exposure for your campaigns.</p>
+                    </div>
+                </div> 
+                <div class="col-md-6">
+                    <img src="images/car1.avif" alt="BARQ ADS Vehicle" class="header-phone img-responsive wow fadeInRight">
                 </div>
             </div>
-            <div id="controls">
-                <div class="control-group">
-                    <label for="vehicle-type">Vehicle Type:</label>
-                    <select id="vehicle-type">
-                        <option value="partner">Partner</option>
-                    </select>
+        </div> 
+    </div>
+   
+    <!-- Intro Section -->
+    <section id="intro">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 feature-2-pic wow fadeInLeft">
+                    <img src="images/Picture1.png" alt="Revolutionizing Advertising" class="img-responsive">
+                </div>  
+                <div class="col-md-6 wow fadeInRight">
+                    <h2>Revolutionizing Outdoor Advertising with BARQ ADS</h2>
+                    <p>Maximize your brand's reach with our innovative vehicle wrap advertising solutions, powered by real-time data and cutting-edge technology.</p>      
+                </div>              
+            </div>            
+        </div>
+    </section>
 
-                    <label for="logo-type">Logo Type:</label>
-                    <select id="logo-type">
-                        <option value="text">Text</option>
-                        <option value="image">Image</option>
-                    </select>
-                    
-                    <div id="logo-text-input">
-                        <label for="logo-text-content">Logo Text:</label>
-                        <input type="text" id="logo-text-content" placeholder="Enter logo text">
-                        
-                        <label for="logo-font">Logo Font:</label>
-                        <select id="logo-font">
-                            <option value="Arial">Arial</option>
-                            <option value="Verdana">Verdana</option>
-                            <option value="Times New Roman">Times New Roman</option>
-                            <option value="Courier">Courier</option>
-                        </select>
-                        
-                        <label for="logo-color">Logo Color:</label>
-                        <input type="color" id="logo-color" value="#000000">
-                    </div>
-                    
-                    <div id="logo-image-input" style="display: none;">
-                        <label for="logo-image-upload">Logo Image (PNG):</label>
-                        <input type="file" id="logo-image-upload" accept="image/png">
+    <!-- Feature Section -->
+    <section id="feature">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1 text-center feature-title wow fadeInUp">
+                    <h2>Cutting-Edge Advertising Solutions</h2>
+                    <p>Transform our fleet into your mobile billboards with eye-catching full or partial wraps. These high-impact branding solutions offer continuous visibility as our vehicles navigate busy urban areas, ensuring maximum exposure for your brand.</p>
+                </div>
+            </div>
+            <div class="row row-feat">
+                <div class="col-md-4 feat-list wow fadeInLeft">
+                    <img src="images/Picture2.png" alt="Vehicle Wraps" class="img-responsive">
+                    <div class="inner">
+                        <h4>Vehicle Wraps</h4>
+                        <p>Transform our fleet into your mobile billboards with eye-catching full or partial wraps. These high-impact branding solutions offer continuous visibility as our vehicles navigate busy urban areas, ensuring maximum exposure for your brand.</p>
                     </div>
                 </div>
-                <div class="control-group">
-                    <label for="logo-size">Logo Size:</label>
-                    <input type="range" id="logo-size" min="50" max="300" value="150">
+                <div class="col-md-4 feat-list wow fadeInUp">
+                    <img src="images/Picture4.png" alt="Digital Display" class="img-responsive">
+                    <div class="inner">
+                        <h4>Digital Display</h4>
+                        <p>Deploy dynamic digital ads with our state-of-the-art smart screens. These HD displays allow for real-time content updates and location-based triggers, enabling you to deliver targeted messages that capture attention and drive engagement.</p>
+                    </div>
                 </div>
-                <div class="control-group">
-                    <button id="save-btn">Save</button>
-                    <button id="reset-btn">Reset</button>
-                    <label for="high-contrast">High Contrast Mode:</label>
-                    <input type="checkbox" id="high-contrast">
+                <div class="col-md-4 feat-list wow fadeInRight"> 
+                    <img src="images/Picture3.png" alt="Interactive Campaigns" class="img-responsive">
+                    <div class="inner">
+                        <h4>Interactive Campaigns</h4>
+                        <p>Engage consumers with innovative interactive marketing campaigns. From product launches to promotional events, our platform supports creative executions that encourage direct audience participation and memorable brand experiences.</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-    const logoText = document.getElementById('logo-text');
-    const logoImage = document.getElementById('logo-image');
-    const logoTypeSelect = document.getElementById('logo-type');
-    const logoTextInput = document.getElementById('logo-text-input');
-    const logoImageInput = document.getElementById('logo-image-input');
-    const logoContainer = document.getElementById('logo-container');
-    const logoSize = document.getElementById('logo-size');
-    const vehicleImg = document.getElementById('vehicle-img');
-    let isDragging = false;
-    let offsetX, offsetY;
+    <!-- Technology Section -->
+    <section id="features">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 wow fadeInRight" data-wow-delay=".8s">
+                    <h2 class="title">Advanced Technology Platform</h2>
+                    <div class="feature-item wow fadeInUp">
+                        <div class="media">
+                            <div class="pull-left icon">
+                                <i class="fa fa-paint-brush"></i>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">Geotargeting Precision</h4>
+                                <p>Our advanced geotargeting technology allows you to deliver hyper-targeted campaigns based on precise geofencing and real-time data. This ensures your ads reach the right audience at the right time and place, significantly enhancing engagement and campaign effectiveness.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feature-item wow fadeInUp" data-wow-delay=".2s">
+                        <div class="media">
+                            <div class="pull-left icon">
+                                <i class="fa fa-rss"></i>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">Programmatic Advertising</h4>
+                                <p>Streamline your ad buying process with our cutting-edge programmatic solutions. Available through leading platforms, our system automates and optimizes your campaigns in real-time, ensuring maximum efficiency and ROI for your advertising budget.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feature-item wow fadeInUp" data-wow-delay=".4s">
+                        <div class="media">
+                            <div class="pull-left icon">
+                                <i class="fa fa-recycle"></i>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">Comprehensive Data Analytics</h4>
+                                <p>Gain valuable insights with our robust data analytics dashboard. Track routes, impressions, and engagement metrics in real-time, and use these insights to continuously refine your campaigns. Our platform empowers you to make data-driven decisions that maximize your advertising impact.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 wow fadeInLeft" data-wow-delay=".8s">
+                    <div class="block">
+                        <img class="img-responsive" src="images/bulletdelivery.png" alt="Technology Illustration">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Creative Map -->
+        <div class="creative-map-container">
+            <iframe src="map.html" title="BARQ ADS Coverage Map"></iframe>
+            <div class="map-overlay-content">
+                <h3 class="map-title wow fadeInUp">Explore Our Reach</h3>
+                <p class="map-description wow fadeInUp" data-wow-delay=".2s">See how our network spans across the city with precision targeting and unmatched coverage.</p>
+                <a href="#" class="btn btn-map wow fadeInUp" data-wow-delay=".4s">Learn More</a>
+            </div>
+        </div>
+    </section>
 
-    // Update the logo size dynamically
-    function updateLogoSize(value) {
-        logoContainer.style.width = `${value}px`;
-        logoContainer.style.height = `${value}px`;
-    }
+    <!-- Clients Section -->
+    <section id="clients">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="wow fadeInLeft">Clients</h2>
+                <div class="title-line wow fadeInRight"></div>
+            </div>
+            <div class="row">
+                <div id="owl-clients" class="owl-carousel owl-theme">
+                    <!-- Client testimonials will be inserted here by Owl Carousel -->
+                </div>
+            </div>  
+        </div>
+    </section>
 
-    // Drag-and-drop functionality
-    logoContainer.addEventListener('mousedown', (e) => {
-        isDragging = true;
-        offsetX = e.clientX - logoContainer.getBoundingClientRect().left;
-        offsetY = e.clientY - logoContainer.getBoundingClientRect().top;
-        logoContainer.style.cursor = 'grabbing';
-    });
+    <!-- Pricing Section -->
+    <section id="package">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="wow fadeInLeft">Pricing</h2>
+                <div class="title-line wow fadeInRight"></div>
+            </div>
+            <div class="row justify-content-center package-option">
+                <div class="col-sm-6 col-md-5">
+                    <div class="price-box wow fadeInUp">
+                        <div class="price-heading text-center">
+                            <h3>Basic Package</h3>
+                        </div>
+                        <div class="price-group text-center">
+                            <span class="dollar">SAR</span>
+                            <span class="price">2000</span>
+                            <span class="time">/Vehicle</span>
+                        </div>
+                        <ul class="price-feature text-center">
+                            <li><strong>1000 SAR</strong> Setup fees</li>
+                            <li><strong>30 - 99</strong> Vehicles</li>
+                            <li><strong>3 Months</strong> Minimum duration</li>
+                            <li><strong>Monthly</strong> Reporting</li>
+                            <li><strong>Car sticker - logo only</strong> Branding</li>
+                        </ul>
+                        <div class="price-footer text-center">
+                            <a class="btn btn-price" href="#footer">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-5">
+                    <div class="price-box wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="price-heading text-center">
+                            <h3>Premium Package</h3>
+                        </div>
+                        <div class="price-group text-center">
+                            <span class="dollar">SAR</span>
+                            <span class="price">1800</span>
+                            <span class="time">/Vehicle</span>
+                        </div>
+                        <ul class="price-feature text-center">
+                            <li><del>1000 SAR Setup fees</del></li>
+                            <li><strong>100+</strong> Vehicles</li>
+                            <li><strong>3 Months</strong> Minimum duration</li>
+                            <li><strong>Real-time tracking dashboard</strong></li>
+                            <li><strong>Large vinyl wrap - full vehicle</strong> Branding</li>
+                        </ul>
+                        <div class="price-footer text-center">
+                            <a class="btn btn-price" href="#footer">Contact Us</a>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </section>
 
-    document.addEventListener('mousemove', (e) => {
-        if (isDragging) {
-            const vehiclePreview = document.getElementById('vehicle-preview');
-            const previewRect = vehiclePreview.getBoundingClientRect();
-            const newX = e.clientX - offsetX - previewRect.left;
-            const newY = e.clientY - offsetY - previewRect.top;
-
-            // Ensure the logo stays within the vehicle preview area
-            const maxX = previewRect.width - logoContainer.offsetWidth;
-            const maxY = previewRect.height - logoContainer.offsetHeight;
-            logoContainer.style.left = `${Math.min(Math.max(0, newX), maxX)}px`;
-            logoContainer.style.top = `${Math.min(Math.max(0, newY), maxY)}px`;
-        }
-    });
-
-    document.addEventListener('mouseup', () => {
-        isDragging = false;
-        logoContainer.style.cursor = 'grab';
-    });
-
-    // Update logo size based on user input
-    logoSize.addEventListener('input', (e) => {
-        updateLogoSize(e.target.value);
-    });
-
-    logoTypeSelect.addEventListener('change', () => {
-        if (logoTypeSelect.value === 'text') {
-            logoTextInput.style.display = 'block';
-            logoImageInput.style.display = 'none';
-            logoText.style.display = 'block';
-            logoImage.style.display = 'none';
-        } else {
-            logoTextInput.style.display = 'none';
-            logoImageInput.style.display = 'block';
-            logoText.style.display = 'none';
-            logoImage.style.display = 'block';
-        }
-    });
-
-    document.getElementById('logo-text-content').addEventListener('input', (e) => {
-        logoText.textContent = e.target.value || 'Your Logo Here';
-    });
-
-    document.getElementById('logo-font').addEventListener('change', (e) => {
-        logoText.style.fontFamily = e.target.value;
-    });
-
-    document.getElementById('logo-color').addEventListener('input', (e) => {
-        logoText.style.color = e.target.value;
-    });
-
-    document.getElementById('logo-image-upload').addEventListener('change', function(e) {
-        const file = e.target.files[0];
-        const reader = new FileReader();
-
-        reader.onload = function(event) {
-            logoImage.src = event.target.result;
-            logoImage.style.display = 'block';
-            logoImage.style.objectFit = 'contain'; // Ensure the image fits within the container without distortion
-        };
-
-        reader.readAsDataURL(file);
-    });
-
-    document.getElementById('vehicle-type').addEventListener('change', (e) => {
-        if (e.target.value === 'partner') {
-            vehicleImg.src = 'images/partner.jpg';
-        }
-    });
-
-    document.getElementById('reset-btn').addEventListener('click', () => {
-        logoText.textContent = 'Your Logo Here';
-        logoText.style.color = '#000000';
-        logoText.style.fontFamily = 'Arial';
-        logoSize.value = 150;
-        updateLogoSize(150);
-        logoImage.style.display = 'none';
-        logoText.style.display = 'block';
-        logoContainer.style.left = '50%';
-        logoContainer.style.top = '60%';
-        logoContainer.style.transform = 'translate(-50%, -50%)';
-    });
-
-    // Save and export the image of the vehicle preview
-    document.getElementById('save-btn').addEventListener('click', () => {
-        const vehiclePreview = document.getElementById('vehicle-preview');
-
-        html2canvas(vehiclePreview).then(canvas => {
-            const link = document.createElement('a');
-            link.download = 'vehicle_ad_preview.png';
-            link.href = canvas.toDataURL('image/png');
-            link.click();
-        });
-    });
-
-    document.getElementById('high-contrast').addEventListener('change', (e) => {
-        document.body.classList.toggle('high-contrast', e.target.checked);
-    });
-});
-</script>
-</body>
-</html>
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4 col-sm-offset-4">
+                    <div class="social text-center">
+                        <ul>
+                            <li><a class="wow fadeInUp" href="https://twitter.com/" target="_blank" rel="noopener noreferrer"><i class="fa fa-twitter"></i></a></li>
+                            <li><a class="wow fadeInUp" href="https://www.facebook.com/" data-wow-delay="0.2s" target="_blank" rel="noopener noreferrer"><i class="fa fa-facebook"></i></a></li>
+                            <li><a class="wow fadeInUp" href="https://www.instagram.com/" data-wow-delay="0.4s" target="_blank" rel="noopener noreferrer"><i class="fa fa-instagram"></i></a></li>
+                            <li><a class="wow fadeInUp" href="https://www.linkedin.com/" data-wow-delay="0.6s" target="_blank" rel="noopener noreferrer"><i class="fa fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                    <p class="text-center wow fadeInUp">Copyright © 2024 BARQ ADS. All rights reserved.</p>
+                    <a href="#top" class="scrollToTop"><i class="fa fa-arrow-up"></i></a>
+                </div>  
+            </div>  
+        </div>  
+    </footer>
+    
+    <!-- JavaScript Files -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/wow.min.
