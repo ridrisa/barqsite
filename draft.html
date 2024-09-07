@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Revolutionize your brand marketing with BARQ Ads through vehicle wrap advertising. Drive visibility across urban areas.">
+    <meta name="keywords" content="Vehicle Wraps, Advertising, Mobile Billboards, BARQ Ads">
+    <meta name="author" content="BARQ ADS">
+    <title>BARQ Ads - Redefining Mobile Advertising</title>
+    
+    <!-- Google Fonts and Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    
+    <!-- CSS Frameworks -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css/animate.min.css">
+
+    <!-- GSAP for Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+
+    <!-- Custom Styles -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Mulish', sans-serif;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        .container {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .navbar .navbar-brand {
+            font-weight: bold;
+            color: #fbd22c;
+        }
+        .navbar .nav-link {
+            color: #555;
+            font-weight: 600;
+            padding: 0 15px;
+            transition: color 0.3s ease-in-out;
+        }
+        .navbar .nav-link:hover {
+            color: #9F2842;
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 85vh;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)), 
+                        url('images/NEWACCENTY.JPG') no-repeat center/cover;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+            animation: bounceIn 1.5s ease;
+        }
+        .hero p {
+            font-size: 1.5rem;
+            margin-top: 20px;
+            margin-bottom: 40px;
+            color: #fbd22c;
+        }
+        .hero a {
+            font-size: 1.2rem;
+            background-color: #9F2842;
+            color: #fbd22c;
+            padding: 15px 30px;
+            border-radius: 30px;
+            transition: background 0.3s ease-in-out;
+        }
+        .hero a:hover {
+            background-color: #f1f1f1;
+            color: #333;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 80px 0;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 40px;
+            color: #9F2842;
+        }
+        .section-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            color: #555;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 30px 0;
+        }
+        .grid-item {
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        .grid-item:hover {
+            transform: translateY(-10px);
+        }
+
+        /* Form Styles */
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .form-group label {
+            font-weight: 600;
+            color: #333;
+        }
+        .form-group input, 
+        .form-group select, 
+        .form-group textarea {
+            border-radius: 5px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .form-group button {
+            padding: 12px 24px;
+            border-radius: 30px;
+            background-color: #9F2842;
+            color: #fbd22c;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: transform 0.3s ease-in-out;
+        }
+        .form-group button:hover {
+            background-color: #f1f1f1;
+            color: #333;
+            transform: translateY(-5px);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 40px 0;
+            text-align: center;
+        }
+        footer .social-icons a {
+            color: #fbd22c;
+            font-size: 1.5rem;
+            margin: 0 10px;
+        }
+        footer .social-icons a:hover {
+            color: #9F2842;
+        }
+
+        @keyframes bounceIn {
+            0% {
+                transform: translateY(-100px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="#top">BARQ ADS</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="#intro">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#campaign">Campaign</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Advertising Redefined</h1>
+        <p>Experience the future of mobile advertising with BARQ Ads</p>
+        <a href="#campaign">Launch Your Campaign</a>
+    </section>
+
+    <!-- About Section -->
+    <section id="intro">
+        <div class="container">
+            <h2 class="section-title">About BARQ Ads</h2>
+            <p class="section-content">
+                Maximize your brand's reach with cutting-edge vehicle wrap advertising. BARQ Ads leverages advanced geo-targeting and data analytics to ensure your campaigns deliver impactful results. Reach your audience where it matters most.
+            </p>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose Us</h2>
+            <div class="grid-container">
+                <div class="grid-item">
+                    <h3>Massive Exposure</h3>
+                    <p>Generate thousands of impressions daily by taking your ads on the move.</p>
+                </div>
+                <div class="grid-item">
+                    <h3>Targeted Advertising</h3>
+                    <p>Pinpoint specific routes and demographics to maximize ROI.</p>
+                </div>
+                <div class="grid-item">
+                    <h3>Real-Time Analytics</h3>
+                    <p>Track performance with real-time data to optimize your campaigns on the go.</p>
+                </div>
+                <div class="grid-item">
+                    <h3>Cost-Effective</h3>
+                    <p>Lower your cost-per-impression with mobile ads versus traditional mediums.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Campaign Section -->
+    <section id="campaign">
+        <div class="container">
+            <h2 class="section-title">Build Your Campaign</h2>
+            <form>
+                <div class="form-group">
+                    <label>Campaign Name</label>
+                    <input type="text" placeholder="Enter Campaign Name">
+                </div>
+                <div class="form-group">
+                    <label>Vehicle Type</label>
+                    <select>
+                        <option>Sedan</option>
+                        <option>Truck</option>
+                        <option>SUV</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Number of Vehicles</label>
+                    <input type="number" placeholder="Enter Number of Vehicles">
+                </div>
+                <div class="form-group">
+                    <label>Campaign Duration (weeks)</label>
+                    <input type="number" placeholder="Enter Duration">
+                </div>
+                <button type="submit">Create Campaign</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <form>
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label>Message</label>
+                    <textarea rows="4" placeholder="Your message"></textarea>
+                </div>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p>&copy; 2024 BARQ Ads. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script>
+        gsap.from(".hero h1", {opacity: 0, y: -50, duration: 1});
+        gsap.from(".hero p", {opacity: 0, y: -30, duration: 1, delay: 0.3});
+        gsap.from(".hero a", {opacity: 1, y: -20, duration: 1, delay: 0.6});
+    </script>
+</body>
+</html>
