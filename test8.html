@@ -74,6 +74,34 @@
     --background-color: #FFFFFF;
 }
 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.animate-fadeIn {
+    animation: fadeIn 1s ease-in-out;
+}
+
+.animate-slideIn {
+    animation: slideIn 1s ease-in-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 body {
     font-family: 'Open Sans', sans-serif;
     line-height: 1.6;
@@ -257,7 +285,7 @@ footer {
 }
 </style>
 <body>
-    <header>
+    <header class="animate-fadeIn">
         <nav>
             <div class="logo">
                 <img src="images/logotransparentxs.png" style="
@@ -279,7 +307,7 @@ footer {
     </header>
 
     <main>
-        <section id="hero">
+        <section id="hero" class="animate-slideIn">
             <video autoplay muted loop id="myVideo">
                 <source src="videos/city-ads.mp4" type="video/mp4">
             </video>
@@ -287,11 +315,11 @@ footer {
                 <h1>ADS & BEYOND</h1>
                 <p>Drive Your Brand Across the City with Barq Ads</p>
                 <p>Transform the landscape of outdoor advertising with our innovative platform that turns vehicles into dynamic billboards.</p>
-                <a href="#contact" class="cta-button">Get Started</a>
+                <a href="#contact" class="cta-button animate-fadeIn">Get Started</a>
             </div>
         </section>
 
-        <section id="about">
+        <section id="about" class="animate-fadeIn">
             <h2>Why Choose Barq Ads</h2>
             <p>Reach thousands of potential customers daily with eye-catching mobile advertisements that leave a lasting impression.</p>
             <div class="features-grid">
