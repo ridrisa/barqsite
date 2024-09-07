@@ -41,26 +41,32 @@
         /* Navbar */
         .navbar {
             background-color: #fff;
+            padding: 0 15px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
         .navbar .navbar-brand {
             font-weight: bold;
             color: #fbd22c;
+            
         }
         .navbar .nav-link {
-            color: #555;
+            color: #000000;
             font-weight: 600;
             padding: 0 15px;
-            transition: color 0.3s ease-in-out;
+            transition: lightning 0.3s ease-in-out;
         }
         .navbar .nav-link:hover {
             color: #9F2842;
         }
         
         /* Hero Section */
+        @keyframes lightning {
+            0%, 100% { text-shadow: 0 0 10px #ffffff, 0 0 20px #2b129b; }
+            50% { text-shadow: 0 0 30px #9F2842, 0 0 50px #e0c125; }
+        }
         .hero {
             height: 85vh;
-            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)), 
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8)), 
                         url('images/NEWACCENTY.JPG') no-repeat center/cover;
             color: #fff;
             display: flex;
@@ -68,12 +74,16 @@
             justify-content: center;
             align-items: center;
             text-align: center;
+            
         }
+        
         .hero h1 {
             font-size: 4rem;
             font-weight: 700;
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-            animation: bounceIn 1.5s ease;
+            animation: lightning 1.5s infinite;
+
+            
         }
         .hero p {
             font-size: 1.5rem;
@@ -90,8 +100,10 @@
             transition: background 0.3s ease-in-out;
         }
         .hero a:hover {
-            background-color: #f1f1f1;
+            background-color: #fbd22c;
             color: #333;
+            border-radius: 30px;
+
         }
 
         /* Section Styles */
@@ -103,7 +115,7 @@
             font-size: 3rem;
             font-weight: bold;
             margin-bottom: 40px;
-            color: #9F2842;
+            color: #ffcb11;
         }
         .section-content {
             text-align: center;
@@ -192,18 +204,24 @@
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#top">BARQ ADS</a>
+            <a class="navbar-brand" href="#top"><img src="images/logotransparentxs.png" alt="logo"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a class="nav-link" href="#intro">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#campaign">Campaign</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                <ul class="navbar-nav ml-auto";>
+                    <li class="nav-item"><a class="nav-link" style="color: #fbd22c" href="#intro">About</a></li>
+                    <li class="nav-item"><a class="nav-link" style="color: #fbd22c" href="#feature">Features</a></li>
+                    <li class="nav-item"><a class="nav-link" style="color: #fbd22c" href="#business-benefits">Business Benefits</a></li>
+                    <li class="nav-item"><a class="nav-link" style="color: #fbd22c" href="#types-of-advertising">Types of Advertising</a></li>
+                    <li class="nav-item"><a class="nav-link" style="color: #fbd22c" href="#build-your-campaign">Build Your Campaign</a></li>
+                    <li class="nav-item"><a class="nav-link" style="color: #fbd22c" href="#vehicle-wrap-visualizer">Vehicle Wrap Visualizer</a></li>
+                    <li class="nav-item"><a class="nav-link" style="color: #fbd22c" href="#impressions-map">Coverage Map</a></li>
+                    <li class="nav-item"><a class="nav-link" style="color: #fbd22c"href="#testimonials">Testimonials</a></li>
+                    <li class="nav-item"><a class="nav-link" style="color: #fbd22c" href="#faq">FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link" style="color: #fbd22c" href="#contact">Contact Us</a></li>
                 </ul>
             </div>
         </div>
@@ -211,9 +229,12 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <h1>Advertising Redefined</h1>
-        <p>Experience the future of mobile advertising with BARQ Ads</p>
-        <a href="#campaign">Launch Your Campaign</a>
+        <div class="hero-content">
+        <h1>The Future of Advertising is Here</h1>
+        <p>Experience BARQ Ads: Where Innovation Meets Visibility.</p>
+        <a href="#campaign">Revolutionize Your Brand</a></div>
+
+        <h1>BARQ:  ADS & BEYOND</h1>
     </section>
 
     <!-- About Section -->
