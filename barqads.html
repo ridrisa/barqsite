@@ -26,6 +26,38 @@
             --bg-color: #FFFFFF;
             --text-color: #333333;
         }
+        .gradient-text {
+            background: linear-gradient(45deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3);
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradient 15s ease infinite;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        .gradient-text:hover {
+            background-size: 400% 400%;
+            animation: gradient 10s ease infinite;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.2);
+        }
+        .typing-animation {
+            overflow: hidden;
+            border-right: .15em solid orange;
+            white-space: nowrap;
+            margin: 0 auto;
+            letter-spacing: .15em;
+            animation: 
+                typing 3.5s steps(40, end),
+                blink-caret .75s step-end infinite;
+        }
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: orange; }
+        }
 
         body {
             font-family: 'Open Sans', sans-serif;
@@ -296,8 +328,8 @@
     <section class="hero" id="top">
         <div class="container">
             <div class="hero-content">
-                <h1 class="animate__animated animate__fadeInDown">The Future of Advertising is Here</h1>
-                <p class="animate__animated animate__fadeInUp animate__delay-1s">Where Innovation Meets Visibility</p>
+                <h1 class="display-4 typing-animation gradient-text">Revolutionize Your Outdoor Advertising</h1>
+                <p class="lead">Reach your audience with AI-driven vehicle wrap solutions and real-time analytics</p>
                 <a href="#contact" class="btn btn-primary btn-lg animate__animated animate__fadeInUp animate__delay-2s">Start Your Campaign</a>
             </div>
             <div class="container car-animation-container">
