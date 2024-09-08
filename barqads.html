@@ -598,13 +598,13 @@
     </footer>
 
     <!-- Chat Widget -->
-    <div id="chatWidget" class="position-fixed bottom-0 end-0 m-3 card" style="width: 300px; height: 400px;">
-        <div class="card-header bg-primary text-white">
+    <div id="chatWidget" class="position-fixed bottom-0 end-0 m-3 card" style="width: 300px; height: 400px; background-color: var(--bg-color); color: var(--text-color); border: 1px solid var(--primary-color);">
+        <div class="card-header" style="background-color: var(--primary-color); color: var(--bg-color);">
             Chat with OpenAI
         </div>
-        <div id="chatMessages" class="card-body overflow-auto" style="height: 300px;"></div>
-        <div class="card-footer">
-            <input type="text" id="chatInput" class="form-control" placeholder="Type your message...">
+        <div id="chatMessages" class="card-body overflow-auto" style="height: 300px; background-color: var(--bg-color); color: var(--text-color);"></div>
+        <div class="card-footer" style="background-color: var(--bg-color);">
+            <input type="text" id="chatInput" class="form-control" placeholder="Type your message..." style="border: 1px solid var(--primary-color);">
         </div>
     </div>
 
