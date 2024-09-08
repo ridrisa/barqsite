@@ -4,16 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=yes">
     <title>BARQ ADS - Revolutionizing Outdoor Advertising</title>
-    
-    <!-- Core CSS Files -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
-    
-    <!-- Google Fonts --> 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:300,400,700&display=swap" rel="stylesheet">
-    
     <style>
         :root {
             --primary-color: #FFB81C;
@@ -22,28 +17,23 @@
             --bg-color: #FFFFFF;
             --text-color: #333333;
         }
-
         body {
             font-family: 'Open Sans', sans-serif;
             color: var(--text-color);
             background-color: var(--bg-color);
             overflow-x: hidden;
         }
-
         h1, h2, h3, h4, h5, h6 {
             font-family: 'Alegreya Sans', sans-serif;
             font-weight: 700;
         }
-
         .navbar {
             transition: background-color 0.3s ease;
         }
-
         .navbar-scrolled {
             background-color: rgba(255, 255, 255, 0.95);
             box-shadow: 0 2px 4px rgba(0,0,0,.1);
         }
-
         .hero {
             height: 80vh;
             background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/lowercover.jpg') no-repeat center center/cover;
@@ -53,62 +43,54 @@
             text-align: center;
             color: var(--bg-color);
         }
-
         .hero-content h1 {
             font-size: 3.5rem;
             margin-bottom: 1rem;
+            animation: fadeInDown 1s ease-out;
         }
-
         .hero-content p {
             font-size: 1.5rem;
             margin-bottom: 2rem;
+            animation: fadeInUp 1s ease-out 0.5s;
+            animation-fill-mode: both;
         }
-
         .btn-primary {
             background-color: var(--primary-color);
             border-color: var(--primary-color);
             color: var(--secondary-color);
             transition: all 0.3s ease;
         }
-
         .btn-primary:hover {
             background-color: var(--secondary-color);
             border-color: var(--secondary-color);
             color: var(--bg-color);
         }
-
         .section-title {
             text-align: center;
             margin-bottom: 3rem;
         }
-
         .section-title h2 {
             color: var(--primary-color);
             font-size: 2.5rem;
             margin-bottom: 1rem;
         }
-
         .feature-item {
             text-align: center;
             margin-bottom: 2rem;
             transition: transform 0.3s ease;
         }
-
         .feature-item:hover {
             transform: translateY(-10px);
         }
-
         .feature-item i {
             font-size: 3rem;
             color: var(--accent-color);
             margin-bottom: 1rem;
         }
-
         .clients-carousel .item {
             text-align: center;
             padding: 2rem;
         }
-
         .price-box {
             background-color: var(--bg-color);
             border-radius: 10px;
@@ -116,24 +98,20 @@
             transition: transform 0.3s ease;
             margin-bottom: 2rem;
         }
-
         .price-box:hover {
             transform: translateY(-10px);
         }
-
         .creative-map-container {
             position: relative;
             height: 500px;
             overflow: hidden;
         }
-
         .creative-map-container iframe {
             width: 100%;
             height: 100%;
             border: none;
             transition: filter 0.5s ease;
         }
-
         .map-overlay-content {
             position: absolute;
             top: 50%;
@@ -145,26 +123,71 @@
             padding: 2rem;
             border-radius: 10px;
         }
-
-        /* Animations for Scroll */
-        .fade-in, .slide-in, .scale-in, .rotate-in {
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .fade-in {
             opacity: 0;
+            transition: opacity 0.5s ease-in-out;
         }
-
-        .floating {
-            animation: float 3s ease-in-out infinite;
+        .fade-in.appear {
+            opacity: 1;
         }
-
+        .slide-in {
+            transform: translateY(50px);
+            opacity: 0;
+            transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+        }
+        .slide-in.appear {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        .scale-in {
+            transform: scale(0.8);
+            opacity: 0;
+            transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+        }
+        .scale-in.appear {
+            transform: scale(1);
+            opacity: 1;
+        }
+        .rotate-in {
+            transform: rotate(-10deg);
+            opacity: 0;
+            transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+        }
+        .rotate-in.appear {
+            transform: rotate(0);
+            opacity: 1;
+        }
         @keyframes float {
             0% { transform: translateY(0px); }
             50% { transform: translateY(-20px); }
             100% { transform: translateY(0px); }
         }
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
     </style>
 </head>
 <body data-bs-spy="scroll" data-bs-target="#navbar-main" data-bs-offset="100">
-
-<!-- Navigation -->
 <nav id="navbar-main" class="navbar navbar-expand-lg navbar-light fixed-top">
     <div class="container">
         <a class="navbar-brand" href="#top">
@@ -184,8 +207,6 @@
         </div>
     </div>
 </nav>
-
-<!-- Hero Section -->
 <section class="hero" id="top">
     <div class="container">
         <div class="hero-content">
@@ -195,8 +216,6 @@
         </div>
     </div>
 </section>
-
-<!-- Intro Section -->
 <section id="intro" class="py-5">
     <div class="container">
         <div class="row align-items-center">
@@ -211,8 +230,6 @@
         </div>
     </div>
 </section>
-
-<!-- Feature Section -->
 <section id="feature" class="py-5 bg-light">
     <div class="container">
         <div class="section-title scale-in">
@@ -228,14 +245,14 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="feature-item slide-in" data-delay="0.2">
+                <div class="feature-item slide-in" data-delay="0.2s">
                     <i class="fas fa-tablet-alt"></i>
                     <h3>Digital Display</h3>
                     <p>Deploy dynamic digital ads with our state-of-the-art smart screens for real-time content updates.</p>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="feature-item slide-in" data-delay="0.4">
+                <div class="feature-item slide-in" data-delay="0.4s">
                     <i class="fas fa-chart-line"></i>
                     <h3>Analytics Dashboard</h3>
                     <p>Track your campaign performance with our comprehensive analytics and reporting tools.</p>
@@ -244,8 +261,6 @@
         </div>
     </div>
 </section>
-
-<!-- Advanced Technology Platform Section -->
 <section id="technology" class="py-5">
     <div class="container">
         <div class="row align-items-center">
@@ -255,11 +270,11 @@
                     <h4><i class="fas fa-map-marker-alt me-2"></i>Geotargeting Precision</h4>
                     <p>Deliver hyper-targeted campaigns based on precise geofencing and real-time data.</p>
                 </div>
-                <div class="feature-item rotate-in" data-delay="0.2">
+                <div class="feature-item rotate-in" data-delay="0.2s">
                     <h4><i class="fas fa-cogs me-2"></i>Programmatic Advertising</h4>
                     <p>Streamline your ad buying process with our cutting-edge programmatic solutions.</p>
                 </div>
-                <div class="feature-item rotate-in" data-delay="0.4">
+                <div class="feature-item rotate-in" data-delay="0.4s">
                     <h4><i class="fas fa-chart-bar me-2"></i>Comprehensive Data Analytics</h4>
                     <p>Gain valuable insights with our robust data analytics dashboard.</p>
                 </div>
@@ -270,8 +285,16 @@
         </div>
     </div>
 </section>
-
-<!-- Clients Section -->
+<section id="map" class="py-5">
+    <div class="creative-map-container">
+        <iframe src="map.html" allowfullscreen="" loading="lazy"></iframe>
+        <div class="map-overlay-content animate__animated animate__fadeIn">
+            <h3 class="map-title">Explore Our Reach</h3>
+            <p class="map-description">See how our network spans across the city with precision targeting and unmatched coverage.</p>
+            <a href="#contact" class="btn btn-primary">Learn More</a>
+        </div>
+    </div>
+</section>
 <section id="clients" class="py-5">
     <div class="container">
         <div class="section-title">
@@ -296,8 +319,6 @@
         </div>
     </div>
 </section>
-
-<!-- Pricing Section -->
 <section id="package" class="py-5 bg-light">
     <div class="container">
         <div class="section-title">
@@ -324,235 +345,203 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="col-md-6">
-                    <div class="price-box p-4 animate__animated animate__fadeInRight">
-                        <div class="price-heading text-center">
-                            <h3>Premium Package</h3>
-                        </div>
-                        <div class="price-group text-center my-4">
-                            <span class="h2">1800 SAR</span> / Vehicle
-                        </div>
-                        <ul class="list-unstyled">
-                            <li><i class="fas fa-check text-success me-2"></i>100+ Vehicles</li>
-                            <li><i class="fas fa-check text-success me-2"></i>3 Months Minimum Duration</li>
-                            <li><i class="fas fa-check text-success me-2"></i>Real-time Tracking Dashboard</li>
-                            <li><i class="fas fa-check text-success me-2"></i>Large Vinyl Wrap - Full Vehicle</li>
-                        </ul>
-                        <div class="text-center mt-4">
-                            <a href="#contact" class="btn btn-primary">Get Started</a>
-                        </div>
+                <div class="price-box p-4 animate__animated animate__fadeInRight">
+                    <div class="price-heading text-center">
+                        <h3>Premium Package</h3>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Contact Section -->
-    <section id="contact" class="py-5">
-        <div class="container">
-            <div class="section-title">
-                <h2>Get in Touch</h2>
-                <p>Ready to revolutionize your advertising? Let's talk!</p>
-            </div>
-            <div class="row">
-                <div class="col-md-6 animate__animated animate__fadeInLeft">
-                    <form id="contactForm" class="contact-form">
-                        <div class="mb-3">
-                            <input type="text" class="form-control" id="name" placeholder="Your Name" required>
-                        </div>
-                        <div class="mb-3">
-                            <input type="email" class="form-control" id="email" placeholder="Your Email" required>
-                        </div>
-                        <div class="mb-3">
-                            <textarea class="form-control" id="message" rows="5" placeholder="Your Message" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                    </form>
-                </div>
-                <div class="col-md-6 animate__animated animate__fadeInRight">
-                    <div class="contact-info">
-                        <h3>Our Office</h3>
-                        <p><i class="fas fa-map-marker-alt me-2"></i>123 BARQ Street, Dubai, UAE</p>
-                        <p><i class="fas fa-phone me-2"></i>+971 4 123 4567</p>
-                        <p><i class="fas fa-envelope me-2"></i>info@barqads.com</p>
-                        <div class="social-links mt-4">
-                            <a href="#" class="me-3"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#" class="me-3"><i class="fab fa-twitter"></i></a>
-                            <a href="#" class="me-3"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#" class="me-3"><i class="fab fa-instagram"></i></a>
-                        </div>
+                    <div class="price-group text-center my-4">
+                        <span class="h2">1800 SAR</span> / Vehicle
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Footer -->
-    <footer class="bg-dark text-light py-4">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <img src="images/logotransparentxs.png" alt="BARQ ADS logo" class="mb-3" height="40">
-                    <p>Revolutionizing outdoor advertising with innovative mobile solutions.</p>
-                </div>
-                <div class="col-md-4">
-                    <h5>Quick Links</h5>
                     <ul class="list-unstyled">
-                        <li><a href="#intro">About</a></li>
-                        <li><a href="#feature">Features</a></li>
-                        <li><a href="#clients">Clients</a></li>
-                        <li><a href="#package">Pricing</a></li>
+                        <li><i class="fas fa-check text-success me-2"></i>100+ Vehicles</li>
+                        <li><i class="fas fa-check text-success me-2"></i>3 Months Minimum Duration</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Real-time Tracking Dashboard</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Large Vinyl Wrap - Full Vehicle</li>
                     </ul>
-                </div>
-                <div class="col-md-4">
-                    <h5>Newsletter</h5>
-                    <p>Stay updated with our latest news and offers.</p>
-                    <form class="mt-3">
-                        <div class="input-group">
-                            <input type="email" class="form-control" placeholder="Enter your email" required>
-                            <button class="btn btn-primary" type="submit">Subscribe</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <hr class="mt-4 mb-3">
-            <div class="row">
-                <div class="col-md-6">
-                    <p>&copy; 2024 BARQ ADS. All rights reserved.</p>
-                </div>
-                <div class="col-md-6 text-md-end">
-                    <a href="#" class="me-3">Privacy Policy</a>
-                    <a href="#" class="me-3">Terms of Service</a>
+                    <div class="text-center mt-4">
+                        <a href="#contact" class="btn btn-primary">Get Started</a>
+                    </div>
                 </div>
             </div>
         </div>
-    </footer>
-    
-    <!-- Back to Top Button -->
-    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="fas fa-arrow-up"></i></a>
-    
-    <!-- JavaScript Files -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
-    
-    <script>
-        $(document).ready(function() {
-            // Initialize WOW.js for scroll animations
-            new WOW().init();
-    
-            // GSAP ScrollTrigger setup
-            gsap.registerPlugin(ScrollTrigger);
-    
-            // Animate elements on scroll
-            gsap.utils.toArray('.fade-in, .slide-in, .scale-in, .rotate-in').forEach(function(elem) {
-                gsap.from(elem, {
-                    opacity: 0,
-                    y: 50,
-                    scale: 0.9,
-                    rotation: -5,
-                    duration: 1,
-                    scrollTrigger: {
-                        trigger: elem,
-                        start: "top 80%",
-                        end: "bottom 20%",
-                        toggleActions: "play none none reverse"
-                    }
-                });
-            });
-    
-            // Floating animation for images
-            gsap.to('.floating', {
-                y: -20,
-                duration: 2,
-                repeat: -1,
-                yoyo: true,
-                ease: "power1.inOut"
-            });
-    
-            // Smooth scrolling for navbar links
-            $('a.nav-link, .btn-primary').on('click', function(event) {
-                if (this.hash !== "") {
-                    event.preventDefault();
-                    var hash = this.hash;
-                    gsap.to(window, {duration: 1, scrollTo: hash, ease: "power2.inOut"});
+    </div>
+</section>
+<section id="contact" class="py-5">
+    <div class="container">
+        <div class="section-title">
+            <h2>Get in Touch</h2>
+            <p>Ready to revolutionize your advertising? Let's talk!</p>
+        </div>
+        <div class="row">
+            <div class="col-md-6 animate__animated animate__fadeInLeft">
+                <form id="contactForm" class="contact-form">
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="mb-3">
+                        <textarea class="form-control" id="message" rows="5" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+            <div class="col-md-6 animate__animated animate__fadeInRight">
+                <div class="contact-info">
+                    <h3>Our Office</h3>
+                    <p><i class="fas fa-map-marker-alt me-2"></i>123 BARQ Street, Dubai, UAE</p>
+                    <p><i class="fas fa-phone me-2"></i>+971 4 123 4567</p>
+                    <p><i class="fas fa-envelope me-2"></i>info@barqads.com</p>
+                    <div class="social-links mt-4">
+                        <a href="#" class="me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="bg-dark text-light py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <img src="images/logotransparentxs.png" alt="BARQ ADS logo" class="mb-3" height="40">
+                <p>Revolutionizing outdoor advertising with innovative mobile solutions.</p>
+            </div>
+            <div class="col-md-4">
+                <h5>Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#intro">About</a></li>
+                    <li><a href="#feature">Features</a></li>
+                    <li><a href="#clients">Clients</a></li>
+                    <li><a href="#package">Pricing</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h5>Newsletter</h5>
+                <p>Stay updated with our latest news and offers.</p>
+                <form class="mt-3">
+                    <div class="input-group">
+                        <input type="email" class="form-control" placeholder="Enter your email" required>
+                        <button class="btn btn-primary" type="submit">Subscribe</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <hr class="mt-4 mb-3">
+        <div class="row">
+            <div class="col-md-6">
+                <p>&copy; 2024 BARQ ADS. All rights reserved.</p>
+            </div>
+            <div class="col-md-6 text-md-end">
+                <a href="#" class="me-3">Privacy Policy</a>
+                <a href="#" class="me-3">Terms of Service</a>
+            </div>
+        </div>
+    </div>
+</footer>
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="fas fa-arrow-up"></i></a>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+<script>
+    $(document).ready(function() {
+        new WOW().init();
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.utils.toArray('.fade-in, .slide-in, .scale-in, .rotate-in').forEach(function(elem) {
+            gsap.from(elem, {
+                opacity: 0,
+                y: 50,
+                scale: 0.9,
+                rotation: -5,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: elem,
+                    start: "top 80%",
+                    end: "bottom 20%",
+                    toggleActions: "play none none reverse"
                 }
-            });
-    
-            // Navbar color change on scroll
-            $(window).scroll(function() {
-                if ($(this).scrollTop() > 100) {
-                    $('.navbar').addClass('navbar-scrolled');
-                } else {
-                    $('.navbar').removeClass('navbar-scrolled');
-                }
-            });
-    
-            // Initialize Owl Carousel for client testimonials
-            $(".clients-carousel").owlCarousel({
-                items: 1,
-                loop: true,
-                margin: 10,
-                autoplay: true,
-                autoplayTimeout: 5000,
-                autoplayHoverPause: true,
-                animateIn: 'fadeIn',
-                animateOut: 'fadeOut',
-                responsive: {
-                    0: { items: 1 },
-                    768: { items: 2 },
-                    992: { items: 3 }
-                }
-            });
-    
-            // Form submission handling with animation
-            $('#contactForm').submit(function(e) {
-                e.preventDefault();
-                gsap.to(this, {scale: 0.9, opacity: 0, duration: 0.5, onComplete: function() {
-                    alert('Thank you for your message. We will get back to you soon!');
-                    $('#contactForm')[0].reset();
-                    gsap.to('#contactForm', {scale: 1, opacity: 1, duration: 0.5});
-                }});
-            });
-    
-            // Back to top button animation
-            $('.back-to-top').click(function() {
-                gsap.to(window, {duration: 1, scrollTo: 0, ease: "power2.inOut"});
-                return false;
-            });
-    
-            // Interactive map animation
-            $('.creative-map-container iframe').on('mouseenter', function() {
-                gsap.to(this, {filter: "grayscale(0%)", duration: 0.3});
-            }).on('mouseleave', function() {
-                gsap.to(this, {filter: "grayscale(100%)", duration: 0.3});
-            });
-    
-            // Animate numbers in pricing section
-            gsap.utils.toArray('.price-group .h2').forEach(function(elem) {
-                let startValue = parseFloat(elem.innerText);
-                let endValue = startValue;
-                
-                gsap.to(elem, {
-                    innerText: endValue,
-                    duration: 2,
-                    ease: "power1.inOut",
-                    snap: { innerText: 1 },
-                    scrollTrigger: {
-                        trigger: elem,
-                        start: "top 80%",
-                        end: "bottom 20%",
-                        toggleActions: "play none none reverse"
-                    },
-                    onUpdate: function() {
-                        elem.innerText = Math.ceil(elem.innerText).toLocaleString() + " SAR";
-                    }
-                });
             });
         });
-    </script>
-    </body>
-    </html>
+        gsap.to('.floating', {
+            y: -20,
+            duration: 2,
+            repeat: -1,
+            yoyo: true,
+            ease: "power1.inOut"
+        });
+        $('a.nav-link, .btn-primary').on('click', function(event) {
+            if (this.hash !== "") {
+                event.preventDefault();
+                var hash = this.hash;
+                gsap.to(window, {duration: 1, scrollTo: hash, ease: "power2.inOut"});
+            }
+        });
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 100) {
+                $('.navbar').addClass('navbar-scrolled');
+            } else {
+                $('.navbar').removeClass('navbar-scrolled');
+            }
+        });
+        $(".clients-carousel").owlCarousel({
+            items: 1,
+            loop: true,
+            margin: 10,
+            autoplay: true,
+            autoplayTimeout: 5000,
+            autoplayHoverPause: true,
+            animateIn: 'fadeIn',
+            animateOut: 'fadeOut',
+            responsive: {
+                0: { items: 1 },
+                768: { items: 2 },
+                992: { items: 3 }
+            }
+        });
+        $('#contactForm').submit(function(e) {
+            e.preventDefault();
+            gsap.to(this, {scale: 0.9, opacity: 0, duration: 0.5, onComplete: function() {
+                alert('Thank you for your message. We will get back to you soon!');
+                $('#contactForm')[0].reset();
+                gsap.to('#contactForm', {scale: 1, opacity: 1, duration: 0.5});
+            }});
+        });
+        $('.back-to-top').click(function() {
+            gsap.to(window, {duration: 1, scrollTo: 0, ease: "power2.inOut"});
+            return false;
+        });
+        $('.creative-map-container iframe').on('mouseenter', function() {
+            gsap.to(this, {filter: "grayscale(0%)", duration: 0.3});
+        }).on('mouseleave', function() {
+            gsap.to(this, {filter: "grayscale(100%)", duration: 0.3});
+        });
+        gsap.utils.toArray('.price-group .h2').forEach(function(elem) {
+            let startValue = parseFloat(elem.innerText);
+            let endValue = startValue;
+            gsap.to(elem, {
+                innerText: endValue,
+                duration: 2,
+                ease: "power1.inOut",
+                snap: { innerText: 1 },
+                scrollTrigger: {
+                    trigger: elem,
+                    start: "top 80%",
+                    end: "bottom 20%",
+                    toggleActions: "play none none reverse"
+                },
+                onUpdate: function() {
+                    elem.innerText = Math.ceil(elem.innerText).toLocaleString() + " SAR";
+                }
+            });
+        });
+    });
+</script>
+</body>
+</html>

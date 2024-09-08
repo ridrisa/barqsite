@@ -2,507 +2,792 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Barq Ads</title>
-    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.7/dist/html2canvas.min.js"></script>
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes">
+    <title>BARQ ADS - Revolutionizing Outdoor Advertising</title>
+    
+    <!-- Meta tags for SEO -->
+    <meta name="description" content="BARQ ADS offers innovative vehicle wrap advertising solutions powered by real-time data and cutting-edge technology. Transform your brand visibility today!">
+    <meta name="keywords" content="outdoor advertising, vehicle wraps, digital display ads, geotargeting, programmatic advertising">
+    
+    <!-- Open Graph meta tags for social media sharing -->
+    <meta property="og:title" content="BARQ ADS - Revolutionizing Outdoor Advertising">
+    <meta property="og:description" content="Maximize your brand's reach with our innovative vehicle wrap advertising solutions, powered by real-time data and cutting-edge technology.">
+    <meta property="og:image" content="https://www.barqads.com/images/og-image.jpg">
+    <meta property="og:url" content="https://www.barqads.com">
+    <meta property="og:type" content="website">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    
+    <!-- Core CSS Files -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Muli:400,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    
+    <!-- Google Fonts --> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Alegreya+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    
     <style>
+        :root {
+            --primary-color: #FFB81C;
+            --secondary-color: #54565A;
+            --accent-color: #9F2842;
+            --bg-color: #FFFFFF;
+            --text-color: #333333;
+        }
+
         body {
-            font-family: 'Muli', sans-serif;
-            color: #54565A;
-            background: linear-gradient(135deg, #FFB81C, #2C9942);
+            font-family: 'Open Sans', sans-serif;
+            color: var(--text-color);
+            background-color: var(--bg-color);
             overflow-x: hidden;
         }
-        header, footer {
-            background-color: #6B5D9A;
-            color: #FFB81C;
-            padding: 20px 0;
-            text-align: center;
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Alegreya Sans', sans-serif;
+            font-weight: 700;
         }
-        nav a {
-            color: #FFB81C;
-            margin: 0 15px;
-            font-weight: 600;
-            transition: color 0.3s, text-shadow 0.3s;
+
+        .navbar {
+            transition: background-color 0.3s ease;
         }
-        nav a:hover {
-            color: #FFFFFF;
-            text-shadow: 0 0 5px #FFFFFF;
+
+        .navbar-scrolled {
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 4px rgba(0,0,0,.1);
         }
-        section {
-            margin: 60px 0;
-            padding: 40px;
-            background-color: #FFFFFF;
-            border-radius: 15px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-        }
-        section h2 {
-            margin-bottom: 40px;
-            font-size: 2.5rem;
-            text-align: center;
-            font-weight: 600;
-            color: #5C007A;
-        }
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
-        }
-        .feature-item, .pricing-item, .testimonial-item {
-            text-align: center;
-            border-radius: 15px;
-            padding: 20px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-            background-color: #F6F6F6;
-        }
-        footer .social ul {
+
+        .hero {
+            height: 80vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/lowercover.jpg') no-repeat center center/cover;
             display: flex;
+            align-items: center;
             justify-content: center;
-            padding: 0;
-            list-style: none;
+            text-align: center;
+            color: var(--bg-color);
         }
-        .form-container {
-            max-width: 600px;
-            margin: auto;
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            animation: fadeInDown 1s ease-out;
         }
-        .form-container input, .form-container select, .form-container textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
+
+        .hero-content p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            animation: fadeInUp 1s ease-out 0.5s;
+            animation-fill-mode: both;
         }
-        .form-container button {
-            background-color: #4A4A4A;
-            color: white;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            color: var(--secondary-color);
+            transition: all 0.3s ease;
+            font-weight: bold;
         }
-        .form-container button:hover {
-            background-color: #2F2F2F;
+
+        .btn-primary:hover, .btn-primary:focus {
+            background-color: var(--secondary-color);
+            border-color: var(--secondary-color);
+            color: var(--bg-color);
         }
-        .ad-editor {
-            background-color: #f4f4f4;
-            padding: 20px;
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-item {
+            text-align: center;
+            margin-bottom: 2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature-item i {
+            font-size: 3rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+
+        .clients-carousel .item {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .price-box {
+            background-color: var(--bg-color);
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 6px rgba(0,0,0,.1);
+            transition: transform 0.3s ease;
+            margin-bottom: 2rem;
+        }
+
+        .price-box:hover {
+            transform: translateY(-10px);
+        }
+
+        .creative-map-container {
+            position: relative;
+            height: 500px;
+            overflow: hidden;
+        }
+
+        .creative-map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            transition: filter 0.5s ease;
+        }
+
+        .map-overlay-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: var(--bg-color);
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 2rem;
+            border-radius: 10px;
+        }
+
+        .skip-to-content {
+            position: absolute;
+            left: -9999px;
+            top: auto;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+        }
+        .skip-to-content:focus {
+            position: static;
+            width: auto;
+            height: auto;
+        }
+
+        a:focus, button:focus, input:focus, textarea:focus {
+            outline: 2px solid var(--accent-color);
+            outline-offset: 2px;
+        }
+
+        .small-text {
+            font-size: 0.875rem;
+            line-height: 1.5;
+        }
+
+        .error-message {
+            color: #dc3545;
+            font-size: 0.875rem;
+            margin-top: 0.25rem;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .fade-in.appear {
+            opacity: 1;
+        }
+
+        .slide-in {
+            transform: translateY(50px);
+            opacity: 0;
+            transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+        }
+
+        .slide-in.appear {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .scale-in {
+            transform: scale(0.8);
+            opacity: 0;
+            transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+        }
+
+        .scale-in.appear {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        .rotate-in {
+            transform: rotate(-10deg);
+            opacity: 0;
+            transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+        }
+
+        .rotate-in.appear {
+            transform: rotate(0);
+            opacity: 1;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .floating {
+            animation: float 3s ease-in-out infinite;
         }
     </style>
 </head>
-<body>
-    <header>
-        <div id="menu">
-        <nav class="navbar-wrapper navbar-default" role="navigation">
-            <div class="container header-container">
-                <div class="navbar-header header-logo">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-themers">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand site-name" href="#top">
-                        <img src="images/logotransparentxs.png" alt="logo">
-                    </a>
-                    <div id="navbar-scroll" class="collapse navbar-collapse navbar-themers navbar-right header-text">
-                    <ul class="nav navbar-nav">
-                        <li><a href="#intro">About</a></li>
-                        <li><a href="#feature">Features</a></li>
-                        <li><a href="#subscribe">Contact us</a></li>
-                        <li><a href="#clients">Clients</a></li>
-                        <li><a href="#package">Pricing</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </div>
-     
-    </header>
-    
-    
-    <section id="landing" class="text-center py-8">
-        <h1 class="text-4xl font-bold">ADS & BEYOND</h1>
-        <h2 class="text-2xl mt-4">Drive Your Brand Across the City with Barq Ads</h2>
-        <p class="mt-4">Transform the landscape of outdoor advertising with our innovative platform that turns vehicles into dynamic billboards.</p>
-    </section>
-    <section id="features">
-        <h2>Why Choose Barq Ads</h2>
-        <p class="text-center">Reach thousands of potential customers daily with eye-catching mobile advertisements that leave a lasting impression.</p>
-        <div class="grid-container">
-            <div class="feature-item">
-                <h3 class="font-semibold">Massive Exposure</h3>
-                <p>Enhance brand visibility with wide-reaching mobile advertisements.</p>
-            </div>
-            <div class="feature-item">
-                <h3 class="font-semibold">Targeted Advertising</h3>
-                <p>Maximize ad impact by choosing specific routes and areas.</p>
-            </div>
-            <div class="feature-item">
-                <h3 class="font-semibold">Cost-Effective</h3>
-                <p>Benefit from a lower cost-per-impression compared to traditional ads.</p>
-            </div>
-            <div class="feature-item">
-                <h3 class="font-semibold">Real-Time Tracking</h3>
-                <p>Gain insights into your ad reach with our GPS tracking and analytics.</p>
-            </div>
-        </div>
-    </section>
-    <section id="how-it-works">
-        <h2>How It Works</h2>
-        <div class="grid-container">
-            <div class="feature-item">
-                <h3>Step 1: Design Your Ad</h3>
-                <p>Create an attention-grabbing vehicle wrap with our design team.</p>
-            </div>
-            <div class="feature-item">
-                <h3>Step 2: Choose Your Fleet</h3>
-                <p>Select the vehicles that align with your marketing strategy.</p>
-            </div>
-            <div class="feature-item">
-                <h3>Step 3: Set Your Route</h3>
-                <p>Define the areas and routes for maximum exposure.</p>
-            </div>
-            <div class="feature-item">
-                <h3>Step 4: Launch & Monitor</h3>
-                <p>Watch your campaign go live and track its performance in real-time.</p>
-            </div>
-        </div>
-    </section>
-    <section id="business-benefits">
-        <h2>Business Benefits</h2>
-        <div class="grid-container">
-            <div class="feature-item">
-                <h3>Guaranteed Reach</h3>
-                <p>Your ads will consistently appear across high-traffic areas.</p>
-            </div>
-            <div class="feature-item">
-                <h3>Widespread Coverage</h3>
-                <p>Broad exposure throughout the city leads to higher conversions.</p>
-            </div>
-            <div class="feature-item">
-                <h3>Data-Driven</h3>
-                <p>Optimize campaigns with actionable insights and real-time analytics.</p>
-            </div>
-            <div class="feature-item">
-                <h3>Build Brand Awareness</h3>
-                <p>Elevate visibility with our vehicle advertising options.</p>
-            </div>
-        </div>
-    </section>
-    <section id="pricing">
-        <h2>Pricing Plans</h2>
-        <div class="grid-container">
-            <div class="pricing-item">
-                <h3>Basic Plan</h3>
-                <p>Price: $500/month</p>
-                <ul>
-                    <li>1 Vehicle</li>
-                    <li>Basic Analytics</li>
-                    <li>Regional Coverage</li>
-                </ul>
-            </div>
-            <div class="pricing-item">
-                <h3>Standard Plan</h3>
-                <p>Price: $1,000/month</p>
-                <ul>
-                    <li>3 Vehicles</li>
-                    <li>Enhanced Analytics</li>
-                    <li>Citywide Coverage</li>
-                </ul>
-            </div>
-            <div class="pricing-item">
-                <h3>Premium Plan</h3>
-                <p>Price: $2,000/month</p>
-                <ul>
-                    <li>5 Vehicles</li>
-                    <li>Full Analytics Suite</li>
-                    <li>National Coverage</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-    <section id="testimonials">
-        <h2>What Our Clients Say</h2>
-        <div class="grid-container">
-            <div class="testimonial-item">
-                <p>"BARQ ADS has transformed our advertising approach, leading to a remarkable increase in sales."</p>
-                <p><strong>— John Asset, Neoleap</strong></p>
-            </div>
-            <div class="testimonial-item">
-                <p>"Promoting the Spiderman trailer with BARQ ADS was a game-changer. Significant ticket sales!"</p>
-                <p><strong>— Peter Parker, Vox Cinema</strong></p>
-            </div>
-            <div class="testimonial-item">
-                <p>"Using BARQ ADS significantly boosted our sales, proving the effectiveness of their service."</p>
-                <p><strong>— Colonel Sanders, KFC</strong></p>
-            </div>
-        </div>
-    </section>
-    <section id="types-of-advertising">
-        <h2>Types of Advertising</h2>
-        <div class="grid-container">
-            <div class="feature-item">
-                <h3 class="font-semibold">Vehicle Wraps</h3>
-                <p>Transform your vehicle into a mobile billboard that captures attention everywhere it goes.</p>
-            </div>
-            <div class="feature-item">
-                <h3 class="font-semibold">Digital Advertising</h3>
-                <p>Leverage digital screens for dynamic advertisements that engage your audience in real time.</p>
-            </div>
-            <div class="feature-item">
-                <h3 class="font-semibold">Street Furniture Ads</h3>
-                <p>Utilize bus shelters, benches, and kiosks for advertising in high foot-traffic areas.</p>
-            </div>
-            <div class="feature-item">
-                <h3 class="font-semibold">Event Sponsorship</h3>
-                <p>Get your brand in front of thousands by sponsoring local events and festivals.</p>
-            </div>
-        </div>
-    </section>
-    <section id="latest-articles">
-        <h2>Latest Articles</h2>
-        <div class="grid-container">
-            <div class="feature-item">
-                <h3 class="font-semibold">The Future of Mobile Advertising</h3>
-                <p>Explore innovative strategies and tools that are shaping the future of mobile advertising.</p>
-            </div>
-            <div class="feature-item">
-                <h3 class="font-semibold">Effective Branding in 2024</h3>
-                <p>Learn how to enhance your brand’s visibility and reach through effective advertising techniques.</p>
-            </div>
-            <div class="feature-item">
-                <h3 class="font-semibold">Case Study: Successful Campaigns</h3>
-                <p>Analyze successful advertising campaigns and the key factors that contributed to their success.</p>
-            </div>
-            <div class="feature-item">
-                <h3 class="font-semibold">Trends in Vehicle Advertising</h3>
-                <p>Discover the latest trends in vehicle advertising and how to leverage them for your business.</p>
-            </div>
-        </div>
-    </section>
-    <section id="impressions-map">
-        <h2>Impressions Map</h2>
-        <div class="grid-container">
-            <div class="feature-item">
-                <h3 class="font-semibold">Interactive Coverage Map</h3>
-                <p>Visualize our advertising reach throughout the city with our interactive impressions map. See where your ads will travel!</p>
-                <div class="w-full h-64 bg-gray-200 rounded-lg">Map will be here</div>
-            </div>
-        </div>
-    </section>
-    <body>
-        <header>
-            <h1>Visualize your Campaign</h1>
-        </header>
+<body data-bs-spy="scroll" data-bs-target="#navbar-main" data-bs-offset="100">
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+    <!-- Navigation -->
+    <nav id="navbar-main" class="navbar navbar-expand-lg navbar-light fixed-top" aria-label="Main navigation">
         <div class="container">
-            <div id="design-area">
-                <div id="vehicle-preview">
-                    <img id="vehicle-img" src="images/partner.jpg" alt="Vehicle Preview">
-                    <div id="logo-container">
-                        <text id="logo-text">Your Logo Here</text>
-                        <img id="logo-image" src="" alt="Logo">
-                    </div>
+            <a class="navbar-brand" href="#top">
+                <img src="images/logotransparentxs.png" alt="BARQ ADS logo" height="40" width="auto">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#intro">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#feature">Features</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#clients">Clients</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#package">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero" id="top" aria-label="Hero section">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="animate__animated animate__fadeInDown">The Future of Advertising is Here</h1>
+                    <p class="animate__animated animate__fadeInUp animate__delay-1s">Where Innovation Meets Visibility</p>
+                    <a href="#contact" class="btn btn-primary btn-lg animate__animated animate__fadeInUp animate__delay-2s">Start Your Campaign</a>
                 </div>
-                <div id="controls">
-                    <div class="control-group">
-                        <label for="vehicle-type">Vehicle Type:</label>
-                        <select id="vehicle-type">
-                            <option value="partner">Partner</option>
-                        </select>
-    
-                        <label for="logo-type">Logo Type:</label>
-                        <select id="logo-type">
-                            <option value="text">Text</option>
-                            <option value="image">Image</option>
-                        </select>
-                        
-                        <div id="logo-text-input">
-                            <label for="logo-text-content">Logo Text:</label>
-                            <input type="text" id="logo-text-content" placeholder="Enter logo text">
-                            
-                            <label for="logo-font">Logo Font:</label>
-                            <select id="logo-font">
-                                <option value="Arial">Arial</option>
-                                <option value="Verdana">Verdana</option>
-                                <option value="Times New Roman">Times New Roman</option>
-                                <option value="Courier">Courier</option>
-                            </select>
-                            
-                            <label for="logo-color">Logo Color:</label>
-                            <input type="color" id="logo-color" value="#000000">
-                        </div>
-                        
-                        <div id="logo-image-input" style="display: none;">
-                            <label for="logo-image-upload">Logo Image (PNG):</label>
-                            <input type="file" id="logo-image-upload" accept="image/png">
-                        </div>
+            </div>
+        </section>
+
+        <!-- Intro Section -->
+        <section id="intro" class="py-5" aria-labelledby="intro-title">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6 animate__animated animate__fadeInLeft">
+                        <img src="images/Picture1.png" alt="BARQ ADS vehicle wrap example" class="img-fluid rounded" width="600" height="400">
                     </div>
-                    <div class="control-group">
-                        <label for="logo-size">Logo Size:</label>
-                        <input type="range" id="logo-size" min="50" max="300" value="150">
-                    </div>
-                    <div class="control-group">
-                        <button id="save-btn">Save</button>
-                        <button id="reset-btn">Reset</button>
-                        <label for="high-contrast">High Contrast Mode:</label>
-                        <input type="checkbox" id="high-contrast">
+                    <div class="col-md-6 animate__animated animate__fadeInRight">
+                        <h2 id="intro-title">Revolutionizing Outdoor Advertising</h2>
+                        <p>Maximize your brand's reach with our innovative vehicle wrap advertising solutions, powered by real-time data and cutting-edge technology.</p>
+                        <a href="#feature" class="btn btn-primary">Learn More</a>
                     </div>
                 </div>
             </div>
-        </div>
-    
-    
-        <script>
-            document.addEventListener('DOMContentLoaded', () => {
-                const logoText = document.getElementById('logo-text');
-                const logoImage = document.getElementById('logo-image');
-                const logoTypeSelect = document.getElementById('logo-type');
-                const logoTextInput = document.getElementById('logo-text-input');
-                const logoImageInput = document.getElementById('logo-image-input');
-                const logoContainer = document.getElementById('logo-container');
-                const logoSize = document.getElementById('logo-size');
-                const vehicleImg = document.getElementById('vehicle-img');
-                let isDragging = false;
-                let offsetX, offsetY;
-            
-                // Update the logo size dynamically
-                function updateLogoSize(value) {
-                    logoContainer.style.width = `${value}px`;
-                    logoContainer.style.height = `${value}px`;
+        </section>
+
+        <!-- Feature Section -->
+        <section id="feature" class="py-5 bg-light" aria-labelledby="feature-title">
+            <div class="container">
+                <div class="section-title scale-in">
+                    <h2 id="feature-title">Cutting-Edge Advertising Solutions</h2>
+                    <p>Transform our fleet into your mobile billboards with eye-catching solutions</p>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="feature-item slide-in">
+                            <i class="fas fa-car" aria-hidden="true"></i>
+                            <h3>Vehicle Wraps</h3>
+                            <p>Transform our fleet into your mobile billboards with eye-catching full or partial wraps.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="feature-item slide-in" data-delay="0.2s">
+                            <i class="fas fa-tablet-alt" aria-hidden="true"></i>
+                            <h3>Digital Display</h3>
+                            <p>Deploy dynamic digital ads with our state-of-the-art smart screens for real-time content updates.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="feature-item slide-in" data-delay="0.4s">
+                            <i class="fas fa-chart-line" aria-hidden="true"></i>
+                            <h3>Analytics Dashboard</h3>
+                            <p>Track your campaign performance with our comprehensive analytics and reporting tools.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Advanced Technology Platform Section -->
+        <section id="technology" class="py-5" aria-labelledby="technology-title">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6 fade-in">
+                        <h2 id="technology-title">Advanced Technology Platform</h2>
+                        <div class="feature-item rotate-in">
+                            <h4><i class="fas fa-map-marker-alt me-2" aria-hidden="true"></i>Geotargeting Precision</h4>
+                            <p>Deliver hyper-targeted campaigns based on precise geofencing and real-time data.</p>
+                        </div>
+                        <div class="feature-item rotate-in" data-delay="0.2s">
+                            <h4><i class="fas fa-cogs me-2" aria-hidden="true"></i>Programmatic Advertising</h4>
+                            <p>Streamline your ad buying process with our cutting-edge programmatic solutions.</p>
+                        </div>
+                        <div class="feature-item rotate-in" data-delay="0.4s">
+    <h4><i class="fas fa-chart-bar me-2" aria-hidden="true"></i>Comprehensive Data Analytics</h4>
+    <p>Gain valuable insights with our robust data analytics dashboard.</p>
+</div>
+</div>
+<div class="col-md-6 scale-in">
+<img src="images/bulletdelivery.png" alt="Advanced Technology Platform illustration" class="img-fluid rounded" width="600" height="400">
+</div>
+</div>
+</div>
+</section>
+
+<!-- Creative Map Section -->
+<section id="map" class="py-5" aria-label="Coverage map">
+<div class="creative-map-container">
+<iframe src="map.html" allowfullscreen="" loading="lazy" title="BARQ ADS coverage map"></iframe>
+<div class="map-overlay-content animate__animated animate__fadeIn">
+<h3 class="map-title">Explore Our Reach</h3>
+<p class="map-description">See how our network spans across the city with precision targeting and unmatched coverage.</p>
+<a href="#contact" class="btn btn-primary">Learn More</a>
+</div>
+</div>
+</section>
+
+<!-- Clients Section -->
+<section id="clients" class="py-5" aria-labelledby="clients-title">
+<div class="container">
+<div class="section-title">
+<h2 id="clients-title">Our Satisfied Clients</h2>
+</div>
+<div class="owl-carousel clients-carousel">
+<div class="item">
+<img src="images/neoleap.png" alt="Neoleap logo" class="img-fluid mb-3" width="150" height="auto">
+<p>"BARQ ADS has transformed our advertising approach. The visibility we've received is unmatched."</p>
+<p><strong>John Asset, Neoleap</strong></p>
+</div>
+<div class="item">
+<img src="images/spiderman.jpeg" alt="Vox Cinema logo" class="img-fluid mb-3" width="150" height="auto">
+<p>"Promoting the Spiderman trailer with BARQ ADS was a game-changer for us. The buzz created was incredible."</p>
+<p><strong>Peter Parker, Vox Cinema</strong></p>
+</div>
+<div class="item">
+<img src="images/kfc.png" alt="KFC logo" class="img-fluid mb-3" width="150" height="auto">
+<p>"Using BARQ ADS to promote our new menu items was a fantastic decision. It significantly boosted our sales."</p>
+<p><strong>Colonel Sanders, KFC</strong></p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Pricing Section -->
+<section id="package" class="py-5 bg-light" aria-labelledby="pricing-title">
+<div class="container">
+<div class="section-title">
+<h2 id="pricing-title">Flexible Pricing Plans</h2>
+</div>
+<div class="row">
+<div class="col-md-6">
+<div class="price-box p-4 animate__animated animate__fadeInLeft">
+    <div class="price-heading text-center">
+        <h3>Basic Package</h3>
+    </div>
+    <div class="price-group text-center my-4">
+        <span class="h2">2000 SAR</span> / Vehicle
+    </div>
+    <ul class="list-unstyled">
+        <li><i class="fas fa-check text-success me-2" aria-hidden="true"></i>30 - 99 Vehicles</li>
+        <li><i class="fas fa-check text-success me-2" aria-hidden="true"></i>3 Months Minimum Duration</li>
+        <li><i class="fas fa-check text-success me-2" aria-hidden="true"></i>Monthly Reporting</li>
+        <li><i class="fas fa-check text-success me-2" aria-hidden="true"></i>Car Sticker - Logo Only</li>
+    </ul>
+    <div class="text-center mt-4">
+        <a href="#contact" class="btn btn-primary">Get Started</a>
+    </div>
+</div>
+</div>
+<div class="col-md-6">
+<div class="price-box p-4 animate__animated animate__fadeInRight">
+    <div class="price-heading text-center">
+        <h3>Premium Package</h3>
+    </div>
+    <div class="price-group text-center my-4">
+        <span class="h2">1800 SAR</span> / Vehicle
+    </div>
+    <ul class="list-unstyled">
+        <li><i class="fas fa-check text-success me-2" aria-hidden="true"></i>100+ Vehicles</li>
+        <li><i class="fas fa-check text-success me-2" aria-hidden="true"></i>3 Months Minimum Duration</li>
+        <li><i class="fas fa-check text-success me-2" aria-hidden="true"></i>Real-time Tracking Dashboard</li>
+        <li><i class="fas fa-check text-success me-2" aria-hidden="true"></i>Large Vinyl Wrap - Full Vehicle</li>
+    </ul>
+    <div class="text-center mt-4">
+        <a href="#contact" class="btn btn-primary">Get Started</a>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="py-5" aria-labelledby="contact-title">
+<div class="container">
+<div class="section-title">
+<h2 id="contact-title">Get in Touch</h2>
+<p>Ready to revolutionize your advertising? Let's talk!</p>
+</div>
+<div class="row">
+<div class="col-md-6 animate__animated animate__fadeInLeft">
+<form id="contactForm" class="contact-form" novalidate>
+    <div class="mb-3">
+        <label for="name" class="form-label">Your Name</label>
+        <input type="text" class="form-control" id="name" name="name" required aria-required="true">
+        <div class="error-message" id="name-error"></div>
+    </div>
+    <div class="mb-3">
+        <label for="email" class="form-label">Your Email</label>
+        <input type="email" class="form-control" id="email" name="email" required aria-required="true">
+        <div class="error-message" id="email-error"></div>
+    </div>
+    <div class="mb-3">
+        <label for="message" class="form-label">Your Message</label>
+        <textarea class="form-control" id="message" name="message" rows="5" required aria-required="true"></textarea>
+        <div class="error-message" id="message-error"></div>
+    </div>
+    <button type="submit" class="btn btn-primary">Send Message</button>
+</form>
+</div>
+<div class="col-md-6 animate__animated animate__fadeInRight">
+<div class="contact-info">
+    <h3>Our Office</h3>
+    <p><i class="fas fa-map-marker-alt me-2" aria-hidden="true"></i>123 BARQ Street, Dubai, UAE</p>
+    <p><i class="fas fa-phone me-2" aria-hidden="true"></i><a href="tel:+97141234567">+971 4 123 4567</a></p>
+    <p><i class="fas fa-envelope me-2" aria-hidden="true"></i><a href="mailto:info@barqads.com">info@barqads.com</a></p>
+    <div class="social-links mt-4">
+        <a href="#" class="me-3" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+        <a href="#" class="me-3" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+        <a href="#" class="me-3" aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+        <a href="#" class="me-3" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+
+<!-- Footer -->
+<footer class="bg-dark text-light py-4" aria-label="Footer">
+<div class="container">
+<div class="row">
+<div class="col-md-4">
+<img src="images/logotransparentxs.png" alt="BARQ ADS logo" class="mb-3" height="40" width="auto">
+<p>Revolutionizing outdoor advertising with innovative mobile solutions.</p>
+</div>
+<div class="col-md-4">
+<h5>Quick Links</h5>
+<ul class="list-unstyled">
+<li><a href="#intro">About</a></li>
+<li><a href="#feature">Features</a></li>
+<li><a href="#clients">Clients</a></li>
+<li><a href="#package">Pricing</a></li>
+</ul>
+</div>
+<div class="col-md-4">
+<h5>Newsletter</h5>
+<p>Stay updated with our latest news and offers.</p>
+<form class="mt-3" id="newsletterForm">
+<div class="input-group">
+    <input type="email" class="form-control" placeholder="Enter your email" required aria-label="Email for newsletter">
+    <button class="btn btn-primary" type="submit">Subscribe</button>
+</div>
+</form>
+</div>
+</div>
+<hr class="mt-4 mb-3">
+<div class="row">
+<div class="col-md-6">
+<p>&copy; 2024 BARQ ADS. All rights reserved.</p>
+</div>
+<div class="col-md-6 text-md-end">
+<a href="#" class="me-3">Privacy Policy</a>
+<a href="#" class="me-3">Terms of Service</a>
+</div>
+</div>
+</div>
+</footer>
+
+<!-- Back to Top Button -->
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center" aria-label="Back to top"><i class="fas fa-arrow-up" aria-hidden="true"></i></a>
+
+<!-- JavaScript Files -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+
+<script>
+$(document).ready(function() {
+// Initialize WOW.js for scroll animations
+new WOW().init();
+
+// GSAP ScrollTrigger setup
+gsap.registerPlugin(ScrollTrigger);
+
+// Animate elements on scroll
+gsap.utils.toArray('.fade-in, .slide-in, .scale-in, .rotate-in').forEach(function(elem) {
+gsap.from(elem, {
+opacity: 0,
+y: 50,
+scale: 0.9,
+rotation: -5,
+duration: 1,
+scrollTrigger: {
+trigger: elem,
+start: "top 80%",
+end: "bottom 20%",
+toggleActions: "play none none reverse"
+}
+});
+});
+
+// Floating animation for images
+gsap.to('.floating', {
+y: -20,
+duration: 2,
+repeat: -1,
+yoyo: true,
+ease: "power1.inOut"
+});
+
+// Smooth scrolling for navbar links
+$('a.nav-link, .btn-primary').on('click', function(event) {
+if (this.hash !== "") {
+event.preventDefault();
+var hash = this.hash;
+gsap.to(window, {duration: 1, scrollTo: hash, ease: "power2.inOut"});
+}
+});
+
+// Navbar color change on scroll
+$(window).scroll(function() {
+if ($(this).scrollTop() > 100) {
+$('.navbar').addClass('navbar-scrolled');
+} else {
+$('.navbar').removeClass('navbar-scrolled');
+}
+});
+
+// Initialize Owl Carousel for client testimonials
+$(".clients-carousel").owlCarousel({
+items: 1,
+loop: true,
+margin: 10,
+autoplay: true,
+autoplayTimeout: 5000,
+autoplayHoverPause: true,
+animateIn: 'fadeIn',
+animateOut: 'fadeOut',
+responsive: {
+0: { items: 1 },
+768: { items: 2 },
+992: { items: 3 }
+}
+});
+
+// Form validation and submission
+$('#contactForm').submit(function(e) {
+e.preventDefault();
+let isValid = true;
+
+// Reset error messages
+$('.error-message').text('');
+
+// Validate name
+if ($('#name').val().trim() === '') {
+$('#name-error').text('Please enter your name');
+isValid = false;
+}
+
+// Validate email
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+if (!emailRegex.test($('#email').val().trim())) {
+$('#email-error').text('Please enter a valid email address');
+                    isValid = false;
                 }
-            
-                // Drag-and-drop functionality
-                logoContainer.addEventListener('mousedown', (e) => {
-                    isDragging = true;
-                    offsetX = e.clientX - logoContainer.getBoundingClientRect().left;
-                    offsetY = e.clientY - logoContainer.getBoundingClientRect().top;
-                    logoContainer.style.cursor = 'grabbing';
-                });
-            
-                document.addEventListener('mousemove', (e) => {
-                    if (isDragging) {
-                        const vehiclePreview = document.getElementById('vehicle-preview');
-                        const previewRect = vehiclePreview.getBoundingClientRect();
-                        const newX = e.clientX - offsetX - previewRect.left;
-                        const newY = e.clientY - offsetY - previewRect.top;
-            
-                        // Ensure the logo stays within the vehicle preview area
-                        const maxX = previewRect.width - logoContainer.offsetWidth;
-                        const maxY = previewRect.height - logoContainer.offsetHeight;
-                        logoContainer.style.left = `${Math.min(Math.max(0, newX), maxX)}px`;
-                        logoContainer.style.top = `${Math.min(Math.max(0, newY), maxY)}px`;
+                
+                // Validate message
+                if ($('#message').val().trim() === '') {
+                    $('#message-error').text('Please enter your message');
+                    isValid = false;
+                }
+                
+                if (isValid) {
+                    // Simulate form submission (replace with actual form submission logic)
+                    gsap.to(this, {scale: 0.9, opacity: 0, duration: 0.5, onComplete: function() {
+                        alert('Thank you for your message. We will get back to you soon!');
+                        $('#contactForm')[0].reset();
+                        gsap.to('#contactForm', {scale: 1, opacity: 1, duration: 0.5});
+                    }});
+                }
+            });
+
+            // Newsletter form submission
+            $('#newsletterForm').submit(function(e) {
+                e.preventDefault();
+                // Simulate newsletter subscription (replace with actual subscription logic)
+                alert('Thank you for subscribing to our newsletter!');
+                this.reset();
+            });
+
+            // Back to top button animation
+            $('.back-to-top').click(function() {
+                gsap.to(window, {duration: 1, scrollTo: 0, ease: "power2.inOut"});
+                return false;
+            });
+
+            // Show/hide back to top button based on scroll position
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 300) {
+                    $('.back-to-top').fadeIn('slow');
+                } else {
+                    $('.back-to-top').fadeOut('slow');
+                }
+            });
+
+            // Interactive map animation
+            $('.creative-map-container iframe').on('mouseenter', function() {
+                gsap.to(this, {filter: "grayscale(0%)", duration: 0.3});
+            }).on('mouseleave', function() {
+                gsap.to(this, {filter: "grayscale(100%)", duration: 0.3});
+            });
+
+            // Animate numbers in pricing section
+            gsap.utils.toArray('.price-group .h2').forEach(function(elem) {
+                let startValue = parseFloat(elem.innerText);
+                let endValue = startValue;
+                
+                gsap.to(elem, {
+                    innerText: endValue,
+                    duration: 2,
+                    ease: "power1.inOut",
+                    snap: { innerText: 1 },
+                    scrollTrigger: {
+                        trigger: elem,
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play none none reverse"
+                    },
+                    onUpdate: function() {
+                        elem.innerText = Math.ceil(elem.innerText).toLocaleString() + " SAR";
                     }
-                });
-            
-                document.addEventListener('mouseup', () => {
-                    isDragging = false;
-                    logoContainer.style.cursor = 'grab';
-                });
-            
-                // Update logo size based on user input
-                logoSize.addEventListener('input', (e) => {
-                    updateLogoSize(e.target.value);
-                });
-            
-                logoTypeSelect.addEventListener('change', () => {
-                    if (logoTypeSelect.value === 'text') {
-                        logoTextInput.style.display = 'block';
-                        logoImageInput.style.display = 'none';
-                        logoText.style.display = 'block';
-                        logoImage.style.display = 'none';
-                    } else {
-                        logoTextInput.style.display = 'none';
-                        logoImageInput.style.display = 'block';
-                        logoText.style.display = 'none';
-                        logoImage.style.display = 'block';
-                    }
-                });
-            
-                document.getElementById('logo-text-content').addEventListener('input', (e) => {
-                    logoText.textContent = e.target.value || 'Your Logo Here';
-                });
-            
-                document.getElementById('logo-font').addEventListener('change', (e) => {
-                    logoText.style.fontFamily = e.target.value;
-                });
-            
-                document.getElementById('logo-color').addEventListener('input', (e) => {
-                    logoText.style.color = e.target.value;
-                });
-            
-                document.getElementById('logo-image-upload').addEventListener('change', function(e) {
-                    const file = e.target.files[0];
-                    const reader = new FileReader();
-            
-                    reader.onload = function(event) {
-                        logoImage.src = event.target.result;
-                        logoImage.style.display = 'block';
-                        logoImage.style.objectFit = 'contain'; // Ensure the image fits within the container without distortion
-                    };
-            
-                    reader.readAsDataURL(file);
-                });
-            
-                document.getElementById('vehicle-type').addEventListener('change', (e) => {
-                    if (e.target.value === 'partner') {
-                        vehicleImg.src = 'images/partner.jpg';
-                    }
-                });
-            
-                document.getElementById('reset-btn').addEventListener('click', () => {
-                    logoText.textContent = 'Your Logo Here';
-                    logoText.style.color = '#000000';
-                    logoText.style.fontFamily = 'Arial';
-                    logoSize.value = 150;
-                    updateLogoSize(150);
-                    logoImage.style.display = 'none';
-                    logoText.style.display = 'block';
-                    logoContainer.style.left = '50%';
-                    logoContainer.style.top = '60%';
-                    logoContainer.style.transform = 'translate(-50%, -50%)';
-                });
-            
-                // Save and export the image of the vehicle preview
-                document.getElementById('save-btn').addEventListener('click', () => {
-                    const vehiclePreview = document.getElementById('vehicle-preview');
-            
-                    html2canvas(vehiclePreview).then(canvas => {
-                        const link = document.createElement('a');
-                        link.download = 'vehicle_ad_preview.png';
-                        link.href = canvas.toDataURL('image/png');
-                        link.click();
-                    });
-                });
-            
-                document.getElementById('high-contrast').addEventListener('change', (e) => {
-                    document.body.classList.toggle('high-contrast', e.target.checked);
                 });
             });
-            </script>
-            
-    </section>
-    <footer>
-        <p>© 2024 BARQ ADS. All rights reserved.</p>
-        <div class="social">
-            <ul>
-                <li><a href="https://twitter.com/"><i class="fab fa-twitter"></i></a></li>
-                <li><a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a></li>
-                <li><a href="https://instagram.com/"><i class="fab fa-instagram"></i></a></li>
-            </ul>
-        </div>
-    </footer>
-    <script>
-        const menuBtn = document.getElementById('menu-btn');
-        const menu = document.getElementById('menu');
-        menuBtn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-            menu.classList.toggle('flex');
+
+            // Accessibility improvements
+            $('.navbar-toggler').on('click', function() {
+                setTimeout(function() {
+                    $('.navbar-collapse').attr('aria-expanded', $('.navbar-collapse').hasClass('show'));
+                }, 100);
+            });
+
+            // Keyboard navigation for carousel
+            $('.owl-carousel').on('keydown', function(e) {
+                if (e.keyCode === 37) { // Left arrow
+                    $(this).trigger('prev.owl.carousel');
+                } else if (e.keyCode === 39) { // Right arrow
+                    $(this).trigger('next.owl.carousel');
+                }
+            });
+
+            // Lazy loading for images
+            if ('loading' in HTMLImageElement.prototype) {
+                const images = document.querySelectorAll('img[loading="lazy"]');
+                images.forEach(img => {
+                    img.src = img.dataset.src;
+                });
+            } else {
+                // Fallback for browsers that don't support lazy loading
+                const script = document.createElement('script');
+                script.src = 'https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js';
+                document.body.appendChild(script);
+            }
+
+            // Performance optimization: Defer non-critical CSS
+            const loadDeferredStyles = function() {
+                const addStylesNode = document.getElementById('deferred-styles');
+                const replacement = document.createElement('div');
+                replacement.innerHTML = addStylesNode.textContent;
+                document.body.appendChild(replacement);
+                addStylesNode.parentElement.removeChild(addStylesNode);
+            };
+            const raf = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+                window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+            if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
+            else window.addEventListener('load', loadDeferredStyles);
+
+            // Add custom tracking events (replace with your analytics code)
+            $('.btn-primary').on('click', function() {
+                // Example: track button clicks
+                console.log('Button clicked:', $(this).text());
+            });
+
+            // Enhance form accessibility
+            $('form').on('submit', function() {
+                $(this).find(':submit').attr('aria-busy', 'true');
+            });
+
+            // Implement a simple cookie consent
+            if (!localStorage.getItem('cookieConsent')) {
+                const cookieBar = $('<div class="cookie-consent">This website uses cookies to ensure you get the best experience. <button class="btn btn-sm btn-primary ms-2">Accept</button></div>');
+                $('body').append(cookieBar);
+                cookieBar.find('button').on('click', function() {
+                    localStorage.setItem('cookieConsent', 'true');
+                    cookieBar.remove();
+                });
+            }
         });
     </script>
 </body>
