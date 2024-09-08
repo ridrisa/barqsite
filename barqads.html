@@ -323,6 +323,7 @@
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
             </div>
+            <button id="closeChatWidget" class="btn-close btn-close-white" aria-label="Close"></button>
         </div>
     </nav>
     
@@ -798,6 +799,9 @@
             const data = await response.json();
             return data.choices[0].text.trim();
         }
+        document.getElementById('closeChatWidget').addEventListener('click', function() {
+            document.getElementById('chatWidget').style.display = 'none';
+        });
     </script>
 </body>
 
