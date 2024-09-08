@@ -67,15 +67,19 @@
             position: absolute;
             bottom: 0;
             width: 300px;
-            animation: moveCar 7s linear infinite;
+            animation: moveCar 10s linear infinite;
+        }
+
+        .car-animation-2 {
+            animation-delay: 5s; /* Delay the start of the second car */
         }
 
         @keyframes moveCar {
             0% {
-                left: 500px;
+                left: 100%;
             }
             100% {
-                left: -100%;
+                left: -300px;
             }
         }
 
