@@ -1,395 +1,1400 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>BARQ ADS</title>
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=yes">
+    <meta name="description" content="BARQ ADS offers innovative vehicle wrap and outdoor advertising solutions, revolutionizing how businesses reach their audience.">
+    <meta name="keywords" content="Outdoor advertising, vehicle wraps, digital display ads, real-time analytics, BARQ ADS">
+    <meta name="author" content="BARQ ADS">
+    <title>BARQ ADS - Revolutionizing Outdoor Advertising</title>
+
     <!-- Core CSS Files -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
 
-    <link href="css/owl.carousel.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:300,400,700&display=swap" rel="stylesheet">
 
+    <style>
+        :root {
+            --primary-color: #FFB81C;
+            --secondary-color: #54565A;
+            --accent-color: #9F2842;
+            --bg-color: #FFFFFF;
+            --text-color: #333333;
+        }
 
-    <link href="css/pe-icon-7-stroke.min.css" rel="stylesheet">
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            overflow-x: hidden;
+        }
 
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Alegreya Sans', sans-serif;
+            font-weight: 700;
+        }
 
-    <!-- Animations -->
-    <link href="css/animate.min.css" rel="stylesheet" media="screen">
-    
-    <!-- Carousel Styles -->
-    <link href="css/owl.carousel.min.css" rel="stylesheet">
+        .navbar {
+            background-color: #ffffff; /* Set a solid background color */
+            transition: background-color 0.3s ease;
+        }
 
-    <!-- Custom Styles -->
-    <link href="css/styles.css" rel="stylesheet" media="screen">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        .navbar-scrolled {
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        @keyframes lightning {
+    0%, 100% { 
+        text-shadow: 0 0 10px #ffffff, 0 0 20px #2b129b, 0 0 30px #9F2842; 
+    }
+    50% { 
+        text-shadow: 0 0 30px #9F2842, 0 0 50px #e0c125, 0 0 60px #ffffff; 
+    }
+}
 
+        /* Car animation */
+        .car-animation-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            height: 300px;
+            margin-top: 8rem; /* Increase margin to move down */
+        }
 
-    <!-- Google Fonts --> 
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:100,300,400,700" rel="stylesheet" type="text/css">
-</head>
-<body data-spy="scroll" data-target="#navbar-scroll">
+        .car-animation {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 300px;
+            animation: moveCar 10s linear infinite;
+        }
+
+        .car-animation-2 {
+            position: absolute;
+            bottom: 0;
+            left: 50px; /* Offset the second car */
+            width: 300px;
+            opacity: 0;
+            animation-delay: 10s; /* Delay the start of the second car */
+            animation: moveCar 10s linear infinite, fadeIn 1s forwards 10s;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes moveCar {
+            0% {
+                left: 100%;
+            }
+            100% {
+                left: -300px;
+            }
+        }
+
+.hero {
+    height: 85vh;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8)),
+                url('images/newaccenty.jpg') no-repeat center/cover;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    animation: lightning 1.5s infinite ease-in-out;
+}
+
+@keyframes lightning {
+            0%, 100% { 
+                text-shadow: 0 0 10px #ffffff, 0 0 20px #2b129b, 0 0 30px #9F2842; 
+            }
+            50% { 
+                text-shadow: 0 0 30px #9F2842, 0 0 50px #e0c125, 0 0 60px #ffffff; 
+            }
+        }
+
+         /* Car animation */
+        .car-animation-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            height: 300px;
+            margin-top: 6rem; /* Increase margin to move down */
+        }
+
+        .car-animation {
+            position: absolute;
+            bottom: 0;
+            width: 300px;
+            animation: moveCar 10s linear infinite;
+        }
+
+        .car-animation-2 {
+            opacity: 0;
+            animation-delay: 5s; /* Delay the start of the second car */
+            animation: moveCar 10s linear infinite, fadeIn 1s forwards 5s;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes moveCar {
+            0% {
+                left: 100%;
+            }
+            100% {
+                left: -300px;
+            }
+        }
  
-<div id="top"></div>
+       
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            color: var(--secondary-color);
+            transition: all 0.3s ease;
+        }
 
-<!-- NAVIGATION -->
+        .btn-primary:hover {
+            background-color: var(--secondary-color);
+            border-color: var(--secondary-color);
+            color: var(--bg-color);
+        }
 
-    <div id="menu">
-    <nav class="navbar-wrapper navbar-default" role="navigation">
-        <div class="container header-container">
-            <div class="navbar-header header-logo">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-themers">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand site-name" href="#top">
-                    <img src="images/logotransparentxs.png" alt="logo">
-                </a>
-            </div>
-     
-            <div id="navbar-scroll" class="collapse navbar-collapse navbar-themers navbar-right header-text">
-                <ul class="nav navbar-nav">
-                    <li><a href="#intro">About</a></li>
-                    <li><a href="#feature">Features</a></li>
-                    <li><a href="#subscribe">Contact us</a></li>
-                    <li><a href="#clients">Clients</a></li>
-                    <li><a href="#package">Pricing</a></li>
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-item {
+            text-align: center;
+            margin-bottom: 2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature-item i {
+            font-size: 3rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+
+        .price-box {
+            background-color: var(--bg-color);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            margin-bottom: 2rem;
+        }
+
+        .price-box:hover {
+            transform: translateY(-10px);
+        }
+
+        .fade-in {
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .fade-in.appear {
+            opacity: 1;
+        }
+
+        .creative-map-container {
+            position: relative;
+            height: 500px;
+            overflow: hidden;
+        }
+
+        .creative-map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            transition: filter 0.5s ease;
+        }
+
+        .map-overlay-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: var(--bg-color);
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 2rem;
+            border-radius: 10px;
+        }
+
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Additional enhancements */
+    </style>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#navbar-main" data-bs-offset="100">
+    <!-- Navigation -->
+    <nav id="navbar-main" class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#top">
+                <img src="images/logotransparentxs.png" alt="BARQ ADS logo" height="40">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#intro">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#feature">Features</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#clients">Samples</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#package">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#clients">Clients</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-</div>
+    
 
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-        <h1>The Future of Advertising is Here </h1>
-        <a href="#campaign">Start Your Campaign</a></div>
-
-        <h1></br></br>  Where Innovation Meets Visibility</h1>
+    <section class="hero" id="top">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="animate__animated animate__fadeInDown">The Future of Advertising is Here</h1>
+                <p class="animate__animated animate__fadeInUp animate__delay-1s">Where Innovation Meets Visibility</p>
+                <a href="#contact" class="btn btn-primary btn-lg animate__animated animate__fadeInUp animate__delay-2s">Start Your Campaign</a>
+            </div>
+            <div class="container car-animation-container">
+                <img src="images/car1.avif" alt="Car Moving" class="car-animation">
+                <img src="images/neoleap.png" alt="Car Moving" class="car-animation car-animation-2">
+            </div>
     </section>
 
- 
-<div class="fullscreen landing parallax banner" style="background-image:url('images/lowercover.jpg'); min-height: 50vh;min-width: 50vh ;background-repeat:no-repeat; background-size:cover;">
-    <div class="overlay"></div>
+    <!-- Samples Section -->
+    <section id="clients" class="py-5">
         <div class="container">
+            <div class="section-title">
+                <h2>Our Samples</h2>
+                <p>Showcasing our work with leading brands</p>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <img src="images/kfc1.png" alt="KFC" class="img-fluid">
+                </div>
+                <div class="col-md-4">
+                    <img src="images/Macdonalds.png" alt="Macdonalds" class="img-fluid">
+                </div>
+                <div class="col-md-4">
+                    <img src="images/neoleap.png" alt="Neo Leap" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Intro Section -->
+    <section id="intro" class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 animate__animated animate__fadeInLeft">
+                    <img src="images/Picture1.png" alt="BARQ ADS in action" class="img-fluid rounded">
+                </div>
+                <div class="col-md-6 animate__animated animate__fadeInRight">
+                    <h2>Revolutionizing Outdoor Advertising</h2>
+                    <p>Maximize your brand's reach with our innovative vehicle wrap advertising solutions, powered by real-time data and cutting-edge technology.</p>
+                    <a href="#feature" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    
+
+    <!-- Feature Section -->
+    <section id="feature" class="py-5 bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>Cutting-Edge Advertising Solutions</h2>
+                <p>Transform our fleet into your mobile billboards with eye-catching solutions</p>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="feature-item">
+                        <i class="fas fa-car"></i>
+                        <h3>Vehicle Wraps</h3>
+                        <p>Transform our fleet into your mobile billboards with eye-catching full or partial wraps.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-item">
+                        <i class="fas fa-tablet-alt"></i>
+                        <h3>Digital Display</h3>
+                        <p>Deploy dynamic digital ads with our state-of-the-art smart screens for real-time content updates.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-item">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Analytics Dashboard</h3>
+                        <p>Track your campaign performance with our comprehensive analytics and reporting tools.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Section -->
+    <section id="technology" class="py-5">
+        <div class="container">
+            <div class="section-title">
+                <h2>Advanced Technology Platform</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="feature-item">
+                        <h4><i class="fas fa-map-marker-alt me-2"></i>Geotargeting Precision</h4>
+                        <p>Deliver hyper-targeted campaigns based on precise geofencing and real-time data.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-item">
+                        <h4><i class="fas fa-cogs me-2"></i>Programmatic Advertising</h4>
+                        <p>Streamline your ad buying process with our cutting-edge programmatic solutions.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-item">
+                        <h4><i class="fas fa-chart-bar me-2"></i>Comprehensive Data Analytics</h4>
+                        <p>Gain valuable insights with our robust data analytics dashboard.</p>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- Creative Map Section -->
+    <section id="map" class="py-5" aria-label="Coverage map">
+        <div class="creative-map-container">
+            <iframe src="map.html" allowfullscreen="" loading="lazy" title="BARQ ADS coverage map"></iframe>
+            <div class="map-overlay-content animate__animated animate__fadeIn">
+                <h3 class="map-title">Explore Our Reach</h3>
+                <p class="map-description">See how our network spans across the city with precision targeting and unmatched coverage.</p>
+                <a href="#contact" class="btn btn-primary">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Pricing Section -->
+    <section id="package" class="py-5 bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>Flexible Pricing Plans</h2>
+            </div>
             <div class="row">
                 <div class="col-md-6">
-                    <h1 class="wow fadeInLeft">
-                       Drive Your Brand Across the City with Barq Ads</h1>
-                    <div class="landing-text wow fadeInLeft">
-<h2>Picture your logo traveling through every street grabbing attention at every turn. Say hello to Barq Ads where we set your brand in motion! </br>
-                        join transforming the landscape of outdoor advertising with our innovative platform turns vehicles into dynamic billboards, delivering your brand message directly to consumers on the go. With a fleet covering over 4 million kilometers monthly, we offer unmatched reach and exposure for your campaigns.
-                    </h2>                    </div>
-                </div> 
-                
-                <!-- phone image -->
+                    <div class="price-box p-4 animate__animated animate__fadeInLeft">
+                        <div class="price-heading text-center">
+                            <h3>Basic Package</h3>
+                        </div>
+                        <div class="price-group text-center my-4">
+                            <span class="h2">2000 SAR</span> / Vehicle
+                        </div>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-success me-2"></i>30 - 99 Vehicles</li>
+                            <li><i class="fas fa-check text-success me-2"></i>3 Months Minimum Duration</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Monthly Reporting</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Car Sticker - Logo Only</li>
+                        </ul>
+                        <div class="text-center mt-4">
+                            <a href="#contact" class="btn btn-primary">Get Started</a>
+                        </div>
+                    </div>
+                </div>
                 <div class="col-md-6">
-                    <img src="images/car1.avif" alt="phone" class="header-phone img-responsive wow fadeInRight">
+                    <div class="price-box p-4 animate__animated animate__fadeInRight">
+                        <div class="price-heading text-center">
+                            <h3>Premium Package</h3>
+                        </div>
+                        <div class="price-group text-center my-4">
+                            <span class="h2">1800 SAR</span> / Vehicle
+                        </div>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-success me-2"></i>100+ Vehicles</li>
+                            <li><i class="fas fa-check text-success me-2"></i>3 Months Minimum Duration</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Real-time Tracking Dashboard</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Large Vinyl Wrap - Full Vehicle</li>
+                        </ul>
+                        <div class="text-center mt-4">
+                            <a href="#contact" class="btn btn-primary">Get Started</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div> 
-    </div> 
-</div>
-   
-<!-- intro section -->
-<section id="intro">
-    <div class="container">
-        <div class="row">
-            <!-- feature image -->
-            <div class="col-md-6 feature-2-pic wow fadeInLeft">
-                <img src="images/Picture1.png" alt="image" class="img-responsive" style="background-color: transparent;">
-            </div>  
-            
-            <!-- feature content -->
-            <div class="col-md-6 wow fadeInRight">
-                <h2>Revolutionizing Outdoor Advertising with BARQ ADS</h2>
-                <p>Maximize your brand's reach with our innovative vehicle wrap advertising solutions, powered by real-time data and cutting-edge technology.</p>      
-            </div>              
-        </div>            
-    </div>
-</section>
+        </div>
+    </section>
 
-<!-- feature section -->
-<section id="feature">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1 col-sm-12 text-center feature-title wow fadeInUp">
-                <!-- feature title -->
-                <h2>Cutting-Edge Advertising Solutions</h2>
-                <p>Transform our fleet into your mobile billboards with eye-catching full or partial wraps. These high-impact branding solutions offer continuous visibility as our vehicles navigate busy urban areas, ensuring maximum exposure for your brand.</p>
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <div class="section-title">
+                <h2>Get in Touch</h2>
+                <p>Ready to revolutionize your advertising? Let's talk!</p>
+            </div>
+            <div class="row">
+                <div class="col-md-6 animate__animated animate__fadeInLeft">
+                    <form id="contactForm" class="contact-form" aria-label="Contact form">
+                        <div class="mb-3">
+                            <input type="text" class="form-control" id="name" placeholder="Your Name" required aria-label="Your Name">
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" id="email" placeholder="Your Email" required aria-label="Your Email">
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" id="message" rows="5" placeholder="Your Message" required aria-label="Your Message"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+                <div class="col-md-6 animate__animated animate__fadeInRight">
+                    <div class="contact-info">
+                        <h3>Our Office</h3>
+                        <p><i class="fas fa-map-marker-alt me-2"></i>123 BARQ Street, Dubai, UAE</p>
+                        <p><i class="fas fa-phone me-2"></i>+971 4 123 4567</p>
+                        <p><i class="fas fa-envelope me-2"></i>info@barqads.com</p>
+                        <div class="social-links mt-4">
+                            <a href="#" class="me-3" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="me-3" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="me-3" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="me-3" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="row row-feat">
-            <div class="col-md-12">
-                <!-- feature 1 -->
-                <div class="col-sm-4 feat-list wow fadeInLeft">
-                    <img src="images/Picture2.png" alt="image" class="img-responsive">
-                    <div class="inner">
-                        <h4>Vehicle Wraps</h4>
-                        <p>Transform our fleet into your mobile billboards with eye-catching full or partial wraps. These high-impact branding solutions offer continuous visibility as our vehicles navigate busy urban areas, ensuring maximum exposure for your brand.</p>
-                    </div>
-                </div>
-            
-                <!-- feature 2 -->
-                <div class="col-sm-4 feat-list wow fadeInUp">
-                    <img src="images/Picture4.png" alt="image" class="img-responsive">
-                    <div class="inner">
-                        <h4>Digital Display</h4>
-                        <p>Deploy dynamic digital ads with our state-of-the-art smart screens. These HD displays allow for real-time content updates and location-based triggers, enabling you to deliver targeted messages that capture attention and drive engagement.</p>
-                    </div>
-                </div>
-            
-                <!-- feature 3 -->
-                <div class="col-sm-4 feat-list wow fadeInRight"> 
-                    <img src="images/Picture3.png" alt="image" class="img-responsive">
-                    <div class="inner">
-                        <h4>Interactive Campaigns</h4>
-                        <p>Engage consumers with innovative interactive marketing campaigns. From product launches to promotional events, our platform supports creative executions that encourage direct audience participation and memorable brand experiences.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+    </section>
 
-<!-- Advanced Technology Platform with Creative Map Section -->
-<section id="features" style="position: relative; overflow: hidden;">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 col-sm-6 wow fadeInRight" data-wow-delay=".8s">
-                <h2 class="title ">Advanced Technology Platform</h2>
-                <div class="feature-item wow fadeInUp">
-                    <div class="media">
-                        <div class="pull-left icon">
-                            <i class="fa fa-paint-brush"></i>
-                        </div>
-                        <div class="media-body">
-                            <h4 class="media-heading">Geotargeting Precision</h4>
-                            <p>Our advanced geotargeting technology allows you to deliver hyper-targeted campaigns based on precise geofencing and real-time data. This ensures your ads reach the right audience at the right time and place, significantly enhancing engagement and campaign effectiveness.</p>
-                        </div>
-                    </div>
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="images/logotransparentxs.png" alt="BARQ ADS logo" class="mb-3" height="40">
+                    <p>Revolutionizing outdoor advertising with innovative mobile solutions.</p>
                 </div>
-                <div class="feature-item wow fadeInUp" data-wow-delay=".2s">
-                    <div class="media">
-                        <div class="pull-left icon">
-                            <i class="fa fa-rss"></i>
-                        </div>
-                        <div class="media-body">
-                            <h4 class="media-heading">Programmatic Advertising</h4>
-                            <p>Streamline your ad buying process with our cutting-edge programmatic solutions. Available through leading platforms, our system automates and optimizes your campaigns in real-time, ensuring maximum efficiency and ROI for your advertising budget.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="feature-item wow fadeInUp" data-wow-delay=".4s">
-                    <div class="media">
-                        <div class="pull-left icon">
-                            <i class="fa fa-recycle"></i>
-                        </div>
-                        <div class="media-body">
-                            <h4 class="media-heading">Comprehensive Data Analytics</h4>
-                            <p>Gain valuable insights with our robust data analytics dashboard. Track routes, impressions, and engagement metrics in real-time, and use these insights to continuously refine your campaigns. Our platform empowers you to make data-driven decisions that maximize your advertising impact.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-sm-6 wow fadeInLeft" data-wow-delay=".8s">
-                <div class="block">
-                    <img class="img-responsive" src="images/bulletdelivery.png" alt="">
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Full-Width Creative Map -->
-    <div class="creative-map-container" style="position: relative; height: 500px; width: 100%; overflow: hidden; background-color: #f5f5f5;">
-        <iframe src="map.html" style="width:100%; height: 100%; border:none; filter: grayscale(100%); transition: filter 0.5s;"></iframe>
-        <!-- Overlay Elements -->
-        <div class="map-overlay-content">
-            <h3 class="map-title wow fadeInUp">Explore Our Reach</h3>
-            <p class="map-description wow fadeInUp" data-wow-delay=".2s">See how our network spans across the city with precision targeting and unmatched coverage.</p>
-            <a href="#" class="btn btn-map wow fadeInUp" data-wow-delay=".4s">Learn More</a>
-        </div>
-    </div>
-</section>
-
-<!-- Clients section -->
-<section id="clients">
-    <div class="container">
-        <div class="text-center">
-            <h2 class="wow fadeInLeft">Clients</h2>
-            <div class="title-line wow fadeInRight"></div>
-        </div>
-        <div class="row">
-                    <!-- Clients 1 -->
-                    <div class="clients-item">
-                        <div class="client-pic text-center">
-                            <img src="images/neoleap.png" alt="client">
-                        </div>
-                        <div class="box">
-                            <p class="message text-center">"BARQ ADS has transformed our advertising approach. The visibility and engagement we've received are unmatched. Their innovative solutions have helped us reach new heights in brand recognition."</p>
-                        </div>
-                        <div class="client-info text-center">
-                             John Asset, <span class="company">Neoleap</span>
-                        </div>
-                    </div>
-                    
-                    <!-- Clients 2 -->
-                    <div class="clients-item">
-                        <div class="client-pic text-center">
-                            <img src="images/spiderman.jpeg" alt="client">
-                        </div>
-                        <div class="box">
-                            <p class="message text-center">"Promoting the Spiderman trailer with BARQ ADS was a game-changer for us. The dynamic vehicle wraps and real-time geotargeting ensured that our trailer reached moviegoers in every corner of the city. The buzz created was incredible, and the engagement levels exceeded our expectations. BARQ ADS truly helped us bring the excitement of Spiderman directly to the streets."</p>
-                        </div>
-                        <div class="client-info text-center">
-                            Peter Parker,<span class="company">Vox Cinema</span>
-                        </div>
-                    </div>
-                    
-                    <!-- Clients 3 -->
-                    <div class="clients-item">
-                        <div class="client-pic text-center">
-                            <img src="images/kfc.png" alt="client">
-                        </div>
-                        <div class="box">
-                            <p class="message text-center">"Using BARQ ADS to promote our new menu items was a fantastic decision. The eye-catching vehicle wraps and strategic city-wide coverage significantly boosted our visibility. Customers loved seeing our ads on the go, and it translated into a noticeable increase in foot traffic and sales. BARQ ADS delivered results beyond what we imagined."</p>
-                        </div>
-                        <div class="client-info text-center">
-                            Colonel Sanders,<span class="company">KFC</span>
-                        </div>
-                    </div>
-                </div>
-            </div>  
-        </div>  
-    </div>
-</section>
-
-<!-- Pricing section -->
-<section id="package">
-    <div class="container">
-        <div class="text-center">
-            <h2 class="wow fadeInLeft" style="visibility: visible; animation-name: fadeInLeft;">Prices</h2>
-            <div class="title-line wow fadeInRight"></div>
-        </div>
-        <div class="row justify-content-center package-option">
-            <!-- package 1 -->
-            <div class="col-sm-6 col-md-5">
-                <div class="price-box wow fadeInUp">
-                    <div class="price-heading text-center">
-                        <h3>Basic Package</h3>
-                    </div>
-                    <div class="price-group text-center">
-                        <span class="dollar">SAR</span>
-                        <span class="price">2000</span>
-                        <span class="time">/Vehicle</span>
-                    </div>
-                    <ul class="price-feature text-center">
-                        <li><strong>1000 SAR</strong> Setup fees</li>
-                        <li><strong>30 - 99</strong> Vehicles</li>
-                        <li><strong>3 Months</strong> Minimum duration</li>
-                        <li><strong>Monthly</strong> Reporting</li>
-                        <li><strong>Car sticker - logo only</strong> Branding</li>
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#intro">About</a></li>
+                        <li><a href="#feature">Features</a></li>
+                        <li><a href="#clients">Clients</a></li>
+                        <li><a href="#package">Pricing</a></li>
                     </ul>
-                    <div class="price-footer text-center">
-                        <a class="btn btn-price" href="#">Contact Us</a>
-                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h5>Newsletter</h5>
+                    <p>Stay updated with our latest news and offers.</p>
+                    <form class="mt-3">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Enter your email" required>
+                            <button class="btn btn-primary" type="submit">Subscribe</button>
+                        </div>
+                    </form>
                 </div>
             </div>
-            
-            <!-- package 2 -->
-            <div class="col-sm-6 col-md-5">
-                <div class="price-box wow fadeInUp" data-wow-delay="0.2s">
-                    <div class="price-heading text-center">
-                        <h3>Premium Package</h3>
-                    </div>
-                    <div class="price-group text-center">
-                        <span class="dollar">SAR</span>
-                        <span class="price">1800</span>
-                        <span class="time">/Vehicle</span>
-                    </div>
-                    <ul class="price-feature text-center">
-                        <li><strike>1000 SAR Setup fees</strike></li>
-                        <li><strong>more than 100</strong> Vehicles</li>
-                        <li><strong>3 Months</strong> Minimum duration</li>
-                        <li><strong>Real-time tracking dashboard</strong></li>
-                        <li><strong>Large vinyl wrap - full vehicle</strong> Branding</li>
-                    </ul>
-                    <div class="price-footer text-center">
-                        <a class="btn btn-price" href="#">Contact Us</a>
-                    </div>
+            <hr class="mt-4 mb-3">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; 2024 BARQ ADS. All rights reserved.</p>
                 </div>
-            </div>  
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="me-3">Privacy Policy</a>
+                    <a href="#" class="me-3">Terms of Service</a>
+                </div>
+            </div>
         </div>
-    </div>
-</section>
+    </footer>
 
-<!-- Footer -->
-<footer id="footer">
-    <div class="container">
-        <div class="col-sm-4 col-sm-offset-4">
-            <!-- Social links -->
-            <div class="social text-center">
-                <ul>
-                    <li><a class="wow fadeInUp" href="https://twitter.com/"><i class="fa fa-twitter"></i></a></li>
-                    <li><a class="wow fadeInUp" href="https://www.facebook.com/" data-wow-delay="0.2s"><i class="fa fa-facebook"></i></a></li>
-                    <li><a class="wow fadeInUp" href="https://plus.google.com/" data-wow-delay="0.4s"><i class="fa fa-google-plus"></i></a></li>
-                    <li><a class="wow fadeInUp" href="https://instagram.com/" data-wow-delay="0.6s"><i class="fa fa-instagram"></i></a></li>
-                </ul>
-            </div>  
-            <div class="text-center wow fadeInUp" style="font-size: 14px;">Copyright BARQADS 2024 <a href="http://www.BARQADS.com">BARQ ADS</a></div>
-            <a href="#" class="scrollToTop"><i class="fa fa-arrow-circle-o-up"></i></a>
-        </div>  
-    </div>  
-</footer>
-    
-<!-- JavaScript Files -->
-<script src="js/jquery.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/custom.js"></script>
-<script src="js/jquery.sticky.js"></script>
-<script src="js/wow.min.js"></script>
-<script src="js/owl.carousel.min.js"></script>
-<script src="js/ekko-lightbox-min.js"></script>
-<script type="text/javascript">
-    $(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) { 
-        event.preventDefault(); 
-        $(this).ekkoLightbox(); 
-    }); 
-    new WOW().init();
-    // Initialize the clients carousel
-    $("#owl-clients").owlCarousel({
-        loop: true, // Infinite loop
-        margin: 10, // Space between items
-        nav: false, // Navigation arrows
-        autoplay: true, // Automatic scrolling
-        autoplayTimeout: 3000, // Speed of autoplay
-        smartSpeed: 800, // Speed of transition
-        autoplayHoverPause: true, // Pause on hover
-        responsive: {
-            0: {
-                items: 1 // 1 item on small screens
-            },
-            600: {
-                items: 2 // 2 items on medium screens
-            },
-            1000: {
-                items: 3 // 3 items on large screens
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center" aria-label="Back to top"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- JavaScript Files -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js" defer></script>
+
+    <script>
+        $(document).ready(function () {
+            // Initialize WOW.js for scroll animations
+            new WOW().init();
+
+            // GSAP ScrollTrigger setup
+            gsap.registerPlugin(ScrollTrigger);
+
+            // Animate elements on scroll
+            gsap.utils.toArray('.fade-in, .slide-in, .scale-in, .rotate-in').forEach(function (elem) {
+                gsap.from(elem, {
+                    opacity: 0,
+                    y: 50,
+                    scale: 0.9,
+                    rotation: -5,
+                    duration: 1,
+                    scrollTrigger: {
+                        trigger: elem,
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play none none reverse"
+                    }
+                });
+            });
+
+            // Floating animation for images
+            gsap.to('.floating', {
+                y: -20,
+                duration: 2,
+                repeat: -1,
+                yoyo: true,
+                ease: "power1.inOut"
+            });
+
+            // Smooth scrolling for navbar links
+            $('a.nav-link, .btn-primary').on('click', function (event) {
+                if (this.hash !== "") {
+                    event.preventDefault();
+                    var hash = this.hash;
+                    gsap.to(window, { duration: 1, scrollTo: hash, ease: "power2.inOut" });
+                }
+            });
+
+            // Navbar color change on scroll
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 100) {
+                    $('.navbar').addClass('navbar-scrolled');
+                } else {
+                    $('.navbar').removeClass('navbar-scrolled');
+                }
+            });
+
+            // Initialize Owl Carousel for client testimonials
+            $(".clients-carousel").owlCarousel({
+                items: 1,
+                loop: true,
+                margin: 10,
+                autoplay: true,
+                autoplayTimeout: 5000,
+                autoplayHoverPause: true,
+                animateIn: 'fadeIn',
+                animateOut: 'fadeOut',
+                responsive: {
+                    0: { items: 1 },
+                    768: { items: 2 },
+                    992: { items: 3 }
+                }
+            });
+
+            // Form submission handling with animation
+            $('#contactForm').submit(function (e) {
+                e.preventDefault();
+                gsap.to(this, { scale: 0.9, opacity: 0, duration: 0.5, onComplete: function () {
+                    alert('Thank you for your message. We will get back to you soon!');
+                    $('#contactForm')[0].reset();
+                    gsap.to('#contactForm', { scale: 1, opacity: 1, duration: 0.5 });
+                } });
+            });
+
+            // Back to top button animation
+            $('.back-to-top').click(function () {
+                gsap.to(window, { duration: 1, scrollTo: 0, ease: "power2.inOut" });
+                return false;
+            });
+
+            // Interactive map animation
+            $('.creative-map-container iframe').on('mouseenter', function () {
+                gsap.to(this, { filter: "grayscale(0%)", duration: 0.3 });
+            }).on('mouseleave', function () {
+                gsap.to(this, { filter: "grayscale(100%)", duration: 0.3 });
+            });
+
+            // Animate numbers in pricing section
+            gsap.utils.toArray('.price-group .h2').forEach(function (elem) {
+                let startValue = parseFloat(elem.innerText);
+                let endValue = startValue;
+
+                gsap.to(elem, {
+                    innerText: endValue,
+                    duration: 2,
+                    ease: "power1.inOut",
+                    snap: { innerText: 1 },
+                    scrollTrigger: {
+                        trigger: elem,
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play none none reverse"
+                    },
+                    onUpdate: function () {
+                        elem.innerText = Math.ceil(elem.innerText).toLocaleString() + " SAR";
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=yes">
+    <meta name="description" content="BARQ ADS offers innovative vehicle wrap and outdoor advertising solutions, revolutionizing how businesses reach their audience.">
+    <meta name="keywords" content="Outdoor advertising, vehicle wraps, digital display ads, real-time analytics, BARQ ADS">
+    <meta name="author" content="BARQ ADS">
+    <title>BARQ ADS - Revolutionizing Outdoor Advertising</title>
+
+    <!-- Core CSS Files -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:300,400,700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-color: #FFB81C;
+            --secondary-color: #54565A;
+            --accent-color: #9F2842;
+            --bg-color: #FFFFFF;
+            --text-color: #333333;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Alegreya Sans', sans-serif;
+            font-weight: 700;
+        }
+
+        .navbar {
+            background-color: #ffffff; /* Set a solid background color */
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar-scrolled {
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        @keyframes lightning {
+    0%, 100% { 
+        text-shadow: 0 0 10px #ffffff, 0 0 20px #2b129b, 0 0 30px #9F2842; 
+    }
+    50% { 
+        text-shadow: 0 0 30px #9F2842, 0 0 50px #e0c125, 0 0 60px #ffffff; 
+    }
+}
+
+        /* Car animation */
+        .car-animation-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            height: 300px;
+            margin-top: 8rem; /* Increase margin to move down */
+        }
+
+        .car-animation {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 300px;
+            animation: moveCar 10s linear infinite;
+        }
+
+        .car-animation-2 {
+            position: absolute;
+            bottom: 0;
+            left: 50px; /* Offset the second car */
+            width: 300px;
+            opacity: 0;
+            animation-delay: 10s; /* Delay the start of the second car */
+            animation: moveCar 10s linear infinite, fadeIn 1s forwards 10s;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
             }
         }
-    });
 
-    // Map interaction
-    document.querySelector('.creative-map-container iframe').addEventListener('mouseenter', function() {
-        this.style.filter = 'grayscale(0%)';
-    });
+        @keyframes moveCar {
+            0% {
+                left: 100%;
+            }
+            100% {
+                left: -300px;
+            }
+        }
 
-    document.querySelector('.creative-map-container iframe').addEventListener('mouseleave', function() {
-        this.style.filter = 'grayscale(100%)';
-    });
-</script>
+.hero {
+    height: 85vh;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8)),
+                url('images/newaccenty.jpg') no-repeat center/cover;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    animation: lightning 1.5s infinite ease-in-out;
+}
+
+@keyframes lightning {
+            0%, 100% { 
+                text-shadow: 0 0 10px #ffffff, 0 0 20px #2b129b, 0 0 30px #9F2842; 
+            }
+            50% { 
+                text-shadow: 0 0 30px #9F2842, 0 0 50px #e0c125, 0 0 60px #ffffff; 
+            }
+        }
+
+         /* Car animation */
+        .car-animation-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            height: 300px;
+            margin-top: 6rem; /* Increase margin to move down */
+        }
+
+        .car-animation {
+            position: absolute;
+            bottom: 0;
+            width: 300px;
+            animation: moveCar 10s linear infinite;
+        }
+
+        .car-animation-2 {
+            opacity: 0;
+            animation-delay: 5s; /* Delay the start of the second car */
+            animation: moveCar 10s linear infinite, fadeIn 1s forwards 5s;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes moveCar {
+            0% {
+                left: 100%;
+            }
+            100% {
+                left: -300px;
+            }
+        }
+ 
+       
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            color: var(--secondary-color);
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--secondary-color);
+            border-color: var(--secondary-color);
+            color: var(--bg-color);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-item {
+            text-align: center;
+            margin-bottom: 2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature-item i {
+            font-size: 3rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+
+        .price-box {
+            background-color: var(--bg-color);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            margin-bottom: 2rem;
+        }
+
+        .price-box:hover {
+            transform: translateY(-10px);
+        }
+
+        .fade-in {
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .fade-in.appear {
+            opacity: 1;
+        }
+
+        .creative-map-container {
+            position: relative;
+            height: 500px;
+            overflow: hidden;
+        }
+
+        .creative-map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            transition: filter 0.5s ease;
+        }
+
+        .map-overlay-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: var(--bg-color);
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 2rem;
+            border-radius: 10px;
+        }
+
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Additional enhancements */
+    </style>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#navbar-main" data-bs-offset="100">
+    <!-- Navigation -->
+    <nav id="navbar-main" class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#top">
+                <img src="images/logotransparentxs.png" alt="BARQ ADS logo" height="40">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#intro">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#feature">Features</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#clients">Samples</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#package">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#clients">Clients</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+
+    <!-- Hero Section -->
+    <section class="hero" id="top">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="animate__animated animate__fadeInDown">The Future of Advertising is Here</h1>
+                <p class="animate__animated animate__fadeInUp animate__delay-1s">Where Innovation Meets Visibility</p>
+                <a href="#contact" class="btn btn-primary btn-lg animate__animated animate__fadeInUp animate__delay-2s">Start Your Campaign</a>
+            </div>
+            <div class="container car-animation-container">
+                <img src="images/car1.avif" alt="Car Moving" class="car-animation">
+                <img src="images/neoleap.png" alt="Car Moving" class="car-animation car-animation-2">
+            </div>
+    </section>
+
+    <!-- Samples Section -->
+    <section id="clients" class="py-5">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Samples</h2>
+                <p>Showcasing our work with leading brands</p>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <img src="images/kfc1.png" alt="KFC" class="img-fluid">
+                </div>
+                <div class="col-md-4">
+                    <img src="images/Macdonalds.png" alt="Macdonalds" class="img-fluid">
+                </div>
+                <div class="col-md-4">
+                    <img src="images/neoleap.png" alt="Neo Leap" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Intro Section -->
+    <section id="intro" class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 animate__animated animate__fadeInLeft">
+                    <img src="images/Picture1.png" alt="BARQ ADS in action" class="img-fluid rounded">
+                </div>
+                <div class="col-md-6 animate__animated animate__fadeInRight">
+                    <h2>Revolutionizing Outdoor Advertising</h2>
+                    <p>Maximize your brand's reach with our innovative vehicle wrap advertising solutions, powered by real-time data and cutting-edge technology.</p>
+                    <a href="#feature" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    
+
+    <!-- Feature Section -->
+    <section id="feature" class="py-5 bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>Cutting-Edge Advertising Solutions</h2>
+                <p>Transform our fleet into your mobile billboards with eye-catching solutions</p>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="feature-item">
+                        <i class="fas fa-car"></i>
+                        <h3>Vehicle Wraps</h3>
+                        <p>Transform our fleet into your mobile billboards with eye-catching full or partial wraps.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-item">
+                        <i class="fas fa-tablet-alt"></i>
+                        <h3>Digital Display</h3>
+                        <p>Deploy dynamic digital ads with our state-of-the-art smart screens for real-time content updates.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-item">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Analytics Dashboard</h3>
+                        <p>Track your campaign performance with our comprehensive analytics and reporting tools.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Section -->
+    <section id="technology" class="py-5">
+        <div class="container">
+            <div class="section-title">
+                <h2>Advanced Technology Platform</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="feature-item">
+                        <h4><i class="fas fa-map-marker-alt me-2"></i>Geotargeting Precision</h4>
+                        <p>Deliver hyper-targeted campaigns based on precise geofencing and real-time data.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-item">
+                        <h4><i class="fas fa-cogs me-2"></i>Programmatic Advertising</h4>
+                        <p>Streamline your ad buying process with our cutting-edge programmatic solutions.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-item">
+                        <h4><i class="fas fa-chart-bar me-2"></i>Comprehensive Data Analytics</h4>
+                        <p>Gain valuable insights with our robust data analytics dashboard.</p>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- Creative Map Section -->
+    <section id="map" class="py-5" aria-label="Coverage map">
+        <div class="creative-map-container">
+            <iframe src="map.html" allowfullscreen="" loading="lazy" title="BARQ ADS coverage map"></iframe>
+            <div class="map-overlay-content animate__animated animate__fadeIn">
+                <h3 class="map-title">Explore Our Reach</h3>
+                <p class="map-description">See how our network spans across the city with precision targeting and unmatched coverage.</p>
+                <a href="#contact" class="btn btn-primary">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Pricing Section -->
+    <section id="package" class="py-5 bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>Flexible Pricing Plans</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="price-box p-4 animate__animated animate__fadeInLeft">
+                        <div class="price-heading text-center">
+                            <h3>Basic Package</h3>
+                        </div>
+                        <div class="price-group text-center my-4">
+                            <span class="h2">2000 SAR</span> / Vehicle
+                        </div>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-success me-2"></i>30 - 99 Vehicles</li>
+                            <li><i class="fas fa-check text-success me-2"></i>3 Months Minimum Duration</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Monthly Reporting</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Car Sticker - Logo Only</li>
+                        </ul>
+                        <div class="text-center mt-4">
+                            <a href="#contact" class="btn btn-primary">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="price-box p-4 animate__animated animate__fadeInRight">
+                        <div class="price-heading text-center">
+                            <h3>Premium Package</h3>
+                        </div>
+                        <div class="price-group text-center my-4">
+                            <span class="h2">1800 SAR</span> / Vehicle
+                        </div>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-success me-2"></i>100+ Vehicles</li>
+                            <li><i class="fas fa-check text-success me-2"></i>3 Months Minimum Duration</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Real-time Tracking Dashboard</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Large Vinyl Wrap - Full Vehicle</li>
+                        </ul>
+                        <div class="text-center mt-4">
+                            <a href="#contact" class="btn btn-primary">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <div class="section-title">
+                <h2>Get in Touch</h2>
+                <p>Ready to revolutionize your advertising? Let's talk!</p>
+            </div>
+            <div class="row">
+                <div class="col-md-6 animate__animated animate__fadeInLeft">
+                    <form id="contactForm" class="contact-form" aria-label="Contact form">
+                        <div class="mb-3">
+                            <input type="text" class="form-control" id="name" placeholder="Your Name" required aria-label="Your Name">
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" id="email" placeholder="Your Email" required aria-label="Your Email">
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" id="message" rows="5" placeholder="Your Message" required aria-label="Your Message"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+                <div class="col-md-6 animate__animated animate__fadeInRight">
+                    <div class="contact-info">
+                        <h3>Our Office</h3>
+                        <p><i class="fas fa-map-marker-alt me-2"></i>123 BARQ Street, Dubai, UAE</p>
+                        <p><i class="fas fa-phone me-2"></i>+971 4 123 4567</p>
+                        <p><i class="fas fa-envelope me-2"></i>info@barqads.com</p>
+                        <div class="social-links mt-4">
+                            <a href="#" class="me-3" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="me-3" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="me-3" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="me-3" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="images/logotransparentxs.png" alt="BARQ ADS logo" class="mb-3" height="40">
+                    <p>Revolutionizing outdoor advertising with innovative mobile solutions.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#intro">About</a></li>
+                        <li><a href="#feature">Features</a></li>
+                        <li><a href="#clients">Clients</a></li>
+                        <li><a href="#package">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Newsletter</h5>
+                    <p>Stay updated with our latest news and offers.</p>
+                    <form class="mt-3">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Enter your email" required>
+                            <button class="btn btn-primary" type="submit">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <hr class="mt-4 mb-3">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; 2024 BARQ ADS. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="me-3">Privacy Policy</a>
+                    <a href="#" class="me-3">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center" aria-label="Back to top"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- JavaScript Files -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js" defer></script>
+
+    <script>
+        $(document).ready(function () {
+            // Initialize WOW.js for scroll animations
+            new WOW().init();
+
+            // GSAP ScrollTrigger setup
+            gsap.registerPlugin(ScrollTrigger);
+
+            // Animate elements on scroll
+            gsap.utils.toArray('.fade-in, .slide-in, .scale-in, .rotate-in').forEach(function (elem) {
+                gsap.from(elem, {
+                    opacity: 0,
+                    y: 50,
+                    scale: 0.9,
+                    rotation: -5,
+                    duration: 1,
+                    scrollTrigger: {
+                        trigger: elem,
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play none none reverse"
+                    }
+                });
+            });
+
+            // Floating animation for images
+            gsap.to('.floating', {
+                y: -20,
+                duration: 2,
+                repeat: -1,
+                yoyo: true,
+                ease: "power1.inOut"
+            });
+
+            // Smooth scrolling for navbar links
+            $('a.nav-link, .btn-primary').on('click', function (event) {
+                if (this.hash !== "") {
+                    event.preventDefault();
+                    var hash = this.hash;
+                    gsap.to(window, { duration: 1, scrollTo: hash, ease: "power2.inOut" });
+                }
+            });
+
+            // Navbar color change on scroll
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 100) {
+                    $('.navbar').addClass('navbar-scrolled');
+                } else {
+                    $('.navbar').removeClass('navbar-scrolled');
+                }
+            });
+
+            // Initialize Owl Carousel for client testimonials
+            $(".clients-carousel").owlCarousel({
+                items: 1,
+                loop: true,
+                margin: 10,
+                autoplay: true,
+                autoplayTimeout: 5000,
+                autoplayHoverPause: true,
+                animateIn: 'fadeIn',
+                animateOut: 'fadeOut',
+                responsive: {
+                    0: { items: 1 },
+                    768: { items: 2 },
+                    992: { items: 3 }
+                }
+            });
+
+            // Form submission handling with animation
+            $('#contactForm').submit(function (e) {
+                e.preventDefault();
+                gsap.to(this, { scale: 0.9, opacity: 0, duration: 0.5, onComplete: function () {
+                    alert('Thank you for your message. We will get back to you soon!');
+                    $('#contactForm')[0].reset();
+                    gsap.to('#contactForm', { scale: 1, opacity: 1, duration: 0.5 });
+                } });
+            });
+
+            // Back to top button animation
+            $('.back-to-top').click(function () {
+                gsap.to(window, { duration: 1, scrollTo: 0, ease: "power2.inOut" });
+                return false;
+            });
+
+            // Interactive map animation
+            $('.creative-map-container iframe').on('mouseenter', function () {
+                gsap.to(this, { filter: "grayscale(0%)", duration: 0.3 });
+            }).on('mouseleave', function () {
+                gsap.to(this, { filter: "grayscale(100%)", duration: 0.3 });
+            });
+
+            // Animate numbers in pricing section
+            gsap.utils.toArray('.price-group .h2').forEach(function (elem) {
+                let startValue = parseFloat(elem.innerText);
+                let endValue = startValue;
+
+                gsap.to(elem, {
+                    innerText: endValue,
+                    duration: 2,
+                    ease: "power1.inOut",
+                    snap: { innerText: 1 },
+                    scrollTrigger: {
+                        trigger: elem,
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play none none reverse"
+                    },
+                    onUpdate: function () {
+                        elem.innerText = Math.ceil(elem.innerText).toLocaleString() + " SAR";
+                    }
+                });
+            });
+        });
+    </script>
 </body>
+
 </html>
