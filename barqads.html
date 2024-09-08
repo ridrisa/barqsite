@@ -331,9 +331,11 @@
                     <li class="nav-item"><a class="nav-link" href="#clients">Clients</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
+                <button id="darkModeToggle" class="btn btn-outline-primary ms-3" aria-label="Toggle dark mode">Dark Mode</button>
             </div>
-            <button id="darkModeToggle" class="btn btn-outline-primary me-2" aria-label="Toggle dark mode">Dark Mode</button>
             <button id="closeChatWidget" class="btn-close btn-close-white" aria-label="Close"></button>
+            <button id="minimizeChatWidget" class="btn btn-sm btn-light float-end">_</button>
+            <button id="closeChatWidget" class="btn btn-sm btn-light float-end">&times;</button>
         </div>
     </nav>
     
@@ -816,6 +818,19 @@
         }
         document.getElementById('closeChatWidget').addEventListener('click', function() {
             document.getElementById('chatWidget').style.display = 'none';
+        });
+
+        document.getElementById('minimizeChatWidget').addEventListener('click', function() {
+            const chatWidget = document.getElementById('chatWidget');
+            const chatMessages = document.getElementById('chatMessages');
+            const chatFooter = document.querySelector('.card-footer');
+            if (chatMessages.style.display === 'none') {
+                chatMessages.style.display = 'block';
+                chatFooter.style.display = 'block';
+            } else {
+                chatMessages.style.display = 'none';
+                chatFooter.style.display = 'none';
+            }
         });
     </script>
 </body>
