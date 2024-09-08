@@ -152,25 +152,7 @@
             animation: moveCar 10s linear infinite, fadeIn 1s forwards 5s;
         }
 
-        @keyframes fadeIn {
-            0% {
-                opacity: 0;
-            }
-            100% {
-                opacity: 1;
-            }
-        }
-
-        @keyframes moveCar {
-            0% {
-                left: 100%;
-            }
-            100% {
-                left: -300px;
-            }
-        }
- 
-       
+    
         .btn-primary {
             background-color: var(--primary-color);
             border-color: var(--primary-color);
@@ -319,32 +301,33 @@
                 <a href="#contact" class="btn btn-primary btn-lg animate__animated animate__fadeInUp animate__delay-2s">Start Your Campaign</a>
             </div>
             <div class="container car-animation-container">
-                <img src="images/car1.avif" alt="Car Moving" class="car-animation">
-                <img src="images/neoleap.png" alt="Car Moving" class="car-animation car-animation-2">
+                <img src="images/feature2-image.jpg" alt="Car Moving" class="car-animation">
             </div>
     </section>
 
-    <!-- Samples Section -->
-    <section id="clients" class="py-5">
-        <div class="container">
-            <div class="section-title">
-                <h2>Our Samples</h2>
-                <p>Showcasing our work with leading brands</p>
-            </div>
-            <div class="row text-center">
-                <div class="col-md-4">
-                    <img src="images/kfc1.png" alt="KFC" class="img-fluid">
+
+    <section id="stats" class="py-5 bg-primary text-white" w-tid="106">
+        <div class="container" w-tid="107">
+            <div class="row" w-tid="108">
+                <div class="col-md-3 text-center mb-3" data-aos="fade-up" w-tid="109">
+                    <h3 class="display-4" id="clientCount" w-tid="110">0</h3>
+                    <p w-tid="111">Happy Clients</p>
                 </div>
-                <div class="col-md-4">
-                    <img src="images/Macdonalds.png" alt="Macdonalds" class="img-fluid">
+                <div class="col-md-3 text-center mb-3" data-aos="fade-up" data-aos-delay="200" w-tid="112">
+                    <h3 class="display-4" id="campaignCount" w-tid="113">0</h3>
+                    <p w-tid="114">Successful Campaigns</p>
                 </div>
-                <div class="col-md-4">
-                    <img src="images/neoleap.png" alt="Neo Leap" class="img-fluid">
+                <div class="col-md-3 text-center mb-3" data-aos="fade-up" data-aos-delay="400" w-tid="115">
+                    <h3 class="display-4" id="vehicleCount" w-tid="116">0</h3>
+                    <p w-tid="117">Vehicles Wrapped</p>
+                </div>
+                <div class="col-md-3 text-center mb-3" data-aos="fade-up" data-aos-delay="600" w-tid="118">
+                    <h3 class="display-4" id="impressionCount" w-tid="119">0</h3>
+                    <p w-tid="120">Ad Impressions</p>
                 </div>
             </div>
         </div>
     </section>
-
     <!-- Intro Section -->
     <section id="intro" class="py-5">
         <div class="container">
@@ -360,6 +343,9 @@
             </div>
         </div>
     </section>
+
+
+    
 
     <!-- Feature Section -->
     <section id="feature" class="py-5 bg-light">
@@ -394,7 +380,6 @@
         </div>
     </section>
 
-    <!-- Technology Section -->
     <section id="technology" class="py-5">
         <div class="container">
             <div class="section-title">
@@ -403,24 +388,29 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="feature-item">
+                        <img src="images/geotargeting.jpg" alt="Geotargeting" class="img-fluid mb-3">
                         <h4><i class="fas fa-map-marker-alt me-2"></i>Geotargeting Precision</h4>
                         <p>Deliver hyper-targeted campaigns based on precise geofencing and real-time data.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="feature-item">
+                        <img src="images/programmatic.jpg" alt="Programmatic Advertising" class="img-fluid mb-3">
                         <h4><i class="fas fa-cogs me-2"></i>Programmatic Advertising</h4>
                         <p>Streamline your ad buying process with our cutting-edge programmatic solutions.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="feature-item">
+                        <img src="images/analytics.jpg" alt="Data Analytics" class="img-fluid mb-3">
                         <h4><i class="fas fa-chart-bar me-2"></i>Comprehensive Data Analytics</h4>
                         <p>Gain valuable insights with our robust data analytics dashboard.</p>
                     </div>
                 </div>
             </div>
+        </div>
     </section>
+    
 
     <!-- Creative Map Section -->
     <section id="map" class="py-5" aria-label="Coverage map">
