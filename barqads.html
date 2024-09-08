@@ -29,12 +29,14 @@
         .gradient-text {
             background: linear-gradient(45deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3);
             background-size: 300% 300%;
-            -webkit-background-clip: text;
+            background-clip: text; /* Standard property for compatibility */
+            -webkit-background-clip: text; /* Vendor-prefixed property for WebKit-based browsers */
             -webkit-text-fill-color: transparent;
             animation: gradient 15s ease infinite;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
             transition: all 0.3s ease;
         }
+    
         .gradient-text:hover {
             background-size: 400% 400%;
             animation: gradient 10s ease infinite;
@@ -43,7 +45,6 @@
         .typing-animation {
             overflow: hidden;
             border-right: .15em solid orange;
-            white-space: nowrap;
             margin: 0 auto;
             letter-spacing: .15em;
             animation: 
