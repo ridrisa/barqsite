@@ -16,8 +16,9 @@
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:300,400,700&display=swap" rel="stylesheet">
+
+    <!-- Particle.js -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
     <style>
@@ -27,47 +28,6 @@
             --accent-color: #9F2842;
             --bg-color: #FFFFFF;
             --text-color: #333333;
-        }
-        .dark-mode {
-            background-color: #333;
-            color: #fff;
-        }
-        .dark-mode .card {
-            background-color: #444;
-            color: #fff;
-        }
-        .gradient-text {
-            background: linear-gradient(45deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3);
-            background-size: 300% 300%;
-            background-clip: text; /* Standard property for compatibility */
-            -webkit-background-clip: text; /* Vendor-prefixed property for WebKit-based browsers */
-            -webkit-text-fill-color: transparent;
-            animation: gradient 15s ease infinite;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
-        }
-    
-        .gradient-text:hover {
-            background-size: 400% 400%;
-            animation: gradient 10s ease infinite;
-            text-shadow: 3px 3px 6px rgba(0,0,0,0.2);
-        }
-        .typing-animation {
-            overflow: hidden;
-            border-right: .15em solid orange;
-            margin: 0 auto;
-            letter-spacing: .15em;
-            animation: 
-                typing 3.5s steps(40, end),
-                blink-caret .75s step-end infinite;
-        }
-        @keyframes typing {
-            from { width: 0 }
-            to { width: 100% }
-        }
-        @keyframes blink-caret {
-            from, to { border-color: transparent }
-            50% { border-color: orange; }
         }
 
         body {
@@ -83,7 +43,7 @@
         }
 
         .navbar {
-            background-color: #ffffff; /* Set a solid background color */
+            background-color: #ffffff;
             transition: background-color 0.3s ease;
         }
 
@@ -91,113 +51,68 @@
             background-color: rgba(255, 255, 255, 0.95);
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
+
+        .hero {
+            height: 85vh;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8)),
+                        url('images/newaccenty.jpg') no-repeat center/cover;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+            animation: lightning 1.5s infinite ease-in-out;
+        }
+
         @keyframes lightning {
-    0%, 100% { 
-        text-shadow: 0 0 10px #ffffff, 0 0 20px #2b129b, 0 0 30px #9F2842; 
-    }
-    50% { 
-        text-shadow: 0 0 30px #9F2842, 0 0 50px #e0c125, 0 0 60px #ffffff; 
-    }
-}
-
-        /* Car animation */
-        .car-animation-container {
-            position: relative;
-            width: 100%;
-            overflow: hidden;
-            height: 300px;
-            margin-top: 8rem; /* Increase margin to move down */
-        }
-
-        .car-animation {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 300px;
-            animation: moveCar 10s linear infinite;
-        }
-
-        .car-animation-2 {
-            position: absolute;
-            bottom: 0;
-            left: 50px; /* Offset the second car */
-            width: 300px;
-            opacity: 0;
-            animation-delay: 10s; /* Delay the start of the second car */
-            animation: moveCar 10s linear infinite, fadeIn 1s forwards 10s;
-        }
-
-        @keyframes fadeIn {
-            0% {
-                opacity: 0;
-            }
-            100% {
-                opacity: 1;
-            }
-        }
-
-        @keyframes moveCar {
-            0% {
-                left: 100%;
-            }
-            100% {
-                left: -300px;
-            }
-        }
-
-.hero {
-    height: 85vh;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8)),
-                url('images/newaccenty.jpg') no-repeat center/cover;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 0 20px; /* Add padding for better alignment on smaller screens */
-    box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
-}
-
-.hero h1 {
-    font-size: 4rem;
-    font-weight: 700;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-    animation: lightning 1.5s infinite ease-in-out;
-}
-
-@keyframes lightning {
             0%, 100% { 
-                text-shadow: 0 0 10px #ffffff, 0 0 20px #129b69, 0 0 30px #9F2842; 
+                text-shadow: 0 0 10px #ffffff, 0 0 20px #2b129b, 0 0 30px #9F2842; 
             }
             50% { 
                 text-shadow: 0 0 30px #9F2842, 0 0 50px #e0c125, 0 0 60px #ffffff; 
             }
         }
 
-         /* Car animation */
         .car-animation-container {
             position: relative;
             width: 100%;
             overflow: hidden;
             height: 300px;
-            margin-top: 6rem; /* Increase margin to move down */
+            margin-top: 6rem;
         }
 
         .car-animation {
             position: absolute;
             bottom: 0;
             width: 300px;
-            animation: moveCar 5s linear infinite;
+            animation: moveCar 10s linear infinite;
         }
 
         .car-animation-2 {
             opacity: 0;
-            animation-delay: 5s; /* Delay the start of the second car */
-            animation: moveCar 5s linear infinite, fadeIn 1s forwards 5s;
+            animation-delay: 5s;
+            animation: moveCar 10s linear infinite, fadeIn 1s forwards 5s;
         }
 
-    
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes moveCar {
+            0% { left: 100%; }
+            100% { left: -300px; }
+        }
+
         .btn-primary {
             background-color: var(--primary-color);
             border-color: var(--primary-color);
@@ -284,32 +199,15 @@
             border-radius: 10px;
         }
 
-
         @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
-
-        /* Additional enhancements */
     </style>
 </head>
 
