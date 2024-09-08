@@ -59,8 +59,11 @@
 
         /* Car animation */
         .car-animation-container {
+            position: relative;
             width: 100%;
-            height: 350px;
+            overflow: hidden;
+            height: 300px;
+            margin-top: 8rem; /* Increase margin to move down */
         }
 
         .car-animation {
@@ -71,9 +74,12 @@
         }
 
         .car-animation-2 {
+            position: absolute;
+            bottom: 0;
+            width: 300px;
             opacity: 0;
-            animation-delay: 5s; /* Delay the start of the second car */
-            animation: moveCar 10s linear infinite, fadeIn 1s forwards 5s;
+            animation-delay: 10s; /* Delay the start of the second car */
+            animation: moveCar 10s linear infinite, fadeIn 1s forwards 10s;
         }
 
         @keyframes fadeIn {
