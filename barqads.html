@@ -56,6 +56,28 @@
     }
 }
 
+        /* Car animation */
+        .car-animation-container {
+            width: 100%;
+            height: 350px;
+        }
+
+        .car-animation {
+            position: absolute;
+            bottom: 0;
+            width: 300px;
+            animation: moveCar 7s linear infinite;
+        }
+
+        @keyframes moveCar {
+            0% {
+                left: 500px;
+            }
+            100% {
+                left: -100%;
+            }
+        }
+
 .hero {
     height: 85vh;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8)),
@@ -108,30 +130,7 @@
                 left: 100%;
             }
         }
- /* Car animation */
-        .car-animation-container {
-            position: relative;
-            width: 100%;
-            overflow: hidden;
-            height: 300px;
-            margin-top: 3rem;
-        }
-
-        .car-animation {
-            position: absolute;
-            bottom: 0;
-            width: 300px;
-            animation: moveCar 10s linear infinite;
-        }
-
-        @keyframes moveCar {
-            0% {
-                left: -300px;
-            }
-            100% {
-                left: 100%;
-            }
-        }
+ 
        
         .btn-primary {
             background-color: var(--primary-color);
@@ -269,6 +268,7 @@
             </div>
         </div>
     </nav>
+    
 
     <!-- Hero Section -->
     <section class="hero" id="top">
@@ -280,6 +280,12 @@
             </div>
         </div>
     </section>
+  <!-- Car Animation Section -->
+  <section id="car-animation" class="py-5">
+    <div class="container car-animation-container">
+        <img src="images/car1.avif" alt="Car Moving" class="car-animation">
+    </div>
+</section>
 
     <!-- Intro Section -->
     <section id="intro" class="py-5">
