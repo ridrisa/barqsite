@@ -8,17 +8,11 @@
     <meta name="keywords" content="Outdoor advertising, vehicle wraps, digital display ads, real-time analytics, BARQ ADS">
     <meta name="author" content="BARQ ADS">
     <title>BARQ ADS - Revolutionizing Outdoor Advertising</title>
-
-    <!-- Core CSS Files -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
-
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:300,400,700&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-
+    <link href="https://fonts.googleapis.com/css?family=Mulish:400,600,700&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary-color: #FFB81C;
@@ -26,46 +20,6 @@
             --accent-color: #9F2842;
             --bg-color: #FFFFFF;
             --text-color: #333333;
-        }
-        .dark-mode {
-            background-color: #333;
-            color: #fff;
-        }
-        .dark-mode .card {
-            background-color: #444;
-            color: #fff;
-        }
-        .gradient-text {
-            background: linear-gradient(45deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3);
-            background-size: 300% 300%;
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: gradient 15s ease infinite;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
-        }
-    
-        .gradient-text:hover {
-            background-size: 400% 400%;
-            animation: gradient 10s ease infinite;
-            text-shadow: 3px 3px 6px rgba(0,0,0,0.2);
-        }
-
-        .typing-animation {
-            overflow: hidden;
-            border-right: .15em solid orange;
-            margin: 0 auto;
-            letter-spacing: .15em;
-            animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
-        }
-        @keyframes typing {
-            from { width: 0 }
-            to { width: 100% }
-        }
-        @keyframes blink-caret {
-            from, to { border-color: transparent }
-            50% { border-color: orange; }
         }
 
         body {
@@ -76,7 +30,7 @@
         }
 
         h1, h2, h3, h4, h5, h6 {
-            font-family: 'Alegreya Sans', sans-serif;
+            font-family: 'Mulish', sans-serif;
             font-weight: 700;
         }
 
@@ -90,92 +44,69 @@
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
-        @keyframes lightning {
-            0%, 100% { 
-                text-shadow: 0 0 10px #ffffff, 0 0 20px #2b129b, 0 0 30px #9F2842; 
-            }
-            50% { 
-                text-shadow: 0 0 30px #9F2842, 0 0 50px #e0c125, 0 0 60px #ffffff; 
-            }
-        }
-
-        /* Car animation */
-        .car-animation-container {
-            position: relative;
-            width: 100%;
-            overflow: hidden;
-            height: 300px;
-            margin-top: 8rem;
-        }
-
-        .car-animation {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 300px;
-            animation: moveCar 10s linear infinite;
-        }
-
-        .car-animation-2 {
-            position: absolute;
-            bottom: 0;
-            left: 50px;
-            width: 300px;
-            opacity: 0;
-            animation-delay: 10s;
-            animation: moveCar 10s linear infinite, fadeIn 1s forwards 10s;
-        }
-
-        @keyframes fadeIn {
-            0% {
-                opacity: 0;
-            }
-            100% {
-                opacity: 1;
-            }
-        }
-
-        @keyframes moveCar {
-            0% {
-                left: 100%;
-            }
-            100% {
-                left: -300px;
-            }
-        }
-
         .hero {
             height: 85vh;
-            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8)),
-                url('images/newaccenty.jpg') no-repeat center/cover;
-            color: #fff;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url('images/newaccenty.jpg') no-repeat center/cover;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 0 20px;
-            box-sizing: border-box;
+            color: white;
         }
 
         .hero h1 {
             font-size: 4rem;
-            font-weight: 700;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-            animation: lightning 1.5s infinite ease-in-out;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5), 0 0 15px var(--primary-color);
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .slogan {
+            font-family: 'Mulish', cursive;
+            font-size: 2rem;
+            margin-top: 1rem;
+            color: rgba(255, 255, 255, 0.8);
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        .moving-cars {
+            position: absolute;
+            top: 70%;
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .car {
+            position: absolute;
+            animation: moveCar 5s linear infinite;
+        }
+
+        @keyframes moveCar {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
         }
 
         .btn-primary {
-            background-color: var(--primary-color);
-            border-color: var(--primary-color);
-            color: var(--secondary-color);
+            padding: 12px 30px;
+            color: #333333;
+            border-color: #333333;
+            border-radius: 25px;
+            background-color: #FFB81C;
             transition: all 0.3s ease;
         }
 
         .btn-primary:hover {
-            background-color: var(--secondary-color);
-            border-color: var(--secondary-color);
             color: var(--bg-color);
+            background-color: #333333;
         }
 
         .section-title {
@@ -189,20 +120,12 @@
             margin-bottom: 1rem;
         }
 
-        .feature-item {
+        .info-box {
+            border: 2px dashed var(--accent-color);
+            border-radius: 10px;
+            padding: 20px;
             text-align: center;
-            margin-bottom: 2rem;
-            transition: transform 0.3s ease;
-        }
-
-        .feature-item:hover {
-            transform: translateY(-10px);
-        }
-
-        .feature-item i {
-            font-size: 3rem;
-            color: var(--accent-color);
-            margin-bottom: 1rem;
+            margin: 2rem auto;
         }
 
         .price-box {
@@ -210,342 +133,258 @@
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
-            margin-bottom: 2rem;
         }
 
         .price-box:hover {
             transform: translateY(-10px);
         }
 
-        .fade-in {
-            opacity: 0;
-            transition: opacity 0.5s ease-in-out;
-        }
-
-        .fade-in.appear {
-            opacity: 1;
-        }
-
-        .creative-map-container {
-            position: relative;
-            height: 500px;
-            overflow: hidden;
-        }
-
-        .creative-map-container iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-            transition: filter 0.5s ease;
-        }
-
-        .map-overlay-content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+        footer {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 1.5rem 0;
             text-align: center;
-            color: var(--bg-color);
-            background-color: rgba(0, 0, 0, 0.7);
-            padding: 2rem;
-            border-radius: 10px;
         }
 
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .contact-info {
+            margin: 2rem 0;
         }
 
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        /* Grid Section */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
         }
 
-        /* Responsive Styles */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 3rem;
-            }
-            .navbar-nav {
-                text-align: center;
-            }
+        .grid-item {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
-
-        @media (max-width: 576px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            .car-animation {
-                width: 200px;
-            }
-        }
-
     </style>
 </head>
 
-<body data-bs-spy="scroll" data-bs-target="#navbar-main" data-bs-offset="100">
-    <!-- Navigation -->
+<body data-bs-spy="scroll" data-bs-target="#navbar-main" data-bs-offset="70">
     <nav id="navbar-main" class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#top">
-                <img src="images/logotransparentxs.png" alt="BARQ ADS logo" height="40">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand" href="#top"><img src="images/logotransparentxs.png" alt="BARQ ADS logo" height="40"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="#intro">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="#feature">Features</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#clients">Samples</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#stats">Statistics</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#roi">ROI</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#design">Design Your Campaign</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#how">How It Works</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#choose">Why Choose Us</a></li>
                     <li class="nav-item"><a class="nav-link" href="#package">Pricing</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#clients">Clients</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section class="hero" id="top">
         <div class="container">
-            <div class="hero-content">
-                <h1 class="mt-3">The Future of Advertising is Here</h1>
-                <p class="lead">Reach your audience with AI-driven vehicle wrap solutions and real-time analytics</p>
-                <a href="#contact" class="btn btn-primary btn-lg animate__animated animate__fadeInUp animate__delay-0.5s">Start Your Campaign</a>
-            </div>
-            <div class="container car-animation-container">
-                <img src="images/feature2-image.jpg" alt="Car Moving" class="car-animation" loading="lazy">
-            </div>
+            <h1>Revolutionizing Outdoor Advertising</h1>
+            <p class="lead">Maximize your brand's reach with our innovative vehicle wrap advertising solutions, powered by real-time data and cutting-edge technology.</p>
+            <a href="#contact" class="btn btn-primary btn-lg">Start Your Campaign</a>
+        </div>
+        <div class="moving-cars">
+            <div class="car" style="animation-duration: 8s;"><img src="images/car1.avif" alt="Car 1" width="150"></div>
+        </div>
     </section>
 
-    <!-- Stats Section -->
-    <section id="stats" class="py-5" style="background-color: var(--primary-color); color: var(--bg-color);">
+    <section id="how" class="py-5">
         <div class="container">
-            <div class="row">
-                <div class="col-md-3 text-center mb-3" data-aos="fade-up">
-                    <h3 class="display-4" id="clientCount">0</h3>
-                    <p>Happy Clients</p>
+            <div class="section-title">
+                <h2>How It Works</h2>
+            </div>
+            <div class="grid-container">
+                <div class="grid-item">
+                    <h3>Consultation</h3>
+                    <p>Discuss your goals with our team.</p>
                 </div>
-                <div class="col-md-3 text-center mb-3" data-aos="fade-up" data-aos-delay="200">
-                    <h3 class="display-4" id="campaignCount">0</h3>
-                    <p>Successful Campaigns</p>
+                <div class="grid-item">
+                    <h3>Design</h3>
+                    <p>Collaborate to create your custom ad.</p>
                 </div>
-                <div class="col-md-3 text-center mb-3" data-aos="fade-up" data-aos-delay="400">
-                    <h3 class="display-4" id="vehicleCount">0</h3>
-                    <p>Vehicles Wrapped</p>
+                <div class="grid-item">
+                    <h3>Implementation</h3>
+                    <p>We handle the deployment process.</p>
                 </div>
-                <div class="col-md-3 text-center mb-3" data-aos="fade-up" data-aos-delay="600">
-                    <h3 class="display-4" id="impressionCount">0</h3>
-                    <p>Ad Impressions</p>
+                <div class="grid-item">
+                    <h3>Analytics</h3>
+                    <p>Monitor your campaign's performance in real-time.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Intro Section -->
-    <section id="intro" class="py-5">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6 animate__animated animate__fadeInLeft">
-                    <img src="images/Picture1.png" alt="BARQ ADS in action" class="img-fluid rounded">
-                </div>
-                <div class="col-md-6 animate__animated animate__fadeInRight">
-                    <h2>Revolutionizing Outdoor Advertising</h2>
-                    <p>Maximize your brand's reach with our innovative vehicle wrap advertising solutions, powered by real-time data and cutting-edge technology.</p>
-                    <a href="#feature" class="btn btn-primary">Learn More</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Feature Section -->
-    <section id="feature" class="py-5 bg-light">
+    <!-- Cutting-Edge Advertising Solutions Section -->
+    <section id="feature" class="py-5">
         <div class="container">
             <div class="section-title">
                 <h2>Cutting-Edge Advertising Solutions</h2>
-                <p>Transform our fleet into your mobile billboards with eye-catching solutions</p>
+                <p>Transform our fleet into your mobile billboards with eye-catching solutions.</p>
             </div>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="feature-item">
-                        <img src="images/neoleap.png" alt="Data Analytics" class="img-fluid mb-3">
+            <div class="grid-container">
+                <div class="grid-item">
+                    <h3>Vehicle Wraps</h3>
+                    <p>Transform our fleet into your mobile billboards with eye-catching full or partial wraps.</p>
+                </div>
+                <div class="grid-item">
+                    <h3>Digital Display</h3>
+                    <p>Deploy dynamic digital ads with our state-of-the-art smart screens for real-time content updates.</p>
+                </div>
+                <div class="grid-item">
+                    <h3>Analytics Dashboard</h3>
+                    <p>Track your campaign performance with our comprehensive analytics and reporting tools.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                        <i class="fas fa-car"></i>
-                        <h3>Vehicle Wraps</h3>
-                        <p>Transform our fleet into your mobile billboards with eye-catching full or partial wraps.</p>
+    <!-- Vehicle Editor -->
+    <section id="vehicle-editor" class="py-5">
+        <div class="container">
+            <div class="section-title">
+                <h2>Vehicle Editor</h2>
+                <p>Customize your vehicle wraps to match your brand perfectly.</p>
+            </div>
+            <div id="design-area">
+                <div id="vehicle-preview">
+                    <img id="vehicle-img" src="images/partner.jpg" alt="Vehicle Preview">
+                    <div id="logo-container">
+                        <text id="logo-text">Your Logo Here</text>
+                        <img id="logo-image" src="" alt="Logo" style="display:none;">
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="feature-item">
-                        <img src="images/spiderman.jpeg" alt="Data Analytics" class="img-fluid mb-3">
-
-                        <i class="fas fa-tablet-alt"></i>
-                        <h3>Digital Display</h3>
-                        <p>Deploy dynamic digital ads with our state-of-the-art smart screens for real-time content updates.</p>
+                <div id="controls">
+                    <div class="control-group">
+                        <label for="logo-type">Logo Type:</label>
+                        <select id="logo-type">
+                            <option value="text">Text</option>
+                            <option value="image">Image</option>
+                        </select>
+                        <div id="logo-text-input">
+                            <label for="logo-text-content">Logo Text:</label>
+                            <input type="text" id="logo-text-content" placeholder="Enter logo text">
+                            <label for="logo-font">Logo Font:</label>
+                            <select id="logo-font">
+                                <option value="Arial">Arial</option>
+                                <option value="Verdana">Verdana</option>
+                                <option value="Times New Roman">Times New Roman</option>
+                                <option value="Courier">Courier</option>
+                            </select>
+                            <label for="logo-color">Logo Color:</label>
+                            <input type="color" id="logo-color" value="#000000">
+                        </div>
+                        <div id="logo-image-input" style="display: none;">
+                            <label for="logo-image-upload">Logo Image (PNG):</label>
+                            <input type="file" id="logo-image-upload" accept="image/png">
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="feature-item">
-                        <img src="images/Designer (28).jpeg" alt="Data Analytics" class="img-fluid mb-3">
-                        <i class="fas fa-chart-line"></i>
-                        <h3>Analytics Dashboard</h3>
-                        <p>Track your campaign performance with our comprehensive analytics and reporting tools.</p>
+                    <div class="control-group">
+                        <label for="logo-placement-x">X Position:</label>
+                        <input type="range" id="logo-placement-x" min="0" max="800" value="400">
+                        <label for="logo-placement-y">Y Position:</label>
+                        <input type="range" id="logo-placement-y" min="0" max="400" value="320">
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Technology Section -->
+    <!-- Advanced Technology Platform -->
     <section id="technology" class="py-5">
         <div class="container">
             <div class="section-title">
                 <h2>Advanced Technology Platform</h2>
             </div>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="feature-item">
-                        <img src="images/car1.avif" alt="Geotargeting" class="img-fluid mb-3">
-                        <h4><i class="fas fa-map-marker-alt me-2"></i>Geotargeting Precision</h4>
-                        <p>Deliver hyper-targeted campaigns based on precise geofencing and real-time data.</p>
-                    </div>
+            <div class="grid-container">
+                <div class="grid-item">
+                    <h3>Geotargeting Precision</h3>
+                    <p>Deliver hyper-targeted campaigns based on precise geofencing and real-time data.</p>
                 </div>
-                <div class="col-md-4">
-                    <div class="feature-item">
-                        <img src="images/car2.avif" alt="Programmatic Advertising" class="img-fluid mb-3">
-                        <h4><i class="fas fa-cogs me-2"></i>Programmatic Advertising</h4>
-                        <p>Streamline your ad buying process with our cutting-edge programmatic solutions.</p>
-                    </div>
+                <div class="grid-item">
+                    <h3>Programmatic Advertising</h3>
+                    <p>Streamline your ad buying process with our cutting-edge programmatic solutions.</p>
                 </div>
-                <div class="col-md-4">
-                    <div class="feature-item">
-                        <img src="images/car3.avif" alt="Data Analytics" class="img-fluid mb-3">
-                        <h4><i class="fas fa-chart-bar me-2"></i>Comprehensive Data Analytics</h4>
-                        <p>Gain valuable insights with our robust data analytics dashboard.</p>
-                    </div>
+                <div class="grid-item">
+                    <h3>Comprehensive Data Analytics</h3>
+                    <p>Gain valuable insights with our robust data analytics dashboard.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Creative Map Section -->
-    <section id="map" class="py-5" aria-label="Coverage map">
-        <div class="creative-map-container">
-            <iframe src="map.html" allowfullscreen="" loading="lazy" title="BARQ ADS coverage map"></iframe>
-            <div class="map-overlay-content animate__animated animate__fadeIn">
-                <h3 class="map-title">Explore Our Reach</h3>
-                <p class="map-description">See how our network spans across the city with precision targeting and unmatched coverage.</p>
-                <a href="#contact" class="btn btn-primary">Learn More</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pricing Section -->
-    <section id="package" class="py-5 bg-light">
+    <!-- Explore Our Reach -->
+    <section id="map" class="py-5">
         <div class="container">
             <div class="section-title">
-                <h2>Flexible Pricing Plans</h2>
+                <h2>Explore Our Reach</h2>
+                <p>See how our network spans across the city with precision targeting and unmatched coverage.</p>
             </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="price-box p-4 animate__animated animate__fadeInLeft">
-                        <div class="price-heading text-center">
-                            <h3>Basic Package</h3>
-                        </div>
-                        <div class="price-group text-center my-4">
-                            <span class="h2">2000 SAR</span> / Vehicle
-                        </div>
-                        <ul class="list-unstyled">
-                            <li><i class="fas fa-check text-success me-2"></i>30 - 99 Vehicles</li>
-                            <li><i class="fas fa-check text-success me-2"></i>3 Months Minimum Duration</li>
-                            <li><i class="fas fa-check text-success me-2"></i>Monthly Reporting</li>
-                            <li><i class="fas fa-check text-success me-2"></i>Car Sticker - Logo Only</li>
-                        </ul>
-                        <div class="text-center mt-4">
-                            <a href="#contact" class="btn btn-primary">Get Started</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="price-box p-4 animate__animated animate__fadeInRight">
-                        <div class="price-heading text-center">
-                            <h3>Premium Package</h3>
-                        </div>
-                        <div class="price-group text-center my-4">
-                            <span class="h2">1800 SAR</span> / Vehicle
-                        </div>
-                        <ul class="list-unstyled">
-                            <li><i class="fas fa-check text-success me-2"></i>100+ Vehicles</li>
-                            <li><i class="fas fa-check text-success me-2"></i>3 Months Minimum Duration</li>
-                            <li><i class="fas fa-check text-success me-2"></i>Real-time Tracking Dashboard</li>
-                            <li><i class="fas fa-check text-success me-2"></i>Large Vinyl Wrap - Full Vehicle</li>
-                        </ul>
-                        <div class="text-center mt-4">
-                            <a href="#contact" class="btn btn-primary">Get Started</a>
-                        </div>
-                    </div>
+            <div style="position: relative;">
+                <iframe src="map.html" style="width: 100%; height: 400px; border: 0;" allowfullscreen="" loading="lazy" title="BARQ ADS coverage map"></iframe>
+                <div class="map-overlay-content">
+                    <p class="map-description">Discover the potential of advertising on the go!</p>
+                    <a href="#contact" class="btn btn-primary">Learn More</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-5">
+    <section id="roi" class="py-5 bg-light">
         <div class="container">
             <div class="section-title">
-                <h2>Get in Touch</h2>
-                <p>Ready to revolutionize your advertising? Let's talk!</p>
+                <h2>Return on Investment (ROI)</h2>
+                <p>Exclusive for clients. Our advertising solutions provide measurable results and insights into your performance, ensuring you get the best value.</p>
             </div>
-            <div class="row">
-                <div class="col-md-6 animate__animated animate__fadeInLeft">
-                    <form id="contactForm" class="contact-form" aria-label="Contact form">
-                        <div class="mb-3">
-                            <input type="text" class="form-control" id="name" placeholder="Your Name" required aria-label="Your Name">
-                        </div>
-                        <div class="mb-3">
-                            <input type="email" class="form-control" id="email" placeholder="Your Email" required aria-label="Your Email">
-                        </div>
-                        <div class="mb-3">
-                            <textarea class="form-control" id="message" rows="5" placeholder="Your Message" required aria-label="Your Message"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                    </form>
+        </div>
+    </section>
+
+    <section id="design" class="py-5 bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>Design Your Campaign</h2>
+                <p>Partner with us for compelling ad designs tailored to your brand's identity.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="choose" class="py-5 bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Choose Us</h2>
+                <p>We provide cutting-edge solutions that differentiate your campaign.</p>
+            </div>
+            <div class="grid-container">
+                <div class="grid-item">
+                    <h3>Innovative Technology</h3>
+                    <p>Utilize top-tier technology for better reach and engagement.</p>
                 </div>
-                <div class="col-md-6 animate__animated animate__fadeInRight">
-                    <div class="contact-info">
-                        <h3>Our Office</h3>
-                        <p><i class="fas fa-map-marker-alt me-2"></i>Tahlia Street, Riyadh, KSA</p>
-                        <p><i class="fas fa-phone me-2"></i>+966556791650</p>
-                        <p><i class="fas fa-envelope me-2"></i>info@barqads.com</p>
-                        <div class="social-links mt-4">
-                            <a href="#" class="me-3" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#" class="me-3" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                            <a href="#" class="me-3" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#" class="me-3" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        </div>
-                    </div>
+                <div class="grid-item">
+                    <h3>Extensive Network</h3>
+                    <p>Access a vast network of mobile advertising platforms.</p>
+                </div>
+                <div class="grid-item">
+                    <h3>Commitment to Excellence</h3>
+                    <p>We strive to ensure your advertising experience is successful.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-light py-4">
+    <footer>
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
@@ -557,7 +396,8 @@
                     <ul class="list-unstyled">
                         <li><a href="#intro">About</a></li>
                         <li><a href="#feature">Features</a></li>
-                        <li><a href="#clients">Clients</a></li>
+                        <li><a href="#stats">Statistics</a></li>
+                        <li><a href="#roi">ROI</a></li>
                         <li><a href="#package">Pricing</a></li>
                     </ul>
                 </div>
@@ -572,160 +412,45 @@
                     </form>
                 </div>
             </div>
-            <hr class="mt-4 mb-3">
-            <div class="row">
-                <div class="col-md-6">
-                    <p>&copy; 2024 BARQ ADS. All rights reserved.</p>
-                </div>
-                <div class="col-md-6 text-md-end">
-                    <a href="#" class="me-3">Privacy Policy</a>
-                    <a href="#" class="me-3">Terms of Service</a>
-                </div>
+            <div class="mt-4 mb-3">
+                <p>© 2024 BARQ ADS. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Back to Top Button -->
-    <a href="#" class="back-to-top d-flex align-items-center justify-content-center" aria-label="Back to top"><i class="fas fa-arrow-up"></i></a>
-
-    <!-- JavaScript Files -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js" defer></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Initialize WOW.js for scroll animations
-            new WOW().init();
-
-            // GSAP ScrollTrigger setup
-            gsap.registerPlugin(ScrollTrigger);
-
-            // Animate elements on scroll
-            gsap.utils.toArray('.fade-in, .slide-in, .scale-in, .rotate-in').forEach(function (elem) {
-                gsap.from(elem, {
-                    opacity: 0,
-                    y: 50,
-                    scale: 0.9,
-                    rotation: -5,
-                    duration: 1,
-                    scrollTrigger: {
-                        trigger: elem,
-                        start: "top 80%",
-                        end: "bottom 20%",
-                        toggleActions: "play none none reverse"
-                    }
-                });
-            });
-
-            // Floating animation for images
-            gsap.to('.floating', {
-                y: -20,
-                duration: 2,
-                repeat: -1,
-                yoyo: true,
-                ease: "power1.inOut"
-            });
-
-            // Smooth scrolling for navbar links
-            $('a.nav-link, .btn-primary').on('click', function (event) {
-                if (this.hash !== "") {
-                    event.preventDefault();
-                    var hash = this.hash;
-                    gsap.to(window, { duration: 1, scrollTo: hash, ease: "power2.inOut" });
-                }
-            });
-
-            // Navbar color change on scroll
-            $(window).scroll(function () {
-                if ($(this).scrollTop() > 100) {
-                    $('.navbar').addClass('navbar-scrolled');
-                } else {
-                    $('.navbar').removeClass('navbar-scrolled');
-                }
-            });
-
-            // Initialize Owl Carousel for client testimonials
-            $(".clients-carousel").owlCarousel({
-                items: 1,
-                loop: true,
-                margin: 10,
-                autoplay: true,
-                autoplayTimeout: 5000,
-                autoplayHoverPause: true,
-                animateIn: 'fadeIn',
-                animateOut: 'fadeOut',
-                responsive: {
-                    0: { items: 1 },
-                    768: { items: 2 },
-                    992: { items: 3 }
-                }
-            });
-
-            // Form submission handling with animation
-            $('#contactForm').submit(function (e) {
-                e.preventDefault();
-                gsap.to(this, { scale: 0.9, opacity: 0, duration: 0.5, onComplete: function () {
-                    alert('Thank you for your message. We will get back to you soon!');
-                    $('#contactForm')[0].reset();
-                    gsap.to('#contactForm', { scale: 1, opacity: 1, duration: 0.5 });
-                } });
-            });
-
-            // Back to top button animation
-            $('.back-to-top').click(function () {
-                gsap.to(window, { duration: 1, scrollTo: 0, ease: "power2.inOut" });
-                return false;
-            });
-
-            // Interactive map animation
-            $('.creative-map-container iframe').on('mouseenter', function () {
-                gsap.to(this, { filter: "grayscale(0%)", duration: 0.3 });
-            }).on('mouseleave', function () {
-                gsap.to(this, { filter: "grayscale(100%)", duration: 0.3 });
-            });
-
-            // Animate numbers in pricing section
-            gsap.utils.toArray('.price-group .h2').forEach(function (elem) {
-                let startValue = parseFloat(elem.innerText);
-                let endValue = startValue;
-
-                gsap.to(elem, {
-                    innerText: endValue,
-                    duration: 2,
-                    ease: "power1.inOut",
-                    snap: { innerText: 1 },
-                    scrollTrigger: {
-                        trigger: elem,
-                        start: "top 80%",
-                        end: "bottom 20%",
-                        toggleActions: "play none none reverse"
-                    },
-                    onUpdate: function () {
-                        elem.innerText = Math.ceil(elem.innerText).toLocaleString() + " SAR";
-                    }
-                });
-            });
+        $(window).on('scroll', function () {
+            if ($(this).scrollTop() > 100) {
+                $('.navbar').addClass('navbar-scrolled');
+            } else {
+                $('.navbar').removeClass('navbar-scrolled');
+            }
         });
+
+        $('#contactForm').on('submit', function (e) {
+            e.preventDefault();
+            alert('Thank you for your message. We will get back to you soon!');
+            this.reset();
+        });
+
         function animateValue(id, start, end, duration) {
             let range = end - start;
             let current = start;
             let increment = end > start ? 1 : -1;
             let stepTime = Math.abs(Math.floor(duration / range));
             let obj = document.getElementById(id);
-            let timer = setInterval(function() {
+            let timer = setInterval(function () {
                 current += increment;
                 obj.innerHTML = current;
-                if (current == end) {
+                if (current === end) {
                     clearInterval(timer);
                 }
             }, stepTime);
         }
 
-        const observer = new IntersectionObserver((entries) => {
+        const observer = new IntersectionObserver(((entries) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
                     animateValue("clientCount", 0, 500, 2000);
@@ -735,9 +460,72 @@
                     observer.unobserve(entry.target);
                 }
             });
-        }, { threshold: 0.5 });
-
+        }), { threshold: 0.5 });
         observer.observe(document.getElementById('stats'));
+
+        // Vehicle editor logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const logoText = document.getElementById('logo-text');
+            const logoImage = document.getElementById('logo-image');
+            const logoTypeSelect = document.getElementById('logo-type');
+            const logoTextInput = document.getElementById('logo-text-input');
+            const logoImageInput = document.getElementById('logo-image-input');
+            const logoContainer = document.getElementById('logo-container');
+            const logoPlacementX = document.getElementById('logo-placement-x');
+            const logoPlacementY = document.getElementById('logo-placement-y');
+
+            // Handle logo type change
+            logoTypeSelect.addEventListener('change', () => {
+                if (logoTypeSelect.value === 'text') {
+                    logoTextInput.style.display = 'block';
+                    logoImageInput.style.display = 'none';
+                    logoText.style.display = 'block';
+                    logoImage.style.display = 'none';
+                } else {
+                    logoTextInput.style.display = 'none';
+                    logoImageInput.style.display = 'block';
+                    logoText.style.display = 'none';
+                    logoImage.style.display = 'block';
+                }
+            });
+
+            // Handle logo text update dynamically
+            document.getElementById('logo-text-content').addEventListener('input', (e) => {
+                logoText.textContent = e.target.value || 'Your Logo Here';
+            });
+
+            // Handle logo font update dynamically
+            document.getElementById('logo-font').addEventListener('change', (e) => {
+                logoText.style.fontFamily = e.target.value;
+            });
+
+            // Handle logo color update dynamically
+            document.getElementById('logo-color').addEventListener('input', (e) => {
+                logoText.style.color = e.target.value;
+            });
+
+            // Handle logo placement update dynamically
+            logoPlacementX.addEventListener('input', (e) => {
+                logoContainer.style.left = `${e.target.value}px`;
+            });
+
+            logoPlacementY.addEventListener('input', (e) => {
+                logoContainer.style.top = `${e.target.value}px`;
+            });
+
+            // Handle logo image upload dynamically
+            document.getElementById('logo-image-upload').addEventListener('change', function (e) {
+                const file = e.target.files[0];
+                const reader = new FileReader();
+
+                reader.onload = function (event) {
+                    logoImage.src = event.target.result;
+                    logoImage.style.display = 'block';
+                };
+
+                reader.readAsDataURL(file);
+            });
+        });
     </script>
 </body>
 

@@ -12,8 +12,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:300,400,700&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Mulish:400,600,700&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary-color: #FFB81C;
@@ -56,6 +55,10 @@
                 text-shadow: 0 0 30px #9F2842, 0 0 50px #e0c125, 0 0 60px #ffffff; 
             }
         }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
         .hero {
             height: 85vh;
             background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url('images/newaccenty.jpg') no-repeat center/cover;
@@ -68,15 +71,25 @@
         }
         .hero h1 {
             font-size: 4rem;
-            text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.5), 0 0 15px var(--primary-color);
             overflow: hidden;
             white-space: nowrap;
             border-right: 5px solid rgba(255, 255, 255, 0.75);
-            animation: typing 4s steps(30, end), blink-caret .75s step-end infinite, lightning 1.5s infinite ease-in-out;
+            animation: typing 4s steps(30, end), blink-caret .75s step-end infinite, lightning 1.5s infinite ease-in-out, pulse 2s infinite;
+            background: linear-gradient(45deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
         .hero p {
             font-size: 1.25rem;
-            margin-bottom: 2rem;
+            margin-bottom: 1rem;
+        }
+        .slogan {
+            font-family: 'Mulish', cursive;
+            font-size: 2rem;
+            margin-top: 1rem;
+            color: rgba(255, 255, 255, 0.8);
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
         }
         .btn-primary {
             padding: 12px 30px;
@@ -139,14 +152,35 @@
             padding: 2rem;
             border-radius: 10px;
         }
+        #campaign .form-group {
+            margin-bottom: 1.5rem;
+        }
+        #campaign label {
+            font-weight: bold;
+        }
+        #roi {
+            background-color: rgba(255, 184, 28, 0.1);
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+        }
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 3rem;
+                overflow: visible;
+                white-space: normal;
+                line-height: 1.2;
+            }
+            .slogan {
+                font-size: 1.5rem;
             }
         }
         @media (max-width: 576px) {
             .hero h1 {
                 font-size: 2.5rem;
+            }
+            .slogan {
+                font-size: 1.25rem;
             }
         }
     </style>
@@ -161,128 +195,25 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#top">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#intro">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#feature">Features</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#feature">Services</a></li>
                     <li class="nav-item"><a class="nav-link" href="#stats">Statistics</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#how">How It Works</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#vehicle-editor">Design Campaign</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#roi">ROI</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#choose">Why Choose Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#campaign">Build Campaign</a></li>
                     <li class="nav-item"><a class="nav-link" href="#package">Pricing</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-    
-    <!-- Hero Section -->
     <section class="hero" id="top">
         <div class="container">
             <h1>The Future of Advertising is Here</h1>
             <p class="lead">Reach your audience with AI-driven vehicle wrap solutions and real-time analytics</p>
+            <div class="slogan">Ads & Beyond</div>
             <a href="#contact" class="btn btn-primary btn-lg">Start Your Campaign</a>
         </div>
     </section>
-    
-    <!-- How It Works Section -->
-    <section id="how" class="py-5">
-        <div class="container">
-            <div class="section-title">
-                <h2>How It Works</h2>
-                <p>Follow our streamlined process to launch an effective advertising campaign:</p>
-            </div>
-            <div class="row text-center">
-                <div class="col-md-3">
-                    <h3>Consultation</h3>
-                    <p>Discuss your goals with our team.</p>
-                </div>
-                <div class="col-md-3">
-                    <h3>Design</h3>
-                    <p>Collaborate to create your custom ad.</p>
-                </div>
-                <div class="col-md-3">
-                    <h3>Implementation</h3>
-                    <p>We handle the deployment process.</p>
-                </div>
-                <div class="col-md-3">
-                    <h3>Analytics</h3>
-                    <p>Monitor your campaign's performance in real-time.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Vehicle Editor Section -->
-    <section id="vehicle-editor" class="py-5 bg-light">
-        <div class="container">
-            <div class="section-title">
-                <h2>Design Your Campaign</h2>
-                <p>Customize your vehicle wraps to match your brand perfectly.</p>
-            </div>
-            <form>
-                <div class="mb-3">
-                    <label for="vehicleType" class="form-label">Select Vehicle Type</label>
-                    <select class="form-select" id="vehicleType" required>
-                        <option value="" disabled selected>Select your vehicle type</option>
-                        <option value="car">Car</option>
-                        <option value="truck">Truck</option>
-                        <option value="bus">Bus</option>
-                        <option value="van">Van</option>
-                    </select>
-                </div>
-                <div class="mb-3">
-                    <label for="designStyle" class="form-label">Choose Design Style</label>
-                    <select class="form-select" id="designStyle" required>
-                        <option value="" disabled selected>Select a style</option>
-                        <option value="full-wrap">Full Wrap</option>
-                        <option value="partial-wrap">Partial Wrap</option>
-                        <option value="sticker">Sticker</option>
-                    </select>
-                </div>
-                <div class="mb-3">
-                    <label for="colorScheme" class="form-label">Select Color Scheme</label>
-                    <input type="color" class="form-control" id="colorScheme" value="#FFB81C">
-                </div>
-                <button type="submit" class="btn btn-primary">Preview Design</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- Return on Investment (ROI) Section -->
-    <section id="roi" class="py-5">
-        <div class="container">
-            <div class="section-title">
-                <h2>Return on Investment (ROI)</h2>
-                <p>Exclusive for clients</p>
-            </div>
-            <p>Our advertising solutions provide measurable results and insights into your performance, ensuring you get the best value.</p>
-        </div>
-    </section>
-
-    <!-- Why Choose Us Section -->
-    <section id="choose" class="py-5 bg-light">
-        <div class="container">
-            <div class="section-title">
-                <h2>Why Choose Us</h2>
-            </div>
-            <div class="row text-center">
-                <div class="col-md-4">
-                    <h3>Innovative Technology</h3>
-                    <p>Utilize top-tier technology for better reach and engagement.</p>
-                </div>
-                <div class="col-md-4">
-                    <h3>Extensive Network</h3>
-                    <p>Access a vast network of mobile advertising platforms.</p>
-                </div>
-                <div class="col-md-4">
-                    <h3>Commitment to Excellence</h3>
-                    <p>We strive to ensure your advertising experience is successful.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Remaining Sections (Statistics, Pricing, Contact, etc.) -->
     <section id="stats" class="py-5" style="background-color: var(--primary-color); color: var(--bg-color);">
         <div class="container">
             <div class="row">
@@ -305,7 +236,93 @@
             </div>
         </div>
     </section>
-
+    <section id="intro" class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <img src="images/Picture1.png" alt="BARQ ADS in action" class="img-fluid rounded">
+                </div>
+                <div class="col-md-6">
+                    <h2>Revolutionizing Outdoor Advertising</h2>
+                    <p>Maximize your brand's reach with our innovative vehicle wrap advertising solutions, powered by real-time data and cutting-edge technology.</p>
+                    <a href="#feature" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="feature" class="py-5 bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>Cutting-Edge Advertising Solutions</h2>
+                <p>Transform our fleet into your mobile billboards with eye-catching solutions</p>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="price-box p-4">
+                        <i class="fas fa-car"></i>
+                        <h3>Vehicle Wraps</h3>
+                        <p>Transform our fleet into your mobile billboards with eye-catching full or partial wraps.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="price-box p-4">
+                        <i class="fas fa-tablet-alt"></i>
+                        <h3>Digital Display</h3>
+                        <p>Deploy dynamic digital ads with our state-of-the-art smart screens for real-time content updates.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="price-box p-4">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Analytics Dashboard</h3>
+                        <p>Track your campaign performance with our comprehensive analytics and reporting tools.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="technology" class="py-5">
+        <div class="container">
+            <div class="section-title">
+                <h2>Advanced Technology Platform</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="price-box p-4">
+                        <h4><i class="fas fa-map-marker-alt me-2"></i>Geotargeting Precision</h4>
+                        <p>Deliver hyper-targeted campaigns based on precise geofencing and real-time data.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="price-box p-4">
+                        <h4><i class="fas fa-cogs me-2"></i>Programmatic Advertising</h4>
+                        <p>Streamline your ad buying process with our cutting-edge programmatic solutions.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="price-box p-4">
+                        <h4><i class="fas fa-chart-bar me-2"></i>Comprehensive Data Analytics</h4>
+                        <p>Gain valuable insights with our robust data analytics dashboard.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="map" class="py-5">
+        <div class="container">
+            <div class="section-title">
+                <h2>Explore Our Reach</h2>
+                <p>See how our network spans across the city with precision targeting and unmatched coverage.</p>
+            </div>
+            <div style="position: relative;">
+                <iframe src="map.html" style="width: 100%; height: 400px; border: 0;" allowfullscreen="" loading="lazy" title="BARQ ADS coverage map"></iframe>
+                <div class="map-overlay-content">
+                    <p class="map-description">Discover the potential of advertising on the go!</p>
+                    <a href="#contact" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
     <section id="package" class="py-5 bg-light">
         <div class="container">
             <div class="section-title">
@@ -354,7 +371,52 @@
             </div>
         </div>
     </section>
-
+    <section id="campaign" class="py-5">
+        <div class="container">
+            <h2 class="section-title">Build Your Campaign</h2>
+            <form>
+                <div class="form-group">
+                    <label>Campaign Name</label>
+                    <input type="text" class="form-control" placeholder="Enter Campaign Name" required>
+                </div>
+                <div class="form-group">
+                    <label>Vehicle Type</label>
+                    <select class="form-select">
+                        <option value="" disabled selected>Select Vehicle Type</option>
+                        <option>Sedan</option>
+                        <option>Truck</option>
+                        <option>SUV</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Number of Vehicles</label>
+                    <input type="number" class="form-control" placeholder="Enter Number of Vehicles" required>
+                </div>
+                <div class="form-group">
+                    <label>Campaign Duration (weeks)</label>
+                    <input type="number" class="form-control" placeholder="Enter Duration" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Create Campaign</button>
+            </form>
+        </div>
+    </section>
+    <section id="roi" class="py-5">
+        <div class="container">
+            <h2 class="section-title">Calculate Your ROI</h2>
+            <p class="lead">Estimate the return on investment for your campaign and make data-driven decisions.</p>
+            <form>
+                <div class="form-group">
+                    <label>Campaign Cost (SAR)</label>
+                    <input type="number" class="form-control" placeholder="Enter Campaign Cost" required>
+                </div>
+                <div class="form-group">
+                    <label>Expected Returns (SAR)</label>
+                    <input type="number" class="form-control" placeholder="Enter Expected Returns" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Calculate ROI</button>
+            </form>
+        </div>
+    </section>
     <section id="contact" class="py-5">
         <div class="container">
             <div class="section-title">
@@ -393,7 +455,6 @@
             </div>
         </div>
     </section>
-
     <footer>
         <div class="container">
             <div class="row">
@@ -404,9 +465,9 @@
                 <div class="col-md-4">
                     <h5>Quick Links</h5>
                     <ul class="list-unstyled">
+                        <li><a href="#top">Home</a></li>
                         <li><a href="#intro">About</a></li>
-                        <li><a href="#feature">Features</a></li>
-                        <li><a href="#stats">Statistics</a></li>
+                        <li><a href="#feature">Services</a></li>
                         <li><a href="#package">Pricing</a></li>
                     </ul>
                 </div>
@@ -426,7 +487,6 @@
             </div>
         </div>
     </footer>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
     <script>
