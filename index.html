@@ -1,532 +1,604 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=yes">
-    <meta name="description" content="BARQ ADS offers innovative vehicle wrap and outdoor advertising solutions, revolutionizing how businesses reach their audience.">
-    <meta name="keywords" content="Outdoor advertising, vehicle wraps, digital display ads, real-time analytics, BARQ ADS">
-    <meta name="author" content="BARQ ADS">
-    <title>BARQ ADS - Revolutionizing Outdoor Advertising</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon: A Revolutionary Way to Deliver Outdoor Ads - BarqAds</title>
+    <link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Mulish:400,600,700&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary-color: #FFB81C;
-            --secondary-color: #54565A;
+            --bg-color: #54565A;
             --accent-color: #9F2842;
-            --bg-color: #FFFFFF;
-            --text-color: #333333;
+            --secondary-color: #00A8E8;
+            --text-color: #FFFFFF;
         }
-
-        body {
-            font-family: 'Open Sans', sans-serif;
+        
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Muli', sans-serif;
             color: var(--text-color);
-            background-color: var(--bg-color);
             overflow-x: hidden;
         }
 
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Mulish', sans-serif;
-            font-weight: 700;
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('images/barq-background.jpg')  center center fixed;
+            background-size: contain;
+            filter: brightness(0.5);
+            z-index: -2;
         }
 
-        .navbar {
-            background-color: #ffffff;
-            transition: background-color 0.3s ease;
-        }
-
-        .navbar-scrolled {
-            background-color: rgba(255, 255, 255, 0.95);
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        .hero {
-            height: 85vh;
-            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url('images/newaccenty.jpg') no-repeat center/cover;
+        .content-wrapper {
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 2rem;
             text-align: center;
-            color: white;
+            z-index: 2;
         }
 
-        .hero h1 {
-            font-size: 4rem;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5), 0 0 15px var(--primary-color);
-        }
-
-        .hero p {
-            font-size: 1.25rem;
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-transform: uppercase;
             margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        h2 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            margin-bottom: 0.9rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
 
-        .slogan {
-            font-family: 'Mulish', cursive;
-            font-size: 2rem;
-            margin-top: 1rem;
-            color: rgba(255, 255, 255, 0.8);
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        .description {
+            font-size: 1.5rem;
+            color: var(--text-color);
+            margin-bottom: 2rem;
+            max-width: 700px;
+        }
+        
+
+        .features-list {
+            margin: 2rem 0;
+            font-size: 1.2rem;
+            color: var(--text-color);
+            max-width: 700px;
+            text-align: left;
         }
 
-        .moving-cars {
+        .features-list li {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .features-list li::before {
+            content: "\f00c";
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
             position: absolute;
-            top: 70%;
-            width: 100%;
-            height: 200px;
+            left: 0;
+            color: var(--primary-color);
+            font-size: 1rem;
+        }
+
+        .cta-button {
+            padding: 15px 35px;
+            font-size: 1.5rem;
+            background-color: var(--accent-color);
+            color: var(--text-color);
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .cta-button:hover {
+            background-color: var(--primary-color);
+            color: var(--bg-color);
+            transform: scale(1.05);
+            box-shadow: 0 0 20px var(--primary-color);
+        }
+
+        .countdown-container {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .time-block {
+            display: inline-block;
+            margin: 0 10px;
+            text-align: center;
+        }
+
+        .time {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px 20px;
+            border-radius: 10px;
+            min-width: 80px;
+            position: relative;
             overflow: hidden;
         }
 
-        .car {
+        .time::before {
+            content: '';
             position: absolute;
-            animation: moveCar 5s linear infinite;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+            transform: translateX(-100%);
+            animation: shimmer 3s infinite;
         }
 
-        @keyframes moveCar {
-            0% {
-                transform: translateX(100%);
-            }
-            100% {
-                transform: translateX(-100%);
-            }
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
         }
 
-        .btn-primary {
-            padding: 12px 30px;
-            color: #333333;
-            border-color: #333333;
-            border-radius: 25px;
-            background-color: #FFB81C;
+        .label {
+            font-size: 1rem;
+            color: var(--text-color);
+            text-transform: uppercase;
+            margin-top: 5px;
+        }
+
+        .subscribe-box {
+            margin-top: 3rem;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(255, 184, 28, 0.2);
+        }
+
+        .subscribe-box input[type="email"] {
+            padding: 10px;
+            width: 300px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 50px;
+            margin-right: 10px;
+            outline: none;
+        }
+
+        .subscribe-box input[type="submit"] {
+            padding: 10px 25px;
+            font-size: 1.2rem;
+            background-color: var(--primary-color);
+            color: var(--bg-color);
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
             transition: all 0.3s ease;
         }
 
-        .btn-primary:hover {
-            color: var(--bg-color);
-            background-color: #333333;
+        .subscribe-box input[type="submit"]:hover {
+            background-color: var(--accent-color);
+            color: var(--text-color);
         }
 
-        .section-title {
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .particle {
+            position: absolute;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            opacity: 0.5;
+            animation: float 3s infinite ease-in-out;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        .cities-container {
+    text-align: center;
+}
+
+.cities-container h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.cities-list {
+    list-style: none;
+    padding: 0;
+    font-size: 1.5rem;
+    color: var(--text-color);
+}
+
+.cities-list li {
+    display: inline-block;
+    margin: 0 20px;
+    font-weight: bold;
+    position: relative;
+}
+
+.cities-list li::before {
+    content: "\f3c5"; /* Font Awesome map marker icon */
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    color: var(--accent-color);
+    margin-right: 10px;
+}
+
+
+        .guaranteed-impressions {
+            position: absolute;
+            top: 50px;
+            right: 50px;
+            background-color: var(--primary-color);
+            padding: 10px;
+            border-radius: 50%;
+            font-weight: bold;
+            font-size: 1rem;
+            box-shadow: 0 0 20px var(--primary-color);
+            transform: rotate(-15deg);
+            z-index: 10;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             text-align: center;
-            margin-bottom: 3rem;
+            border: 4px solid var(--accent-color);
+            text-transform: uppercase;
+            line-height: 1.2;
+            font-family: 'Courier New', monospace;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+            background-image: radial-gradient(circle, var(--primary-color) 60%, var(--accent-color) 100%);
+            opacity: 0;
+            transform: scale(5) rotate(-15deg);
+            transition: all 0.5s ease-out;
         }
 
-        .section-title h2 {
-            color: var(--primary-color);
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
+        .guaranteed-impressions.stamped {
+            opacity: 0.7;
+            transform: scale(1) rotate(-15deg);
         }
 
-        .info-box {
-            border: 2px dashed var(--accent-color);
-            border-radius: 10px;
-            padding: 20px;
-            text-align: center;
-            margin: 2rem auto;
+        .stamp-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 9;
+            display: none;
         }
 
-        .price-box {
-            background-color: var(--bg-color);
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
+        .moving-cars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 1;
+            pointer-events: none;
         }
 
-        .price-box:hover {
-            transform: translateY(-10px);
+        .bike {
+    position: absolute;
+    right: -150px; /* Start off-screen on the right */
+    animation: moveBike 3s ease-in-out infinite, bobbing 1s ease-in-out infinite; /* Added bobbing effect */
+    filter: blur(1px) brightness(1.1); /* Adds motion blur and brightness for speed effect */
+}
+
+@keyframes moveBike {
+    0% { transform: translateX(100vw) scale(1); }
+    50% { transform: translateX(0) scale(1.1); } /* Zooms in slightly at the center */
+    100% { transform: translateX(-150px) scale(1); }
+}
+
+@keyframes bobbing {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); } /* Adds a slight bobbing motion */
+}
+
+        .car {
+            position: absolute;
+            right: -150px;
+            animation: moveCar 4s linear;
         }
 
-        footer {
-            background-color: var(--secondary-color);
-            color: white;
-            padding: 1.5rem 0;
-            text-align: center;
+        .car img {
+            width: 150px;
+            height: auto;
+            filter: drop-shadow(0 0 10px var(--primary-color));
         }
 
-        .contact-info {
-            margin: 2rem 0;
+        @keyframes moveCar {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(calc(-100vw - 150px)); }
         }
 
-        /* Grid Section */
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 2rem;
-            margin: 2rem 0;
+        
+        @media (max-width: 768px) {
+            h1,h2 { font-size: 1.5rem; }
+            .description { font-size: 1.2rem; }
+            .cta-button {
+                font-size: 1.2rem;
+                padding: 12px 28px;
+            }
+            .guaranteed-impressions {
+                top: 20px;
+                right: 20px;
+                width: 100px;
+                height: 100px;
+                font-size: 0.8rem;
+            }
         }
 
-        .grid-item {
-            background-color: white;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 20px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
+
+
+
+@media (max-width: 480px) {
+    h1,h2 { font-size: 1.8rem; }
+    .description { font-size: 1rem; }
+    .cta-button {
+        font-size: 1rem;
+        padding: 10px 25px;
+    }
+    .subscribe-box input[type="email"] { 
+        width: 220px; 
+        margin-bottom: 10px; /* Added space below email input */
+    }
+    .subscribe-box input[type="submit"] {
+        display: block; /* Ensure submit button is on a new line */
+        width: 100%; /* Full width on mobile */
+        padding: 10px 25px;
+    }
+}
+
     </style>
 </head>
+<body>
+    <div class="background"></div>
+    <div class="particles" id="particles"></div>
+    <div class="stamp-overlay"></div>
+    <div class="guaranteed-impressions">Guaranteed Impressions</div>
+    <div class="content-wrapper">
+        <h1>Coming Soon</h1>
+        <p class="description">A Revolutionary Way to Deliver Outdoor Ads.<br> 
+            BarqAds is launching a new product that combines real-time data, geo-targeting, re-targeting and stunning visuals for unparalleled brand exposure.</p>
 
-<body data-bs-spy="scroll" data-bs-target="#navbar-main" data-bs-offset="70">
-    <nav id="navbar-main" class="navbar navbar-expand-lg navbar-light fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#top"><img src="images/logotransparentxs.png" alt="BARQ ADS logo" height="40"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#intro">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#feature">Features</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#stats">Statistics</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#roi">ROI</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#design">Design Your Campaign</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#how">How It Works</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#choose">Why Choose Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#package">Pricing</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            <ul class="features-list">
+                <li>Guaranteed reach through precise geofencing</li>
+                <li>Know your impressions from offline ads like never before </li>
+                <li>Eye-catching designs for high visibility</li>
+                <li>Easy setup with expert support</li>
+                <li>Comprehensive analytics for measurable results</li>
+            </ul>
+    
+            <div class="cities-container">
+                <h2>We’re launching soon in:</h2>
+                <ul class="cities-list">
+                    <li>Riyadh</li>
+                    <li>Jeddah</li>
+                    <li>Dammam</li>
                 </ul>
             </div>
-        </div>
-    </nav>
+    
 
-    <section class="hero" id="top">
-        <div class="container">
-            <h1>Revolutionizing Outdoor Advertising</h1>
-            <p class="lead">Maximize your brand's reach with our innovative vehicle wrap advertising solutions, powered by real-time data and cutting-edge technology.</p>
-            <a href="#contact" class="btn btn-primary btn-lg">Start Your Campaign</a>
-        </div>
-        <div class="moving-cars">
-            <div class="car" style="animation-duration: 8s;"><img src="images/car1.avif" alt="Car 1" width="150"></div>
-        </div>
-    </section>
+        <a href="#notify" class="cta-button">Be the First to Know!</a>
 
-    <section id="how" class="py-5">
-        <div class="container">
-            <div class="section-title">
-                <h2>How It Works</h2>
+        <div class="countdown-container">
+            <div class="time-block">
+                <div id="days" class="time">00</div>
+                <div class="label">Days</div>
             </div>
-            <div class="grid-container">
-                <div class="grid-item">
-                    <h3>Consultation</h3>
-                    <p>Discuss your goals with our team.</p>
-                </div>
-                <div class="grid-item">
-                    <h3>Design</h3>
-                    <p>Collaborate to create your custom ad.</p>
-                </div>
-                <div class="grid-item">
-                    <h3>Implementation</h3>
-                    <p>We handle the deployment process.</p>
-                </div>
-                <div class="grid-item">
-                    <h3>Analytics</h3>
-                    <p>Monitor your campaign's performance in real-time.</p>
-                </div>
+            <div class="time-block">
+                <div id="hours" class="time">00</div>
+                <div class="label">Hours</div>
+            </div>
+            <div class="time-block">
+                <div id="minutes" class="time">00</div>
+                <div class="label">Minutes</div>
+            </div>
+            <div class="time-block">
+                <div id="seconds" class="time">00</div>
+                <div class="label">Seconds</div>
             </div>
         </div>
-    </section>
 
-    <!-- Cutting-Edge Advertising Solutions Section -->
-    <section id="feature" class="py-5">
-        <div class="container">
-            <div class="section-title">
-                <h2>Cutting-Edge Advertising Solutions</h2>
-                <p>Transform our fleet into your mobile billboards with eye-catching solutions.</p>
-            </div>
-            <div class="grid-container">
-                <div class="grid-item">
-                    <h3>Vehicle Wraps</h3>
-                    <p>Transform our fleet into your mobile billboards with eye-catching full or partial wraps.</p>
-                </div>
-                <div class="grid-item">
-                    <h3>Digital Display</h3>
-                    <p>Deploy dynamic digital ads with our state-of-the-art smart screens for real-time content updates.</p>
-                </div>
-                <div class="grid-item">
-                    <h3>Analytics Dashboard</h3>
-                    <p>Track your campaign performance with our comprehensive analytics and reporting tools.</p>
-                </div>
-            </div>
+        <div class="subscribe-box" id="notify">
+            <h3>Sign Up for Updates</h3>
+            <form action="https://script.google.com/macros/s/AKfycbx6uEtd4h965smY5jYbQn45jLtr2q-1-T2UQbHnr-NBeagF2RsNB-wdYZdigBJzHlfZ/exec" method="POST" id="subscribe-form">
+                <input type="email" name="email" id="email" placeholder="Your email address" required>
+                <input type="submit" value="Subscribe" id="submit-button">
+            </form>
+            <p id="subscribe-success" style="display: none; color: var(--primary-color); font-size: 1.2rem; margin-top: 1rem;">Thank you for subscribing!</p>
+            <p id="subscribe-error" style="display: none; color: red; font-size: 1.2rem; margin-top: 1rem;">Oops! Something went wrong. Please try again.</p>
         </div>
-    </section>
+        
+        <script>
+            document.getElementById('subscribe-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const form = e.target;
+                const emailInput = form.querySelector('input[name="email"]');
+                const submitButton = document.getElementById('submit-button');
+                const successMessage = document.getElementById('subscribe-success');
+                const errorMessage = document.getElementById('subscribe-error');
+                
+                // Hide any previous messages
+                successMessage.style.display = 'none';
+                errorMessage.style.display = 'none';
+                
+                // Disable the button and change text to "Subscribing..."
+                submitButton.disabled = true;
+                submitButton.value = 'Subscribing...';
+        
+                // Send the email to Google Apps Script
+                fetch(form.action, {
+                    method: 'POST',
+                    body: new FormData(form)
+                })
+                .then(response => response.text())
+                .then(result => {
+                    // Show the success message and reset the form
+                    successMessage.style.display = 'block';
+                    submitButton.disabled = false;
+                    submitButton.value = 'Subscribe';
+                    form.reset();  // Clear the form
+                })
+                .catch(error => {
+                    // Show an error message
+                    errorMessage.style.display = 'block';
+                    submitButton.disabled = false;
+                    submitButton.value = 'Subscribe';
+                    console.error('Error:', error);
+                });
+            });
+        </script>
+        
+        
+        
+        
+    </div>
 
-    <!-- Vehicle Editor -->
-    <section id="vehicle-editor" class="py-5">
-        <div class="container">
-            <div class="section-title">
-                <h2>Vehicle Editor</h2>
-                <p>Customize your vehicle wraps to match your brand perfectly.</p>
-            </div>
-            <div id="design-area">
-                <div id="vehicle-preview">
-                    <img id="vehicle-img" src="images/partner.jpg" alt="Vehicle Preview">
-                    <div id="logo-container">
-                        <text id="logo-text">Your Logo Here</text>
-                        <img id="logo-image" src="" alt="Logo" style="display:none;">
-                    </div>
-                </div>
-                <div id="controls">
-                    <div class="control-group">
-                        <label for="logo-type">Logo Type:</label>
-                        <select id="logo-type">
-                            <option value="text">Text</option>
-                            <option value="image">Image</option>
-                        </select>
-                        <div id="logo-text-input">
-                            <label for="logo-text-content">Logo Text:</label>
-                            <input type="text" id="logo-text-content" placeholder="Enter logo text">
-                            <label for="logo-font">Logo Font:</label>
-                            <select id="logo-font">
-                                <option value="Arial">Arial</option>
-                                <option value="Verdana">Verdana</option>
-                                <option value="Times New Roman">Times New Roman</option>
-                                <option value="Courier">Courier</option>
-                            </select>
-                            <label for="logo-color">Logo Color:</label>
-                            <input type="color" id="logo-color" value="#000000">
-                        </div>
-                        <div id="logo-image-input" style="display: none;">
-                            <label for="logo-image-upload">Logo Image (PNG):</label>
-                            <input type="file" id="logo-image-upload" accept="image/png">
-                        </div>
-                    </div>
-                    <div class="control-group">
-                        <label for="logo-placement-x">X Position:</label>
-                        <input type="range" id="logo-placement-x" min="0" max="800" value="400">
-                        <label for="logo-placement-y">Y Position:</label>
-                        <input type="range" id="logo-placement-y" min="0" max="400" value="320">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <div class="moving-cars" id="movingCars"></div>
 
-    <!-- Advanced Technology Platform -->
-    <section id="technology" class="py-5">
-        <div class="container">
-            <div class="section-title">
-                <h2>Advanced Technology Platform</h2>
-            </div>
-            <div class="grid-container">
-                <div class="grid-item">
-                    <h3>Geotargeting Precision</h3>
-                    <p>Deliver hyper-targeted campaigns based on precise geofencing and real-time data.</p>
-                </div>
-                <div class="grid-item">
-                    <h3>Programmatic Advertising</h3>
-                    <p>Streamline your ad buying process with our cutting-edge programmatic solutions.</p>
-                </div>
-                <div class="grid-item">
-                    <h3>Comprehensive Data Analytics</h3>
-                    <p>Gain valuable insights with our robust data analytics dashboard.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Explore Our Reach -->
-    <section id="map" class="py-5">
-        <div class="container">
-            <div class="section-title">
-                <h2>Explore Our Reach</h2>
-                <p>See how our network spans across the city with precision targeting and unmatched coverage.</p>
-            </div>
-            <div style="position: relative;">
-                <iframe src="map.html" style="width: 100%; height: 400px; border: 0;" allowfullscreen="" loading="lazy" title="BARQ ADS coverage map"></iframe>
-                <div class="map-overlay-content">
-                    <p class="map-description">Discover the potential of advertising on the go!</p>
-                    <a href="#contact" class="btn btn-primary">Learn More</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="roi" class="py-5 bg-light">
-        <div class="container">
-            <div class="section-title">
-                <h2>Return on Investment (ROI)</h2>
-                <p>Exclusive for clients. Our advertising solutions provide measurable results and insights into your performance, ensuring you get the best value.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="design" class="py-5 bg-light">
-        <div class="container">
-            <div class="section-title">
-                <h2>Design Your Campaign</h2>
-                <p>Partner with us for compelling ad designs tailored to your brand's identity.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="choose" class="py-5 bg-light">
-        <div class="container">
-            <div class="section-title">
-                <h2>Why Choose Us</h2>
-                <p>We provide cutting-edge solutions that differentiate your campaign.</p>
-            </div>
-            <div class="grid-container">
-                <div class="grid-item">
-                    <h3>Innovative Technology</h3>
-                    <p>Utilize top-tier technology for better reach and engagement.</p>
-                </div>
-                <div class="grid-item">
-                    <h3>Extensive Network</h3>
-                    <p>Access a vast network of mobile advertising platforms.</p>
-                </div>
-                <div class="grid-item">
-                    <h3>Commitment to Excellence</h3>
-                    <p>We strive to ensure your advertising experience is successful.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <img src="images/logotransparentxs.png" alt="BARQ ADS logo" class="mb-3" height="40">
-                    <p>Revolutionizing outdoor advertising with innovative mobile solutions.</p>
-                </div>
-                <div class="col-md-4">
-                    <h5>Quick Links</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#intro">About</a></li>
-                        <li><a href="#feature">Features</a></li>
-                        <li><a href="#stats">Statistics</a></li>
-                        <li><a href="#roi">ROI</a></li>
-                        <li><a href="#package">Pricing</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <h5>Newsletter</h5>
-                    <p>Stay updated with our latest news and offers.</p>
-                    <form class="mt-3">
-                        <div class="input-group">
-                            <input type="email" class="form-control" placeholder="Enter your email" required>
-                            <button class="btn btn-primary" type="submit">Subscribe</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <div class="mt-4 mb-3">
-                <p>© 2024 BARQ ADS. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
     <script>
-        $(window).on('scroll', function () {
-            if ($(this).scrollTop() > 100) {
-                $('.navbar').addClass('navbar-scrolled');
-            } else {
-                $('.navbar').removeClass('navbar-scrolled');
+        const countDownDate = new Date("2024-09-19T23:59:00+03:00").getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = countDownDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerHTML = days.toString().padStart(2, '0');
+            document.getElementById("hours").innerHTML = hours.toString().padStart(2, '0');
+            document.getElementById("minutes").innerHTML = minutes.toString().padStart(2, '0');
+            document.getElementById("seconds").innerHTML = seconds.toString().padStart(2, '0');
+
+            if (distance < 0) {
+                clearInterval(countdownTimer);
+                document.querySelector(".countdown-container").innerHTML = "<h2>BarqAds is Live!</h2>";
             }
-        });
-
-        $('#contactForm').on('submit', function (e) {
-            e.preventDefault();
-            alert('Thank you for your message. We will get back to you soon!');
-            this.reset();
-        });
-
-        function animateValue(id, start, end, duration) {
-            let range = end - start;
-            let current = start;
-            let increment = end > start ? 1 : -1;
-            let stepTime = Math.abs(Math.floor(duration / range));
-            let obj = document.getElementById(id);
-            let timer = setInterval(function () {
-                current += increment;
-                obj.innerHTML = current;
-                if (current === end) {
-                    clearInterval(timer);
-                }
-            }, stepTime);
         }
 
-        const observer = new IntersectionObserver(((entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    animateValue("clientCount", 0, 500, 2000);
-                    animateValue("campaignCount", 0, 1000, 2000);
-                    animateValue("vehicleCount", 0, 5000, 2000);
-                    animateValue("impressionCount", 0, 10000000, 2000);
-                    observer.unobserve(entry.target);
-                }
-            });
-        }), { threshold: 0.5 });
-        observer.observe(document.getElementById('stats'));
+        const countdownTimer = setInterval(updateCountdown, 1000);
 
-        // Vehicle editor logic
-        document.addEventListener('DOMContentLoaded', () => {
-            const logoText = document.getElementById('logo-text');
-            const logoImage = document.getElementById('logo-image');
-            const logoTypeSelect = document.getElementById('logo-type');
-            const logoTextInput = document.getElementById('logo-text-input');
-            const logoImageInput = document.getElementById('logo-image-input');
-            const logoContainer = document.getElementById('logo-container');
-            const logoPlacementX = document.getElementById('logo-placement-x');
-            const logoPlacementY = document.getElementById('logo-placement-y');
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 50;
 
-            // Handle logo type change
-            logoTypeSelect.addEventListener('change', () => {
-                if (logoTypeSelect.value === 'text') {
-                    logoTextInput.style.display = 'block';
-                    logoImageInput.style.display = 'none';
-                    logoText.style.display = 'block';
-                    logoImage.style.display = 'none';
-                } else {
-                    logoTextInput.style.display = 'none';
-                    logoImageInput.style.display = 'block';
-                    logoText.style.display = 'none';
-                    logoImage.style.display = 'block';
-                }
-            });
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                particle.style.width = `${Math.random() * 5 + 2}px`;
+                particle.style.height = particle.style.width;
+                particle.style.left = `${Math.random() * 100}%`;
+                particle.style.top = `${Math.random() * 100}%`;
+                particle.style.animationDuration = `${Math.random() * 2 + 2}s`;
+                particle.style.animationDelay = `${Math.random() * 2}s`;
+                particlesContainer.appendChild(particle);
+            }
+        }
 
-            // Handle logo text update dynamically
-            document.getElementById('logo-text-content').addEventListener('input', (e) => {
-                logoText.textContent = e.target.value || 'Your Logo Here';
-            });
+      
 
-            // Handle logo font update dynamically
-            document.getElementById('logo-font').addEventListener('change', (e) => {
-                logoText.style.fontFamily = e.target.value;
-            });
+        function createCars() {
+    const carsContainer = document.getElementById('movingCars');
+    
+    // Clear the container to avoid car duplication
+    carsContainer.innerHTML = '';
 
-            // Handle logo color update dynamically
-            document.getElementById('logo-color').addEventListener('input', (e) => {
-                logoText.style.color = e.target.value;
-            });
+    const carImages = ['car1.avif','car2.avif', 'bike.avif'];
 
-            // Handle logo placement update dynamically
-            logoPlacementX.addEventListener('input', (e) => {
-                logoContainer.style.left = `${e.target.value}px`;
-            });
+    carImages.forEach((carImage, index) => {
+        const car = document.createElement('div');
+        car.classList.add('car');
+        if (carImage.includes('bike')) {
+            car.classList.add('bike');
+        }
+        const img = document.createElement('img');
+        img.src = `images/${carImage}`;
+        img.alt = `Moving ${carImage.includes('bike') ? 'Bike' : 'Car'} ${index + 1}`;
+        car.appendChild(img);
 
-            logoPlacementY.addEventListener('input', (e) => {
-                logoContainer.style.top = `${e.target.value}px`;
-            });
+        const randomTop = Math.random() * 80 + 10; // Random vertical position between 10% and 90%
+        car.style.top = `${randomTop}%`;
+        
+        // Set a random start delay for each car/bike
+        const randomDelay = Math.random() * 3;
+        car.style.animationDelay = `${randomDelay}s`;
 
-            // Handle logo image upload dynamically
-            document.getElementById('logo-image-upload').addEventListener('change', function (e) {
-                const file = e.target.files[0];
-                const reader = new FileReader();
+        // Set a faster animation duration for the bike
+        if (carImage.includes('bike')) {
+            car.style.animationDuration = '2s'; // Faster animation for the bike
+        }
 
-                reader.onload = function (event) {
-                    logoImage.src = event.target.result;
-                    logoImage.style.display = 'block';
-                };
+        carsContainer.appendChild(car);
+    });
+}
 
-                reader.readAsDataURL(file);
-            });
-        });
+
+        function animateStamp() {
+            const stamp = document.querySelector('.guaranteed-impressions');
+            const overlay = document.querySelector('.stamp-overlay');
+            
+            overlay.style.display = 'block';
+            
+            setTimeout(() => {
+                stamp.classList.add('stamped');
+                
+                setTimeout(() => {
+                    overlay.style.display = 'none';
+                }, 500);
+            }, 500);
+        }
+
+        function initializePageElements() {
+            createParticles();
+            createCars();
+            updateCountdown();
+            setInterval(updateCountdown, 1000);
+            setInterval(createCars, 10000); // Create new cars every 10 seconds
+            
+            // Animate the stamp after a short delay
+            setTimeout(animateStamp, 1000);
+        }
+
+        window.addEventListener('load', initializePageElements);
     </script>
 </body>
-
 </html>
